@@ -1,10 +1,43 @@
 # GTM Playground — How This Repo Works
 
-This is the operating system for our outbound/GTM work. Every client (Kynship, UNITZERO, etc.) runs through the same pipeline: **ingest calls into the corpus → brainstorm using the corpus → research the market → build the GTM sheet → write the copy**. The repo is split so that *each step in the process has its own file*, and the same step can be reused across clients.
+This is the operating system for our outbound/GTM work: research a client's market from real buyer evidence, develop the proof and mechanism, write the copy, learn from what actually shipped.
 
-If you are new: read this top-to-bottom once. After that you should be able to pick any client and know exactly which file to open next.
+**New machine? Start with [SETUP.md](SETUP.md)** — it gets you cloned, connected and running in ~20 minutes.
 
-A complete diagram of the system lives at [GTM_SYSTEM_FLOW.md](GTM_SYSTEM_FLOW.md) — open in a Mermaid-aware viewer (VSCode preview, GitHub, Obsidian).
+---
+
+## The current system (July 2026) — start here
+
+The pipeline now runs as **auto-loading Claude Code skills** in [.claude/skills/](.claude/skills/). You don't open prompt files — you open Claude Code in this folder and describe what you want in plain English; the right skill fires on its own.
+
+The SMS workflow, in order:
+
+| Step | Skill | What it does |
+|---|---|---|
+| 1 | `sms-brief` | Layer A market-research brief for a client + segment + persona (sales calls → master sheet → web, every claim traced) |
+| 2 | `case-study-developer` | Turns a chosen case study into menus of proof framings + mechanism reframings |
+| 3 | `mechanism-wordsmith` | Reframes a literal mechanism into sticky, SMS-ready lines |
+| 4 | `sms-draft` | Assembles ship-ready T1/T2 SMS variants and QAs them against the Voice Profile |
+| — | `sms-performance` | Mines GoHighLevel for what a client's copy ACTUALLY did (replies, opt-outs, variants) |
+| — | `evergreen-data` | Data supply from the Evergreen API: pains, buyer lingo, tiered proof, winners/losers, campaign stats, the knowledge graph |
+| — | `call-corpus-search` | Searches the sales-call corpus for a pain/objection/theme |
+
+Supporting pieces:
+
+- [sms-playbook/](sms-playbook/) — `winners.csv` / `losers.csv` + the playbook. Drafting QAs against these.
+- [clients/registry.json](clients/registry.json) — maps each client to its channels (GHL locationId, EmailBison/GHL MCP server names). No secrets — keys live in `~/.claude.json`.
+- [tools/ghl_mine.py](tools/ghl_mine.py) / [tools/sms_report.py](tools/sms_report.py) — the GHL send-log miners behind `sms-performance`.
+- [clients/](clients/) — per-client workspaces (`source/` inputs, `output/` deliverables).
+
+The **Evergreen system** (Hilal's Supabase knowledge graph: all clients' calls, campaigns, copies, deals) is the data backbone — reached through the `evergreen-data` skill, which documents every endpoint.
+
+---
+
+## Legacy pipeline (pre-June 2026) — kept for reference
+
+Everything below this line describes the ORIGINAL prompt-file pipeline (`skills/`, `rules/`, `sops/`, `frameworks/`, `sheet/`). The files still exist and still work — parts (the rules/QA thinking, the corpus tools, the Sandler references) fed directly into the current skills — but for SMS work, **use the current system above**. Kept for cold-email templates (`frameworks/`), the ingest pipeline (`sheet/`), and historical context.
+
+A complete diagram of the legacy system lives at [GTM_SYSTEM_FLOW.md](GTM_SYSTEM_FLOW.md) — open in a Mermaid-aware viewer (VSCode preview, GitHub, Obsidian).
 
 ---
 
@@ -12,8 +45,8 @@ A complete diagram of the system lives at [GTM_SYSTEM_FLOW.md](GTM_SYSTEM_FLOW.m
 
 | Folder | What lives here | Who reads it |
 |---|---|---|
-| [skills/](skills/) | **Prompts**. The actual "brain" that runs at each step. You load one of these into Claude and it does the work. | The AI, at runtime |
-| [.claude/skills/](.claude/skills/) | **Auto-firing Claude Code skills**. Currently just `call-corpus-search` — fires whenever you ask a GTM question that needs corpus retrieval. | Claude Code auto-loads on intent match |
+| [skills/](skills/) | **Legacy prompts**. The old manually-loaded step files. Superseded by `.claude/skills/` for SMS work. | Historical reference |
+| [.claude/skills/](.claude/skills/) | **Auto-firing Claude Code skills — the current system.** `sms-brief`, `case-study-developer`, `mechanism-wordsmith`, `sms-draft`, `sms-performance`, `evergreen-data`, `call-corpus-search`. | Claude Code auto-loads on intent match |
 | [tools/](tools/) | Python CLIs: Fireflies fetcher, chunker, embedder, 5 corpus-search CLIs, Slack/Fathom helpers. | Skills shell out to these; you can run them by hand too. |
 | [sheet/](sheet/) | The Supabase ingest pipeline (`fetch_all.py`, `build_final.py`, `upload_supabase.py`) + SQL migrations. | Run once per new client to load their calls into the corpus. |
 | [sops/](sops/) | **Standard Operating Procedures**. How-to guides for the human operator — step-by-step checklists. | Humans + the AI reads them as reference |
