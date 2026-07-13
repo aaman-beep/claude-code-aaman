@@ -1,0 +1,126 @@
+{
+  "skill_under_test": "mechanism-wordsmith",
+  "version": "v1",
+  "test_bed": "Kynship — DTC Health & Wellness segment",
+  "evals": [
+    {
+      "id": "kynship-supergut-founder-ceo",
+      "description": "Supergut case study, Founder/CEO persona. Brief surfaces creative engine bottleneck as top pain.",
+      "input": {
+        "client": "Kynship",
+        "case_study_client": "Supergut",
+        "case_study_outcome": "Paused $100k/mo meta spend → $1m/mo NCR in 3 months",
+        "literal_mechanism": "Used 1,000 unpaid micro-influencer videos as paid creative on meta, combined with Cost Cap campaigns per SKU to keep CAC controlled while scaling spend",
+        "industry": "DTC Health & Wellness",
+        "persona": "Founder/CEO",
+        "brief_top_pains": [
+          "Creative engine is the bottleneck — can't produce enough variants to scale spend",
+          "CAC creeps up the moment we push more budget",
+          "Burned by previous agencies who couldn't sustain results past month 3",
+          "Don't know what's actually scalable vs. one-hit-wonder"
+        ]
+      },
+      "expected_output": {
+        "min_variants_at_score_4": 3,
+        "min_distinct_patterns": 4,
+        "must_include_pattern": [1, 3, 5, 8],
+        "must_not_include": [
+          "Cost Cap",
+          "CAC",
+          "campaigns per SKU",
+          "blended ROAS",
+          "world-class",
+          "proprietary"
+        ],
+        "lead_pattern_for_top_pain": 1,
+        "notes": "Top pain is creative engine bottleneck — Pattern 1 (Contrarian Refresh: 'instead of agency-produced creative') is the highest-leverage. Pattern 3 (Constraint Negation: 'without an in-house creative team') is close second. Pattern 5 (Position Engineering: 'turned customers into the creative engine') is a strong third."
+      }
+    },
+    {
+      "id": "kynship-sweetbee-founder-ceo",
+      "description": "Sweet Bee Organics case study, Founder/CEO persona. Mechanism involves ramping spend while cutting CAC.",
+      "input": {
+        "client": "Kynship",
+        "case_study_client": "Sweet Bee Organics",
+        "case_study_outcome": "$2m to $21m/yr in 1 year. Net new customer revenue $300k → $1.5m. Ad spend $25k → $500k in 3 months while cutting CAC by ~75%",
+        "literal_mechanism": "Restructured meta campaigns from broad audiences to tightly-segmented ones around buyer intent, then layered creative testing at high volume to find scalable winners before pouring spend behind them",
+        "industry": "DTC Health & Wellness",
+        "persona": "Founder/CEO",
+        "brief_top_pains": [
+          "CAC creeps up the moment we push more budget",
+          "Don't know which creatives are scalable vs. one-hit-wonder",
+          "Burned by agencies who couldn't sustain results",
+          "Can't justify spending more until we trust the system"
+        ]
+      },
+      "expected_output": {
+        "min_variants_at_score_4": 3,
+        "min_distinct_patterns": 4,
+        "must_include_pattern": [2, 3, 7, 8],
+        "must_not_include": [
+          "blended CAC",
+          "MER",
+          "lookalikes",
+          "structured campaigns"
+        ],
+        "lead_pattern_for_top_pain": 3,
+        "notes": "Top pain is CAC at scale — Pattern 3 (Constraint Negation: '20x spend without CAC moving') is highest-leverage. Pattern 2 (Hidden Misattribution: 'testing creative before spending, not after') strong. Pattern 7 (Named Methodology) works for the strategist who wants a soft teaser."
+      }
+    },
+    {
+      "id": "kynship-gruns-marketing-leader",
+      "description": "Grüns case study, Marketing Leader persona. Mechanism is launch / 0-to-1 scale.",
+      "input": {
+        "client": "Kynship",
+        "case_study_client": "Grüns",
+        "case_study_outcome": "$0 → $2m revenue in first 2 months from launch",
+        "literal_mechanism": "Built launch creative engine from day one — ran 50+ ad variants in the first 2 weeks, tested across multiple hooks and angles, found the winning creative direction before any major spend, then scaled the winners with cost-controlled campaigns",
+        "industry": "DTC Health & Wellness",
+        "persona": "Marketing Leader",
+        "brief_top_pains": [
+          "Need to launch new products / brands and don't know if creative will hit",
+          "Last launch underperformed because we picked the wrong creative direction early",
+          "Can't afford to burn the launch budget testing in production",
+          "Need to find winning creative fast — before momentum dies"
+        ]
+      },
+      "expected_output": {
+        "min_variants_at_score_4": 3,
+        "min_distinct_patterns": 4,
+        "must_include_pattern": [2, 3, 7, 8],
+        "must_not_include": [
+          "cost-controlled campaigns",
+          "blended ROAS",
+          "Cactuar"
+        ],
+        "lead_pattern_for_top_pain": 2,
+        "notes": "Top pain is wrong creative direction picked early — Pattern 2 (Hidden Misattribution: 'finding the winner before scaling, not after') is highest-leverage. Pattern 3 (Constraint Negation: 'without burning the launch budget') strong. Pattern 8 (Plain English: 'tested 50+ ad variants in the first 2 weeks') is the safety net."
+      }
+    },
+    {
+      "id": "kynship-vague-mechanism-stress-test",
+      "description": "Stress test: literal mechanism is too vague to wordsmith. Skill should kick back, not invent.",
+      "input": {
+        "client": "Kynship",
+        "case_study_client": "[REDACTED]",
+        "case_study_outcome": "Grew revenue 3x",
+        "literal_mechanism": "Worked closely with the brand on their marketing",
+        "industry": "DTC Health & Wellness",
+        "persona": "Founder/CEO",
+        "brief_top_pains": ["..."]
+      },
+      "expected_output": {
+        "min_variants_at_score_4": 0,
+        "min_distinct_patterns": 0,
+        "must_include_pattern": [],
+        "must_not_include": [],
+        "expected_behavior": "Skill stops at Step 0. Returns: 'Literal mechanism is too vague to wordsmith. Need: what specifically did the agency do? Channel, tactic, named approach, or specific number. Send the strategist back to Layer A / case study extraction.'",
+        "notes": "This eval verifies the skill does not invent mechanisms when the input is empty. Garbage in must produce a kick-back, not a hallucination out."
+      }
+    }
+  ],
+  "v1_acceptance_criteria": {
+    "pass_threshold": "3 of 4 evals produce a menu meeting their expected_output (the stress test counts as 'pass' if the skill correctly kicks back)",
+    "iteration_trigger": "Below 3/4 pass rate, or strategist rejects all variants and writes their own — log the variant they wrote and which pattern it matches (or whether it's a new pattern to add to the library)"
+  }
+}
