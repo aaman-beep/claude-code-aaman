@@ -8,6 +8,33 @@ description: Pulls what a client's cold SMS ACTUALLY did — every copy variant 
 Every other skill in this repo reasons about copy that *should* work. This one is the
 only source of what **did** work: the real texts that went out, and what came back.
 
+## Evergreen — the shared knowledge API (check it first)
+
+Scaletopia's knowledge lives in **Evergreen**, the one API every skill in this playbook shares.
+It is the research/data **provider** — it serves evidence and numbers; it does **not** write copy
+(that's this skill's job, and your proven copy stays yours). GHL's send log stays the deepest mine of raw copy history — keep using it. But for the aggregates, the RECONSTRUCTED live copy per campaign, and correct period numbers, Evergreen is faster and already fixed the counting bugs (period sent from the ops daily feed; booked from `meeting_booked_at`).
+
+- **Base URL:** `https://knowledgebase-production-f52e.up.railway.app`
+- **Auth (required):** send header `Authorization: Bearer $EVERGREEN_API_KEY` on every call — the key
+  lives in this playbook's `.env` (gitignored). No header -> **401**.
+- **Discover the API yourself:** `GET /api/docs` is the live index of every endpoint with its params
+  and descriptions; `GET /api/openapi` is the full machine schema. Unsure which endpoint/field exists?
+  Read `/api/docs` first — never guess a path or bulk-pull GHL/Airtable for what Evergreen already has.
+- **Focused entry points:** `evergreen-research` (pull/save findings) · `evergreen-stats` (numbers) ·
+  `evergreen-data` (full field-level catalogue).
+
+**What THIS skill pulls from Evergreen:**
+- `GET /api/clients/{slug}/report?channel=sms` — per campaign `sent, positives, power_requests,
+  booked, power_rate_pct`, **reconstructed `live_copy`**, and `vs_client_avg`.
+- `GET /api/clients/{slug}/variant-performance?campaign={name}` — which **arm / CTA won** (recovered
+  from the sent copy); honors `confidence` (won't invent a winner on thin reach).
+- `GET /api/clients/{slug}/period?window=this_week&channel=sms` (one client) and
+  `GET /api/period?window=last_week&channel=sms` (agency-wide) — correct **period sent** + PR-per-SMS.
+  Never derive a window by arithmetic.
+- `GET /api/clients/{slug}/monthly` — month-by-month trend + `peaks`.
+- Promoting proven copy into `sms-playbook/winners.csv` stays your call; Evergreen stores copy as
+  `draft` and lets real metrics decide winner/loser.
+
 ## The one thing you must understand first
 
 **GoHighLevel does not store copy history.** Copy is edited **in place** inside a workflow,

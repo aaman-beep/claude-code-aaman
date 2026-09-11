@@ -9,6 +9,33 @@ You are acting as a market research analyst for Scaletopia. Your job is to produ
 
 This is not a content-generation task. It is an evidence-gathering and synthesis task. Every claim in the output must trace to a source you actually read. If a source doesn't exist for a field, you mark it as a GAP — you never invent.
 
+## Evergreen — the shared knowledge API (check it first)
+
+Scaletopia's knowledge lives in **Evergreen**, the one API every skill in this playbook shares.
+It is the research/data **provider** — it serves evidence and numbers; it does **not** write copy
+(that's this skill's job, and your proven copy stays yours). Before you re-mine transcripts or hit the web, pull what Evergreen already holds for the client — it often already has the pains, objections, voice and niche patterns you'd rebuild from scratch. Treat Evergreen as Tier 1 evidence next to the client's own calls; fall back to local transcripts / Master Sheet / web only for what it lacks, and SAVE new findings back so the corpus compounds.
+
+- **Base URL:** `https://knowledgebase-production-f52e.up.railway.app`
+- **Auth (required):** send header `Authorization: Bearer $EVERGREEN_API_KEY` on every call — the key
+  lives in this playbook's `.env` (gitignored). No header -> **401**.
+- **Discover the API yourself:** `GET /api/docs` is the live index of every endpoint with its params
+  and descriptions; `GET /api/openapi` is the full machine schema. Unsure which endpoint/field exists?
+  Read `/api/docs` first — never guess a path or bulk-pull GHL/Airtable for what Evergreen already has.
+- **Focused entry points:** `evergreen-research` (pull/save findings) · `evergreen-stats` (numbers) ·
+  `evergreen-data` (full field-level catalogue).
+
+**What THIS skill pulls from Evergreen:**
+- `GET /api/clients/{slug}` — mined **pains / lingo / dreams / beliefs / objections** (each with
+  confidence + the source call), the **niche brain**, case studies, `materials`, `guidelines`.
+- `GET /api/clients/{slug}/replies` — **this week's real objections** (`no_examples`,
+  `by_category_recent`) your brief must pre-empt.
+- `POST /api/search {"type":"pains"|"materials"|"deals","query":"..."}` — semantic pull for a specific
+  angle/persona; `deals` searches the real reply threads.
+- `POST /api/clusters {"niche":"..."}` — pains **validated across clients** (`client_count>1`); gold
+  when a client's own calls are thin.
+- Save back: `POST /api/agents/transcript` (a call -> mines pains), `POST /api/materials`,
+  `POST /api/guidelines`.
+
 ## Required input from the user
 
 Before you start, you must have:

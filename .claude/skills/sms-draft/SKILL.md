@@ -13,6 +13,32 @@ down, QA'd, and handed back with a remix bank so you ship in minutes.
 their attention, worth learning more. It's worth **testing, not guessing** — so you get a few variants, and
 you + the market pick the winner.
 
+## Evergreen — the shared knowledge API (check it first)
+
+Scaletopia's knowledge lives in **Evergreen**, the one API every skill in this playbook shares.
+It is the research/data **provider** — it serves evidence and numbers; it does **not** write copy
+(that's this skill's job, and your proven copy stays yours). Your winning copy, `winners.csv` and the `sms-playbook/` stay exactly as they are — Evergreen does not replace them. It adds the live evidence to write FROM and the loser gate you already pull.
+
+- **Base URL:** `https://knowledgebase-production-f52e.up.railway.app`
+- **Auth (required):** send header `Authorization: Bearer $EVERGREEN_API_KEY` on every call — the key
+  lives in this playbook's `.env` (gitignored). No header -> **401**.
+- **Discover the API yourself:** `GET /api/docs` is the live index of every endpoint with its params
+  and descriptions; `GET /api/openapi` is the full machine schema. Unsure which endpoint/field exists?
+  Read `/api/docs` first — never guess a path or bulk-pull GHL/Airtable for what Evergreen already has.
+- **Focused entry points:** `evergreen-research` (pull/save findings) · `evergreen-stats` (numbers) ·
+  `evergreen-data` (full field-level catalogue).
+
+**What THIS skill pulls from Evergreen:**
+- **Winners to model** — `POST /api/search {"type":"copies","status":"winner","query":"<angle>"}`:
+  real sent copy with `why_it_worked` **and results attached** (`sent, positives, booked, positive_rate`).
+  Model what actually converted, not what only sounds good.
+- **Loser gate (already wired)** — `POST /api/search {"type":"copies","status":"loser"}`: judge each
+  draft against each loser's `why_it_failed` reason, not its surface text.
+- **Voice / proof** — `GET /api/clients/{slug}` `materials` + `caseStudies`;
+  `GET /api/guidelines?client={slug}` for the strategist's standing rules.
+- **Record the ship** — `POST /api/agents/save-copy {status:"draft", variant, campaignName}` so the
+  copy inherits real stats and feeds future briefs. Save as `draft`; real metrics decide winner/loser.
+
 ## Who does what (read this first)
 
 The skill is **strategist-led, skill-assisted.** Keeping this line clean is what stops it being a template-

@@ -5,6 +5,28 @@ description: Wordsmith a literal agency mechanism into 5–7 cold-SMS-ready refr
 
 # Mechanism Wordsmith
 
+## Evergreen — the shared knowledge API (check it first)
+
+Scaletopia's knowledge lives in **Evergreen**, the one API every skill in this playbook shares.
+It is the research/data **provider** — it serves evidence and numbers; it does **not** write copy
+(that's this skill's job, and your proven copy stays yours). Your winning-SMS templates DB stays the pattern source. Evergreen adds cross-client proven mechanism lines and component-level verdicts to widen the pattern pool.
+
+- **Base URL:** `https://knowledgebase-production-f52e.up.railway.app`
+- **Auth (required):** send header `Authorization: Bearer $EVERGREEN_API_KEY` on every call — the key
+  lives in this playbook's `.env` (gitignored). No header -> **401**.
+- **Discover the API yourself:** `GET /api/docs` is the live index of every endpoint with its params
+  and descriptions; `GET /api/openapi` is the full machine schema. Unsure which endpoint/field exists?
+  Read `/api/docs` first — never guess a path or bulk-pull GHL/Airtable for what Evergreen already has.
+- **Focused entry points:** `evergreen-research` (pull/save findings) · `evergreen-stats` (numbers) ·
+  `evergreen-data` (full field-level catalogue).
+
+**What THIS skill pulls from Evergreen:**
+- `POST /api/search {"type":"components","query":"unique_mechanism ..."}` — swipeable
+  `unique_mechanism` components with a `verdict` (winner/loser).
+- `POST /api/search {"type":"copies","query":"<mechanism/angle>","status":"winner"}` — winners'
+  `unique_mechanism` field, already phrased for SMS, with real results.
+- `POST /api/search {"type":"offers"}` — the literal `mechanism` per offer + its `proof_hint`.
+
 ## What this skill does
 
 Takes a **literal mechanism** (one or two sentences describing what the agency actually did — the tactic, the channel, the process, the tool) and returns **5–7 SMS-ready reframings**, each anchored to a verified pattern from Scaletopia's winning SMS templates database.

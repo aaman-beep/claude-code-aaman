@@ -7,6 +7,29 @@ description: Search a client's sales/strategy call corpus in Supabase for transc
 
 The `client_calls` + `call_chunks` tables in Supabase contain every prospect/strategy call we've imported, sliced into ~10–15 topic-coherent chunks each, with three embedding columns (verbatim text, one-line gist, label) so the right retrieval mode can be picked per question.
 
+## Evergreen — the shared knowledge API (check it first)
+
+Scaletopia's knowledge lives in **Evergreen**, the one API every skill in this playbook shares.
+It is the research/data **provider** — it serves evidence and numbers; it does **not** write copy
+(that's this skill's job, and your proven copy stays yours). Your local `call_chunks` search still works. Evergreen holds the same calls PLUS every categorized reply thread across ALL clients — use it to widen a search beyond one client's local corpus.
+
+- **Base URL:** `https://knowledgebase-production-f52e.up.railway.app`
+- **Auth (required):** send header `Authorization: Bearer $EVERGREEN_API_KEY` on every call — the key
+  lives in this playbook's `.env` (gitignored). No header -> **401**.
+- **Discover the API yourself:** `GET /api/docs` is the live index of every endpoint with its params
+  and descriptions; `GET /api/openapi` is the full machine schema. Unsure which endpoint/field exists?
+  Read `/api/docs` first — never guess a path or bulk-pull GHL/Airtable for what Evergreen already has.
+- **Focused entry points:** `evergreen-research` (pull/save findings) · `evergreen-stats` (numbers) ·
+  `evergreen-data` (full field-level catalogue).
+
+**What THIS skill pulls from Evergreen:**
+- `POST /api/search {"type":"deals","query":"..."}` — semantic search over real **reply
+  conversations** (e.g. "price objection handled then meeting booked").
+- `POST /api/search {"type":"contacts","query":"..."}` and
+  `GET /api/clients/{slug}/contacts?category=Not%20Interested` — categorized reply threads incl. negatives.
+- `POST /api/search {"type":"calls","query":"..."}` — ingested call chunks (exact buyer phrasing) across
+  clients, not just the local table.
+
 ## When to use this skill
 
 Use it the moment a GTM-style request mentions BOTH a client and an angle/pain/outcome/objection — anything that sounds like *"find me what real prospects said about ___ for ___"*. Examples:

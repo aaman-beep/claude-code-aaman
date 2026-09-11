@@ -11,6 +11,19 @@ returns JSON, and never mutates data — safe to call freely.
 **This is the system of record for booked / showed / next stage / proposal / won.**
 Do not answer those questions from Airtable or Evergreen — see [Not this system](#not-this-system).
 
+## Evergreen — the sibling knowledge API (know the boundary)
+
+This skill (the CRM insights API at `clients.scaletopia.online/api/insights`) is **not** Evergreen, and
+it stays your source for the funnel: meetings booked, shows, close rate, pipeline, revenue/MRR, target
+pacing. But it has a sibling every skill here shares — **Evergreen** — and the boundary matters so you
+don't answer the wrong question from the wrong system.
+
+- **Route OUTBOUND questions to Evergreen, not here:** sent, PRs / positive replies, positive-per-SMS,
+  which variant/CTA won, campaign copy performance, churn cohort -> the **`evergreen-stats`** skill
+  (`https://knowledgebase-production-f52e.up.railway.app`, `Authorization: Bearer $EVERGREEN_API_KEY`).
+- **This skill keeps:** post-reply funnel + money — booked, show rate, close rate, pipeline, MRR, pacing.
+- Unsure what Evergreen exposes? `GET /api/docs` (endpoint index + descriptions) / `GET /api/openapi`.
+
 ## Access
 
 Base URL: `https://clients.scaletopia.online/api/insights`

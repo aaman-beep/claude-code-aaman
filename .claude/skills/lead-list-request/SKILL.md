@@ -13,6 +13,26 @@ write to directly. Filling it by hand means twenty copy-pastes between a chat wi
 browser tab, and that is where the mistakes come from - half-pasted values, ASCII dividers
 dragged into fields, a required field missed until the form rejects it. Skip the form.
 
+## Evergreen — the shared knowledge API (check it first)
+
+Scaletopia's knowledge lives in **Evergreen**, the one API every skill in this playbook shares.
+It is the research/data **provider** — it serves evidence and numbers; it does **not** write copy
+(that's this skill's job, and your proven copy stays yours). Before requesting a list, check Evergreen for who's already been touched so the data team doesn't rebuild a list of people we've already burned.
+
+- **Base URL:** `https://knowledgebase-production-f52e.up.railway.app`
+- **Auth (required):** send header `Authorization: Bearer $EVERGREEN_API_KEY` on every call — the key
+  lives in this playbook's `.env` (gitignored). No header -> **401**.
+- **Discover the API yourself:** `GET /api/docs` is the live index of every endpoint with its params
+  and descriptions; `GET /api/openapi` is the full machine schema. Unsure which endpoint/field exists?
+  Read `/api/docs` first — never guess a path or bulk-pull GHL/Airtable for what Evergreen already has.
+- **Focused entry points:** `evergreen-research` (pull/save findings) · `evergreen-stats` (numbers) ·
+  `evergreen-data` (full field-level catalogue).
+
+**What THIS skill pulls from Evergreen:**
+- `POST /api/prospects/lookup {"client":"{slug}","companies":[...]}` — touch history: matched vs
+  fresh, `furthest_stage`, who we already reached, and `suggested_next` (who to go to instead).
+- `GET /api/niches` — canonical niche / sub-niche ids for clean targeting.
+
 ## The shape of the job
 
 The input is a brief: usually a transcribed voice note, sometimes pasted notes. It will be

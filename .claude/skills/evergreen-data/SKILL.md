@@ -15,6 +15,8 @@ covers: how to **fetch** from every endpoint, how to **read the quality signals*
 **save** findings back.
 
 **Base URL (live):** `https://knowledgebase-production-f52e.up.railway.app`
+**Full live endpoint index:** `GET /api/docs` (every endpoint, params, and which group it belongs to). Formal spec: `GET /api/openapi`.
+**Auth (required):** every call MUST send header `Authorization: Bearer $EVERGREEN_API_KEY` or it returns **401** — this is why older runs silently fell back to GHL/Airtable/local files: the API is now locked. The key lives in this playbook's `.env` as `EVERGREEN_API_KEY` (gitignored). Load it from the environment for every request; never paste it into copy, a committed file, or a shared doc.
 All paths below are relative to it. All bodies are JSON (`Content-Type: application/json`).
 Independent calls can be fired in parallel. Machine-readable spec: `GET /api/openapi`.
 
@@ -40,18 +42,17 @@ loop compounds.
 
 ---
 
-# COMMON QUESTIONS — ONE CALL (do not explore; call the exact endpoint)
+# COMMON QUESTIONS → ONE CALL (do not explore; call the exact endpoint)
 
 Most strategist questions are ONE Evergreen call. Answer in one; do NOT bulk-pull
 deals/contacts and analyze by hand, and do NOT fall back to GHL/Airtable MCP for these.
 
 | The question | Make exactly this call |
 |---|---|
-| meetings booked / showed / show rate / close rate / revenue / pipeline / target pacing | **`client-crm` skill — NOT Evergreen** |
 | "copy + stats of {client}'s campaigns" (SMS/email/BD/etc.) | `GET /api/clients/{slug}/report?channel=sms&q=BD` (server-side filter) |
 | "which variant / copy performed better for {client}" | `GET /api/clients/{slug}/copy-performance` |
 | "which VARIANT / CTA arm inside {campaign} won" | `GET /api/clients/{slug}/variant-performance?campaign={name}` (variant recovered from the sent copy) |
-| "which CTA / hook / lever performed better" | `POST /api/search {"type":"copies","client":"{slug}"}` — group results by `cta`/`lever`, compare `positive_rate`/`power_rate` |
+| "which CTA / hook / lever performed better" | `POST /api/search {"type":"copies","client":"{slug}"}` → group results by `cta`/`lever`, compare `positive_rate`/`power_rate` |
 | "why isn't {campaign} working" | `GET /api/clients/{slug}/reply-diagnosis` |
 | "have we touched these companies / what stage" | `POST /api/prospects/lookup {"companies":[...]}` |
 | "weekly report for {client}" | `GET /api/clients/{slug}/report` + `GET /api/clients/{slug}/benchmarks` |
@@ -71,7 +72,6 @@ to 12,000 records) burns API credits and can take Airtable/GHL down. Route by qu
 
 | You want… | Use | Endpoint |
 |---|---|---|
-| **Meetings booked / showed / next stage / proposal / won, show rate, revenue, target pacing** | **`client-crm` skill — NOT Evergreen** | `GET clients.scaletopia.online/api/insights/clients` (see the `client-crm` skill) |
 | Winning replies / booked meetings / deal outcomes, with variant + full thread | **deals** | `GET /api/clients/{slug}/deals`, `POST /api/search {"type":"deals"}` |
 | ALL replies by category (Not Interested, Objection Handling, Positive, Maybe, Power Request…), negative-reply threads, "why aren't people responding" | **contacts** | `GET /api/clients/{slug}/contacts`, `POST /api/search {"type":"contacts"}` |
 | Overall performance (sent, positives, booked, conversion, KPIs) | **stats** | `GET /api/clients/{slug}/stats`, campaigns in `GET /api/clients/{slug}` |
@@ -80,7 +80,7 @@ to 12,000 records) burns API credits and can take Airtable/GHL down. Route by qu
 | Pains / lingo / proof / copy / offers / Slack / guidelines / materials | Evergreen search | `POST /api/search` (see types below) |
 | **Prospect research** — "have we touched these companies, what stage, who did we reach" | **prospects/lookup** | `POST /api/prospects/lookup` (do NOT semantic-search deals for this) |
 
-**Rule:** funnel/meeting/revenue questions go to `client-crm` first. For everything else try Evergreen first. Only fall back to GHL/Airtable/Smartlead MCP for something
+**Rule:** try Evergreen first. Only fall back to GHL/Airtable/Smartlead MCP for something
 Evergreen genuinely does not have (e.g. a single live record by id), and never bulk-pull.
 `deals` = the subset that became opportunities. `contacts` = every categorized reply
 (bigger). For counts/breakdowns use the aggregates the endpoints return — don't fetch
@@ -114,10 +114,10 @@ thousands of rows to count them yourself.
        you learn something durable (`POST` with `kind:"gtm_memory"`).
      - **Audit / test log** (`kind:"audit"`) — a campaign problem + what to test next. Put
        the campaign name in `context`, the observation + hypothesis in `guideline_text`
-       (e.g. "spam-flagged + 0 positives — test a softer, non-salesy opener"). It stays OPEN
+       (e.g. "spam-flagged + 0 positives → test a softer, non-salesy opener"). It stays OPEN
        while active; once tested/resolved, retire it with `PATCH {id, active:false}`. This
-       pairs with reply-diagnosis (5c): diagnose why a campaign fails — log the fix to test
-       — resolve it when it's fixed. Copy tasks can ignore this lane by fetching
+       pairs with reply-diagnosis (5c): diagnose why a campaign fails → log the fix to test
+       → resolve it when it's fixed. Copy tasks can ignore this lane by fetching
        `?kind=preference,process,rule,learning`.
 2. **Slack is in the memory**: `POST /api/search {"type":"slack"}` searches 2,500+
    messages from every client's Slack channel (client feedback, campaign updates,
@@ -415,7 +415,7 @@ Use the ids as `nicheId`/`subNicheId` in search for exact (non-fuzzy) scoping.
 ## 8. `GET /api/graph` — the whole knowledge graph
 No params. `{ "nodes": [{id, type, label, value?, parent?, niche?, meta?}], "edges": [{source, target, kind}], "summary": {clients, niches, sharedNiches} }`
 Node types: niche, kb (niche brain), kbpain, kblingo, client, hub, painkind, pain, angle, campaign, case, copy, call.
-Edge kinds: `in-niche`, `has`, `mined-from` (pain → its source call), `for-campaign` (copy → campaign), `co-client` (clients sharing a niche), `related <sim>` (niche → niche by embedding).
+Edge kinds: `in-niche`, `has`, `mined-from` (pain → its source call), `for-campaign` (copy → campaign), `co-client` (clients sharing a niche), `related <sim>` (niche ↔ niche by embedding).
 Use for: tracing provenance and seeing how everything connects. Heavy; prefer targeted endpoints for data pulls.
 
 ## 9. `GET /api/openapi` — machine-readable OpenAPI 3.1 spec of the API.
@@ -466,11 +466,11 @@ The copy inherits the campaign's niche/persona where empty.
 Sets `niche_source='human'` (human always wins over AI tagging) and inherits to the client's pains + case studies. Returns `{ok, niche, source}`.
 
 ## 13–17. Ingestion agents (feed new data in; each returns `{ok, output}`; may take ~1 min)
-- `POST /api/agents/onboarding` — `{client, slug, form (the pasted onboarding text), airtableId?, niche?, subNiche?}` — creates the client + extracts pains. **Run this first for a new client.**
-- `POST /api/agents/transcript` — `{client, sourceCallId (unique id, e.g. "kynship_call22"), text (the transcript), title?, provider?, mine?: true}` — saves + chunks the call, mines pains. Re-running the same `sourceCallId` is skipped (no duplicates).
-- `POST /api/agents/case-study` — `{client, text (pasted case studies), sourceLabel? (stable dedup prefix, e.g. "Kynship Master Sheet · Tab 4")}` — splits, tiers S–D, saves.
-- `POST /api/agents/campaign-sync` — `{client, airtableId?, dryRun?: true}` — pulls the client's campaigns from Airtable into the DB.
-- `POST /api/agents/niche-synth` — `{niche}` — rebuilds the niche brain (summary, top pains, lingo, levers) from all clients in that niche.
+- `POST /api/agents/onboarding` — `{client, slug, form (the pasted onboarding text), airtableId?, niche?, subNiche?}` → creates the client + extracts pains. **Run this first for a new client.**
+- `POST /api/agents/transcript` — `{client, sourceCallId (unique id, e.g. "kynship_call22"), text (the transcript), title?, provider?, mine?: true}` → saves + chunks the call, mines pains. Re-running the same `sourceCallId` is skipped (no duplicates).
+- `POST /api/agents/case-study` — `{client, text (pasted case studies), sourceLabel? (stable dedup prefix, e.g. "Kynship Master Sheet · Tab 4")}` → splits, tiers S–D, saves.
+- `POST /api/agents/campaign-sync` — `{client, airtableId?, dryRun?: true}` → pulls the client's campaigns from Airtable into the DB.
+- `POST /api/agents/niche-synth` — `{niche}` → rebuilds the niche brain (summary, top pains, lingo, levers) from all clients in that niche.
 
 ---
 
@@ -495,21 +495,13 @@ What you do with these signals is your playbook's business.
 # Practical patterns
 
 - **Brief on a client**: #2 + #3 + #4c (replies) in parallel → then targeted #5 searches per angle.
-- **Weekly client report**: ONE call — `GET /api/clients/{slug}/report` (#4d). It already
-  returns KPIs vs the client's own targets, this-week/this-month actuals, an 8-week trend, AND
-  the reconstructed live copy per campaign with its power_rate. Do NOT stitch this together
-  from `/stats` + `/deals` + GHL/Airtable — that's the slow fan-out; `/report` is the one-shot.
-  Only reach past it if a specific field it doesn't carry is needed.
-- **Prospect touch-history** ("what stage are these companies at / who did we reach"): use
-  `POST /api/prospects/lookup` (#5b) with the whole company list at once — deterministic and
-  instant. Do NOT semantic-search `deals`/`contacts` for this; that's the slow, unreliable path.
 - **New client in a known niche**: #6 clusters (lead with `client_count > 1`) + #7 for exact ids + the niche brain from #2.
 - **Evidence for one angle**: #5 with `route:true`, `limit` 3–6 per type; go deeper only if thin.
 - **Pre-empt objections**: #4c replies (`no_examples` + `lost_reasons`) → your copy should
   answer this week's actual "no"s before they're raised.
 - **Study what converts WHO**: #4b deals filtered by stage/variant → which variant books
   which job titles; then #5 `{type:"deals"}` to read the winning threads themselves.
-- **Pick the campaign to write for**: client detail campaigns sorted by `power_rate` →
+- **Pick the campaign to write for**: client detail campaigns sorted by `power_rate` —
   write for what's already resonating, or fix what isn't.
 - **After writing**: #10 save as draft **with `variant`** → #11 link to campaign (ids from #4).
 
