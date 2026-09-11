@@ -74,7 +74,9 @@ The main workflow, in order:
 | 3 | `mechanism-wordsmith` | Reframes a literal mechanism into SMS-ready lines |
 | 4 | `sms-draft` | Assembles ship-ready T1/T2 SMS variants and QAs them |
 | — | `sms-performance` | Mines GHL for what a client's copy actually did |
-| — | `evergreen-data` | Pulls pains/proof/winners/etc. from the Evergreen API |
+| — | `evergreen-stats` | Numbers from the Evergreen API: sent, PRs, booked, which variant won |
+| — | `evergreen-research` | Pulls pains/proof/winners/objections; saves findings back |
+| — | `evergreen-data` | Reference only — the full Evergreen endpoint catalogue |
 | — | `call-corpus-search` | Searches sales-call transcripts for a pain/theme |
 
 Just describe what you want in plain English ("draft the brief for Big Leap",

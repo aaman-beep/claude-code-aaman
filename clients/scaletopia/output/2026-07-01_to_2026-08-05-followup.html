@@ -1,0 +1,194 @@
+<title>Scaletopia — follow-up list, 2026-07-01 → 2026-08-05</title>
+<style>
+:root{
+  --paper:#F7F7F5; --surface:#FFFFFF; --sunk:#EFEFEB;
+  --ink:#17181A; --ink-2:#4C4E52; --ink-3:#7C7F85;
+  --rule:#E0E0DA; --rule-2:#C7C7BF;
+  --accent:#1F5C3D; --accent-soft:#E3EFE8;
+  --hot:#B33A17; --hot-soft:#FBE8E1; --gold:#96700B;
+  --sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root{
+  --paper:#0F1110; --surface:#181A19; --sunk:#1F2220;
+  --ink:#EAEBE8; --ink-2:#A6A9A4; --ink-3:#787C78;
+  --rule:#2A2E2B; --rule-2:#3C413D;
+  --accent:#6FC095; --accent-soft:#16281F;
+  --hot:#F0906C; --hot-soft:#35201A; --gold:#D6AA4B;
+}}
+:root[data-theme="dark"]{
+  --paper:#0F1110; --surface:#181A19; --sunk:#1F2220;
+  --ink:#EAEBE8; --ink-2:#A6A9A4; --ink-3:#787C78;
+  --rule:#2A2E2B; --rule-2:#3C413D;
+  --accent:#6FC095; --accent-soft:#16281F;
+  --hot:#F0906C; --hot-soft:#35201A; --gold:#D6AA4B;
+}
+:root[data-theme="light"]{
+  --paper:#F7F7F5; --surface:#FFFFFF; --sunk:#EFEFEB;
+  --ink:#17181A; --ink-2:#4C4E52; --ink-3:#7C7F85;
+  --rule:#E0E0DA; --rule-2:#C7C7BF;
+  --accent:#1F5C3D; --accent-soft:#E3EFE8;
+  --hot:#B33A17; --hot-soft:#FBE8E1; --gold:#96700B;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
+     font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:940px;margin:0 auto;padding:0 20px}
+
+header{padding:32px 0 18px;border-bottom:2px solid var(--ink)}
+h1{margin:0;font-size:26px;font-weight:660;letter-spacing:-.022em}
+.sub{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;
+     color:var(--ink-3);margin-top:5px}
+.lede{margin:12px 0 0;color:var(--ink-2);max-width:62ch;font-size:14.5px}
+.bar{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px;align-items:center}
+.pill{font-family:var(--mono);font-size:11.5px;padding:5px 10px;border-radius:999px;
+      background:var(--sunk);color:var(--ink-2);font-variant-numeric:tabular-nums}
+.pill.-n{background:var(--accent);color:var(--surface);font-weight:600}
+.tick{margin-left:auto;font-size:12.5px;color:var(--ink-3);font-family:var(--mono)}
+
+.grp{margin-top:34px}
+.grp h2{margin:0 0 2px;font-size:17px;font-weight:650;letter-spacing:-.015em;
+        display:flex;align-items:baseline;gap:9px}
+.grp h2 .c{font-family:var(--mono);font-size:11.5px;background:var(--accent);color:var(--surface);
+           padding:2px 8px;border-radius:999px;font-variant-numeric:tabular-nums}
+.grp > p{margin:0 0 12px;font-size:13.5px;color:var(--ink-3);max-width:68ch}
+
+.lead{background:var(--surface);border:1px solid var(--rule);border-radius:10px;
+      padding:14px 16px;margin-bottom:9px;display:grid;
+      grid-template-columns:1fr auto;gap:4px 16px;align-items:start}
+.lead.done{opacity:.42}
+.lead.done .nm{text-decoration:line-through}
+.hd{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 9px;min-width:0}
+.nm{font-weight:650;font-size:16px;letter-spacing:-.01em}
+.ti{font-size:13px;color:var(--ink-3)}
+.co{font-size:13.5px;color:var(--ink-2);font-weight:500}
+.co a{color:var(--accent)}
+.age{font-family:var(--mono);font-size:11px;padding:3px 8px;border-radius:999px;
+     background:var(--sunk);color:var(--ink-3);white-space:nowrap;font-weight:600}
+.age.-hot{background:var(--hot-soft);color:var(--hot)}
+.quote{grid-column:1/-1;margin:8px 0 0;padding:9px 13px;background:var(--sunk);
+       border-left:3px solid var(--accent);border-radius:0 7px 7px 0;font-size:14px}
+.quote b{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;
+         text-transform:uppercase;color:var(--ink-3);margin-bottom:3px}
+.quote.-ours{border-left-color:var(--rule-2);background:transparent;
+             border:1px dashed var(--rule-2);border-radius:7px;color:var(--ink-2);font-size:13px}
+.routes{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:7px;margin-top:9px;align-items:center}
+.route{font-family:var(--mono);font-size:12px;padding:5px 10px;border-radius:6px;
+       border:1px solid var(--rule-2);color:var(--ink-2);text-decoration:none;
+       display:inline-flex;gap:6px;align-items:center}
+.route:hover{border-color:var(--accent);color:var(--accent)}
+.route b{font-family:var(--sans);font-size:10px;text-transform:uppercase;letter-spacing:.06em;
+         color:var(--ink-3);font-weight:600}
+.mark{margin-left:auto;font:inherit;font-size:12px;background:none;cursor:pointer;
+      border:1px solid var(--rule-2);border-radius:6px;padding:5px 11px;color:var(--ink-2)}
+.mark:hover{border-color:var(--accent);color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+details.thin{margin:44px 0 0;border:1px dashed var(--rule-2);border-radius:10px;padding:2px 18px 10px}
+details.thin > summary{cursor:pointer;font-weight:640;font-size:15px;padding:14px 0;list-style:none}
+details.thin > summary::-webkit-details-marker{display:none}
+details.thin > summary::before{content:"▸ ";color:var(--ink-3)}
+details.thin[open] > summary::before{content:"▾ "}
+details.thin > p{font-size:13.5px;color:var(--ink-3);max-width:68ch;margin:0 0 12px}
+footer{margin:50px 0 40px;padding-top:16px;border-top:1px solid var(--rule);
+       font-size:12.5px;color:var(--ink-3);max-width:70ch}
+footer p{margin:0 0 8px}
+@media (max-width:680px){
+  .lead{grid-template-columns:1fr}
+  .age{justify-self:start}
+  .mark{margin-left:0}
+}
+@media print{
+  body{background:#fff} .mark,.tick{display:none} .lead{break-inside:avoid;border-color:#bbb}
+  details.thin{break-before:page} details.thin[open] > summary::before{content:""}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<header><div class="wrap">
+  <h1>Follow-up list</h1>
+  <div class="sub">Scaletopia · cold SMS · 2026-07-01 → 2026-08-05</div>
+  <p class="lede">Qualified positive replies that never booked. Ordered by what they asked
+    for, then by how long they've been sitting.</p>
+  <div class="bar" id="bar"></div>
+</div></header>
+
+<main class="wrap" id="main"></main>
+<footer class="wrap" id="foot"></footer>
+
+<script>
+const D = {"main": [{"contact": "Christopher cjoe anaya", "job_title": "Director of Brand Partnerships & Business Development", "company": "MomentIQ", "website": "https://bemomentiq.com", "linkedin": "https://www.linkedin.com/in/cjosephanaya/", "email": "", "phone": "+18018235332", "location": "United States", "category": "Power Request", "days_silent": 28, "we_replied": true, "created_at": "2026-07-09T19:34:19.000Z", "campaign_name": "Scaletopia - Retargeting campaign | 11-500E | NA", "warm_tier": "stalled", "source": "both", "said": "Yes please", "ours": "Sure thing, whats your best email these days? I can see you've moved on from Momentiq so not sure if thats your best email", "n_messages": 8}, {"contact": "J Singh", "job_title": "Owner President CEO", "company": "Wagento Creative LLC", "website": "https://wagento.com", "linkedin": "https://www.linkedin.com/in/singhjp", "email": "", "phone": "+19173767620", "location": "United States", "category": "Power Request", "days_silent": 24, "we_replied": true, "created_at": "2026-07-13T17:35:58.000Z", "campaign_name": "Scaletopia - Marketing Agencies (Ecom focused) | 11-500E | NA | Retargeting", "warm_tier": "stalled", "source": "both", "said": "Sure", "ours": "Perfect. How does a quick 15 min this week look to walk through how we'd run this for you on a pay on results model?", "n_messages": 4}, {"contact": "Steven Cicalese", "job_title": "Chief Revenue Officer (CRO) & Co-Founder", "company": "AMZ Advisers", "website": "https://amzadvisers.com", "linkedin": "https://www.linkedin.com/in/steven-cicalese/", "email": "steve@amzadvisers.com", "phone": "+12036100235", "location": "United States", "category": "Power Request", "days_silent": 21, "we_replied": true, "created_at": "2026-07-15T19:50:31.000Z", "campaign_name": "Scaletopia - Marketing Agencies (Ecom focused) | 11-500E | NA | Retargeting", "warm_tier": "stalled", "source": "both", "said": "Next week better", "ours": "Sounds good, what day is better, i'll send a placeholder invite. Btw I'd be keen to show you what we got, we've worked with half of the amazon agencies out there haha - Pirawna, Hyperzon, BAD marketing etc.", "n_messages": 8}, {"contact": "Fahad Khan", "job_title": "Chief Executive Officer", "company": "Ignite & Infinite", "website": "https://igniteandinfinite.com", "linkedin": "https://www.linkedin.com/in/fahad-khan-2a588670", "email": "fahad@safehandshhc.com", "phone": "+12484254098", "location": "United States", "category": "Power Request", "days_silent": 20, "we_replied": true, "created_at": "2026-07-17T17:00:47.000Z", "campaign_name": "Scaletopia - Marketing Agencies (Ecom focused) | 11-500E | NA | Retargeting", "warm_tier": "stalled", "source": "both", "said": "Sure why not", "ours": "Perfect. How does a quick 15-min on Monday 2:30pm or Tuesday 10am est look to discuss the pay on results model ?", "n_messages": 7}, {"contact": "Chad De lisle", "job_title": "VP of Marketing", "company": "Disruptive Advertising", "website": "https://disruptiveadvertising.com", "linkedin": "", "email": "chad.delisle@disruptiveadvertising.com", "phone": "+18014943063", "location": "United States", "category": "Power Request", "days_silent": 16, "we_replied": true, "created_at": "2026-07-08T14:03:19.000Z", "campaign_name": "Scaletopia - Retargeting campaign | 11-500E | NA", "warm_tier": "stalled", "source": "both", "said": "Yes please - Chad@disruptiveadvertising.com", "ours": "Sorry just saw your OOO message with the reunion, apologies for texting!", "n_messages": 9}, {"contact": "Lawrence Trujillo mba", "job_title": "Company Owner and CEO", "company": "ThinkBIG Marketing", "website": "https://thinkbigsites.com", "linkedin": "https://www.linkedin.com/in/lawrence-trujillo-ba1aa426/", "email": "lawrence@thinkbigsites.com", "phone": "+19077231328", "location": "United States", "category": "Power Request", "days_silent": 3, "we_replied": true, "created_at": "2026-07-30T16:50:47.000Z", "campaign_name": "Scaletopia - ICP Hook Enriched | 25-500E | NA", "warm_tier": "stalled", "source": "both", "said": "Sure, I'd be open to the discussion.", "ours": "Apologies tomorrow might be a bit difficult, Monday/Tuesday morning would be better. Curious to hear if you've heard of Chamber btw? I've heard everyone knows each other in the Utah agency space \ud83d\ude02", "n_messages": 13}, {"contact": "Michael Begg", "job_title": "Co-Founder, CEO", "company": "AMZ Advisers", "website": "https://amzadvisers.com", "linkedin": "https://www.linkedin.com/in/mbegg/", "email": "mike@amzadvisers.com", "phone": "+12032187389", "location": "United States", "category": "Power Request", "days_silent": 3, "we_replied": true, "created_at": "2026-08-03T18:48:46.000Z", "campaign_name": "Scaletopia - ICP Hook Enriched | 25-500E | NA", "warm_tier": "stalled", "source": "deal", "said": "My email is Mike not Michael", "ours": "Great, just sent the email over to mike@amzadvisers.com, lmk if you've got it - speak soon.", "n_messages": 14}, {"contact": "Jeff Cocca", "job_title": "VP of Growth Marketing / Partner", "company": "Libre Design & Digital", "website": "https://libredesign.com", "linkedin": "https://www.linkedin.com/in/jefferycocca/", "email": "jeffery.cocca@libredesign.com", "phone": "+19519702663", "location": "United States", "category": "Power Request", "days_silent": 2, "we_replied": true, "created_at": "2026-08-04T17:34:35.000Z", "campaign_name": "Scaletopia - ICP Hook Enriched | 25-500E | NA", "warm_tier": "stalled", "source": "both", "said": "I'm not back until next. Do you have case studies you could share prior?", "ours": "Sure, you can check them at <https://scaletopia.io/case-studies/>", "n_messages": 15}, {"contact": "Ahmad Islam", "job_title": "Chief Executive Officer", "company": "Ten35", "website": "https://ten35.com", "linkedin": "https://www.linkedin.com/in/ahmad-i-b99112/", "email": "", "phone": "+18326577800", "location": "United States", "category": "Power Request", "days_silent": 1, "we_replied": true, "created_at": "2026-08-05T16:19:40.000Z", "campaign_name": "Scaletopia - ICP Hook Enriched | 25-500E | NA", "warm_tier": "stalled", "source": "both", "said": "Sure", "ours": "Perfect. If you've got a few minutes tomorrow 12 pm or maybe Friday 11 am cst, I'd be happy to hop on a 15 minute call and discuss what we'd do for Ten35 specifically.", "n_messages": 4}, {"contact": "Robert Murray", "job_title": "CEO & Co-founder", "company": "Intrigue media", "website": "https://intriguemedia.com", "linkedin": "https://www.linkedin.com/in/robert-murray-33889117/", "email": "robert@intrigueme.ca", "phone": "+12269791206", "location": "United States", "category": "Power Request", "days_silent": 1, "we_replied": true, "created_at": "2026-08-05T17:29:28.000Z", "campaign_name": "Scaletopia - ICP Hook Enriched | 25-500E | NA", "warm_tier": "stalled", "source": "both", "said": "I'm out for a few weeks, please email me at robert@intrigueme.ca and I'll have my ea help get something scheduled \ud83d\udc4d", "ours": "Awesome. If you've got a few minutes tomorrow 1 pm or maybe Friday 12 pm est, I'd be happy to hop on a 15 minute call and discuss.", "n_messages": 5}, {"contact": "Anto Dotcom", "job_title": "Co-Founder", "company": "iNexxus", "website": "https://inexxus.com", "linkedin": "https://www.linkedin.com/in/antodotcom/", "email": "antodotcom@inexxus.com", "phone": "+15146610435", "location": "United States", "category": "More Info Request", "days_silent": 30, "we_replied": true, "created_at": "2026-07-07T17:42:52.000Z", "campaign_name": "Scaletopia - Retargeting campaign | 11-500E | NA", "warm_tier": "stalled", "source": "both", "said": "Let me know details.", "ours": "Cool. How does a 15 min call look this week to discuss how this would work for iNexxus ?", "n_messages": 8}, {"contact": "Karim Badrawy", "job_title": "AVP of Retail Search", "company": "Craft & Commerce", "website": "https://craftand.com", "linkedin": "http://www.linkedin.com/in/karimelbadrawy", "email": "", "phone": "+17186442119", "location": "United States", "category": "More Info Request", "days_silent": 30, "we_replied": true, "created_at": "2026-07-07T18:20:47.000Z", "campaign_name": "Scaletopia - Marketing Agencies (Ecom focused) | 11-500E | NA | Retargeting", "warm_tier": "stalled", "source": "both", "said": "How does this work?", "ours": "We identify your ideal ecom clients, build the outreach lists, write the sequences, and run the whole campaign for you on a pay on results model, so you only pay when we deliver. How does a quick 15 min this week look to run through it for Craft & Commerce?", "n_messages": 6}, {"contact": "James Bishara", "job_title": "Director, Digital Marketing & Strategy", "company": "Mindshape", "website": "https://mindshape.com", "linkedin": "https://www.linkedin.com/in/jamesnbishara/", "email": "jbishara@mindshape.com", "phone": "+12897952785", "location": "United States", "category": "More Info Request", "days_silent": 27, "we_replied": false, "created_at": "2026-07-10T16:41:24.000Z", "campaign_name": "Scaletopia - Retargeting campaign | 11-500E | NA", "warm_tier": "no_reply_sent", "source": "both", "said": "Send email to jbishara@mindshape.com. what's the unique approach? What's the cost range? How does text perform compared to email and how does it impact brand perception?", "ours": "", "n_messages": 7}, {"contact": "Jeff Finkelstein", "job_title": "Owner", "company": "Customer Paradigm", "website": "https://customerparadigm.com", "linkedin": "https://www.linkedin.com/in/finkelsteinjeff/", "email": "jeff@customerparadigm.com", "phone": "+13038178787", "location": "United States", "category": "More Info Request", "days_silent": 22, "we_replied": true, "created_at": "2026-07-15T16:55:01.000Z", "campaign_name": "Scaletopia - Marketing Agencies (Ecom focused) | 11-500E | NA | Retargeting", "warm_tier": "stalled", "source": "both", "said": "Regardless, neither of those times work. Do you have anything today?", "ours": "Sure, we build your ideal client list, run AI-timed text and email outreach that feels human, handle all the replies, and pass warm leads directly to your team. You just take the calls. We only charge on results delivered so there's zero risk. Happy to share what we have in mind on a quick 15 min call tomorrow 1pm or Friday 11:30am mdt, what works best for you?", "n_messages": 11}, {"contact": "Salman Bhatti", "job_title": "Founder & CEO | Superior Tech Solutions | Digital Marketing Agency", "company": "Superior Tech Solutions", "website": "https://superiortechsolutions.com", "linkedin": "https://www.linkedin.com/in/salman-t-bhatti-88a6047b/", "email": "salman@superiortechsolutions.com", "phone": "+14152797258", "location": "United States", "category": "More Info Request", "days_silent": 21, "we_replied": true, "created_at": "2026-07-16T18:11:48.000Z", "campaign_name": "Scaletopia - Marketing Agencies (Ecom focused) | 11-500E | NA | Retargeting", "warm_tier": "stalled", "source": "both", "said": "Whats your offer?", "ours": "Basically, we run AI-timed text and email outreach for agencies targeting ecom brands, build the prospect lists, write the sequences, manage replies and pass warm leads straight to your team. Pay on results only, no results no fee. Happy to share what we'd do for Superior Tech on a quick call this Friday 12pm pst or next week, what works?", "n_messages": 11}, {"contact": "Jackie Bese", "job_title": "Owner", "company": "Atomic Design and Consulting", "website": "https://atomicdc.com", "linkedin": "https://www.linkedin.com/in/jackiebese/", "email": "jackie@atomicdc.com", "phone": "+12149298940", "location": "United States", "category": "More Info Request", "days_silent": 14, "we_replied": false, "created_at": "2026-07-09T17:05:10.000Z", "campaign_name": "Scaletopia - Retargeting campaign | 11-500E | NA", "warm_tier": "no_reply_sent", "source": "both", "said": "\u200b\ud83d\udc4d\u200b to \u201c I think it'd also work for Atomic design and consulting, e.g i'd reach out to med spa marketing companies spending $5k+/month on google ads but with no conversion tracking set up. could I drop you an email w more info? \u201d", "ours": "", "n_messages": 11}, {"contact": "Luke Mcginnis", "job_title": "VP of Growth and Ops (Buy Box Experts - Spreetail)", "company": "Buy Box Experts", "website": "https://buyboxexperts.com", "linkedin": "http://www.linkedin.com/in/luke-mcginnis1", "email": "", "phone": "+12063755990", "location": "United States", "category": "More Info Request", "days_silent": 2, "we_replied": true, "created_at": "2026-08-04T17:38:08.000Z", "campaign_name": "Scaletopia - ICP Hook Enriched | 25-500E | NA", "warm_tier": "stalled", "source": "both", "said": "1.) yes. How much does it cost per month? I have a roughly $3k monthly budget opening up", "ours": "either way happy to connect, done this for like 5+ amazon agencies.. Pirawna, BAD marketing, Evolved commerce etc.", "n_messages": 10}, {"contact": "Anthony Hanes", "job_title": "Business Development Manager, Partnerships", "company": "Ai Media Group", "website": "https://aimediagroup.com", "linkedin": "https://www.linkedin.com/in/anthony-hanes/", "email": "ahanes@aimediagroup.com", "phone": "+19738307748", "location": "United States", "category": "Email Me Request", "days_silent": 23, "we_replied": true, "created_at": "2026-07-14T17:42:18.000Z", "campaign_name": "Scaletopia - Marketing Agencies (Ecom focused) | 11-500E | NA | Retargeting", "warm_tier": "stalled", "source": "both", "said": "Please send an email to ahanes@aimediagroup.com and CC partners@aimediagroup.com for any inquiries of this nature, thank you", "ours": "Great, just sent the email over to ahanes@aimediagroup.com, lmk if you've got it - speak soon.", "n_messages": 6}, {"contact": "Jessy Fofana", "job_title": "Founder", "company": "LaRue", "website": "https://laruepr.com", "linkedin": "http://www.linkedin.com/in/jessykleinfofana123", "email": "lex@laruepr.com", "phone": "+19176087832", "location": "United States", "category": "Email Me Request", "days_silent": 22, "we_replied": true, "created_at": "2026-07-15T17:40:52.000Z", "campaign_name": "Scaletopia - Marketing Agencies (Ecom focused) | 11-500E | NA | Retargeting", "warm_tier": "stalled", "source": "both", "said": "Please email lex@laruepr.com and cc me at jessy@laruepr.com", "ours": "Great, just sent the email over to lex@laruepr.com, lmk if you've got it - speak soon.", "n_messages": 6}, {"contact": "Brandon Rinehart", "job_title": "Co-Founder & Executive Vice President", "company": "Aletheia Digital", "website": "https://aletheiadigital.com", "linkedin": "https://www.linkedin.com/in/brandon-rinehart-1428045a/", "email": "brandon@aletheiadigital.com", "phone": "+17068888680", "location": "United States", "category": "Email Me Request", "days_silent": 6, "we_replied": true, "created_at": "2026-07-31T19:38:55.000Z", "campaign_name": "Scaletopia - ICP Hook Enriched | 25-500E | NA", "warm_tier": "stalled", "source": "both", "said": "Txt or email me", "ours": "Great, just sent the email over to brandon@aletheiadigital.com, lmk if you've got it - speak soon.", "n_messages": 8}, {"contact": "David Sahly", "job_title": "Vice President Growth", "company": "Pulsion", "website": "https://gopulsion.io", "linkedin": "", "email": "david.sahly@gopulsion.io", "phone": "+14168467942", "location": "United States", "category": "Email Me Request", "days_silent": 1, "we_replied": true, "created_at": "2026-07-08T14:19:30.000Z", "campaign_name": "Scaletopia - Retargeting campaign | 11-500E | NA", "warm_tier": "stalled", "source": "both", "said": "Sure.", "ours": "Hey David i reached out a few weeks ago in regards to text/e-mail outreach, helped chamber book calls with AG1, feastables, volcom etc. - would love to show you what we're doing for these agencies, regardless if there's a fit", "n_messages": 10}, {"contact": "Terry Downing", "job_title": "Senior Vice President", "company": "PRxDigital Silicon Valley", "website": "https://prxdigital.com", "linkedin": "http://www.linkedin.com/in/terry-downing-096278124", "email": "terry_downing@prxdigital.com", "phone": "+14088380962", "location": "", "category": "Future Request", "days_silent": 28, "we_replied": false, "created_at": "2026-07-09T16:27:58.000Z", "campaign_name": "Scaletopia - Marketing Agencies | 4-200E | NA | Agency Vista | 1 case study ICP enriched", "warm_tier": "later", "source": "both", "said": "", "ours": "", "n_messages": 5}], "thin": [{"contact": "John Summer", "job_title": "Business Owner", "company": "JTZ Enterprise, LLC", "website": "", "linkedin": "", "email": "", "phone": "+15408463821", "location": "", "category": "Power Request", "days_silent": 35, "we_replied": false, "created_at": "2026-07-02T21:20:13.000Z", "campaign_name": "Scaletopia - Retargeting campaign | 11-500E | NA", "warm_tier": "no_reply_sent", "source": "contact_only", "said": "Sure. Webmaster@jtzenterprise.com", "ours": "", "n_messages": 7}, {"contact": "Jeff Dare", "job_title": "Director Sales Division", "company": "", "website": "", "linkedin": "", "email": "", "phone": "+19253211592", "location": "", "category": "Power Request", "days_silent": 34, "we_replied": false, "created_at": "2026-07-03T19:48:52.000Z", "campaign_name": "Scaletopia - All Marketing Agencies | 11-500E | NA", "warm_tier": "no_reply_sent", "source": "contact_only", "said": "Sure", "ours": "", "n_messages": 3}, {"contact": "Mike Novak", "job_title": "Co-Founder", "company": "Louder Than Digital", "website": "", "linkedin": "", "email": "", "phone": "+13125456585", "location": "", "category": "Power Request", "days_silent": 28, "we_replied": false, "created_at": "2026-07-09T20:48:36.000Z", "campaign_name": "Scaletopia - Retargeting campaign | 11-500E | NA", "warm_tier": "no_reply_sent", "source": "contact_only", "said": "Sure, mnovak76@gmail.com", "ours": "", "n_messages": 7}, {"contact": "Ron Greenbaum", "job_title": "Chief Executive Officer", "company": "Greenbaum Stiers Strategic Marketing Group", "website": "", "linkedin": "", "email": "", "phone": "+16142064752", "location": "", "category": "Power Request", "days_silent": 24, "we_replied": false, "created_at": "2026-07-10T16:05:38.000Z", "campaign_name": "Scaletopia - Retargeting campaign | 11-500E | NA", "warm_tier": "no_reply_sent", "source": "contact_only", "said": "Ron.greenbaum1@gmail.com", "ours": "", "n_messages": 11}, {"contact": "Ernesto Antonio gaita", "job_title": "Founder", "company": "Neighbourhood Creative", "website": "", "linkedin": "", "email": "", "phone": "+16479694339", "location": "", "category": "More Info Request", "days_silent": 31, "we_replied": false, "created_at": "2026-07-06T16:57:32.000Z", "campaign_name": "Scaletopia - Marketing Agencies (Ecom focused) | 11-500E | NA | Retargeting", "warm_tier": "no_reply_sent", "source": "contact_only", "said": "Hey Mel, do you guys work on commission basis?", "ours": "", "n_messages": 6}, {"contact": "Perry Psaros", "job_title": "Sales Manager", "company": "Lauer Media Company", "website": "", "linkedin": "", "email": "", "phone": "+13023450322", "location": "", "category": "More Info Request", "days_silent": 30, "we_replied": true, "created_at": "2026-07-07T16:38:47.000Z", "campaign_name": "Scaletopia - Retargeting campaign | 11-500E | NA", "warm_tier": "stalled", "source": "contact_only", "said": "And company info", "ours": "Sure - on the whitelabel its strictly pay per show but totally get it.", "n_messages": 12}, {"contact": "Reid Johnson", "job_title": "Partner", "company": "Innovative Marketing", "website": "", "linkedin": "", "email": "", "phone": "+12149244758", "location": "", "category": "More Info Request", "days_silent": 28, "we_replied": false, "created_at": "2026-07-09T18:06:44.000Z", "campaign_name": "Scaletopia - Retargeting campaign | 11-500E | NA", "warm_tier": "no_reply_sent", "source": "contact_only", "said": "", "ours": "", "n_messages": 8}, {"contact": "Vera Kopp", "job_title": "Founder + CEO", "company": "inCast Group - Influencer Marketing", "website": "", "linkedin": "", "email": "", "phone": "+13104984030", "location": "", "category": "More Info Request", "days_silent": 21, "we_replied": true, "created_at": "2026-07-16T17:28:15.000Z", "campaign_name": "Scaletopia - Marketing Agencies (Ecom focused) | 11-500E | NA | Retargeting", "warm_tier": "stalled", "source": "contact_only", "said": "Sure. How does it work?", "ours": "Once we get an understand of your ICP, your offers etc., we'd run email & sms outbound to connect with those and book it onto your calendar. At least thats the simplest way I can put it haha, but yeah we run a 30 day pilot before even committing to anything, have you ever tried or running outbound?", "n_messages": 10}, {"contact": "Edwin Colon", "job_title": "CEO", "company": "Chicago Internet Marketing", "website": "", "linkedin": "", "email": "", "phone": "+13125458630", "location": "", "category": "Email Me Request", "days_silent": 36, "we_replied": false, "created_at": "2026-07-01T16:39:03.000Z", "campaign_name": "Scaletopia - Retargeting campaign | 11-500E | NA", "warm_tier": "no_reply_sent", "source": "contact_only", "said": "Send an email with more info to efcolon@gmail.com", "ours": "", "n_messages": 8}, {"contact": "Tina Andes", "job_title": "President", "company": "Rank media", "website": "", "linkedin": "", "email": "", "phone": "+15149293752", "location": "", "category": "Email Me Request", "days_silent": 0, "we_replied": true, "created_at": "2026-07-24T19:29:22.000Z", "campaign_name": "Scaletopia - Clutch Scrapped Companies | 11-500E | Clutch | V2", "warm_tier": "stalled", "source": "contact_only", "said": "Wrong email", "ours": "Hey Tina, a while back you pointed me to Tina@directroutedesign.com but my note on that $50k+/month fashion-brand approach bounced. Could you share the best email for me to resend it?", "n_messages": 10}, {"contact": "Dmytro Muzychko", "job_title": "Founder/ CEO", "company": "1 MDE", "website": "", "linkedin": "", "email": "", "phone": "+12678107964", "location": "", "category": "Objection Handling", "days_silent": 28, "we_replied": false, "created_at": "2026-07-09T15:33:04.000Z", "campaign_name": "Scaletopia - Retargeting campaign | 11-500E | NA", "warm_tier": "no_reply_sent", "source": "contact_only", "said": "Let's start with your prices.", "ours": "", "n_messages": 7}, {"contact": "Preston Taylor", "job_title": "Executive Vice President of Growth", "company": "MMG", "website": "", "linkedin": "", "email": "", "phone": "+17133766203", "location": "", "category": "Objection Handling", "days_silent": 23, "we_replied": false, "created_at": "2026-07-14T15:52:23.000Z", "campaign_name": "Scaletopia - Marketing Agencies (Ecom focused) | 11-500E | NA | Retargeting", "warm_tier": "no_reply_sent", "source": "contact_only", "said": "Cut to the chase. What does it cost. I'm not hopping on a call", "ours": "", "n_messages": 3}, {"contact": "Peter Bray", "job_title": "Founder / ECD", "company": "Bray & Co", "website": "", "linkedin": "", "email": "", "phone": "+17185945928", "location": "", "category": "Objection Handling", "days_silent": 22, "we_replied": true, "created_at": "2026-07-15T17:54:23.000Z", "campaign_name": "Scaletopia - Marketing Agencies (Ecom focused) | 11-500E | NA | Retargeting", "warm_tier": "stalled", "source": "contact_only", "said": "What is your outreach channel?", "ours": "We do multichannel outreach like sms , and highly targeted emails..", "n_messages": 6}, {"contact": "Brian Wallace", "job_title": "Senior Vice President / Chief Revenue Officer", "company": "The AD Leaf Marketing Firm, LLC.", "website": "", "linkedin": "", "email": "", "phone": "+13217040705", "location": "", "category": "Referral Request", "days_silent": 8, "we_replied": false, "created_at": "2026-07-29T16:34:29.000Z", "campaign_name": "Scaletopia - Clutch Scrapped Companies | 11-500E | Clutch | V2", "warm_tier": "no_reply_sent", "source": "contact_only", "said": "Email spencer.monteiro@theadleaf.com", "ours": "", "n_messages": 7}, {"contact": "Nicki Zevola benvenuti", "job_title": "CEO, Co-Founder", "company": "AEK Solutions", "website": "", "linkedin": "", "email": "", "phone": "+14129926595", "location": "", "category": "Future Request", "days_silent": 35, "we_replied": false, "created_at": "2026-07-02T22:20:05.000Z", "campaign_name": "Scaletopia - Retargeting campaign | 11-500E | NA", "warm_tier": "later", "source": "contact_only", "said": "Hi I just signed another company utilizing AI for this, check back in 3 months", "ours": "", "n_messages": 7}, {"contact": "Charley Fitzwilliam", "job_title": "Co-Founder", "company": "The brand amp", "website": "", "linkedin": "", "email": "", "phone": "+19495790405", "location": "", "category": "Future Request", "days_silent": 13, "we_replied": false, "created_at": "2026-07-24T20:30:23.000Z", "campaign_name": "Scaletopia - Clutch Scrapped Companies | 11-500E | Clutch | V2", "warm_tier": "later", "source": "contact_only", "said": "We're really good on the pipeline front right now. Thanks for the offer. We'll let you know if that changes.", "ours": "", "n_messages": 5}], "ask_order": ["Power Request", "Positive", "More Info Request", "Email Me Request", "Objection Handling", "Referral Request", "Custom Response", "Future Request"], "ask_copy": {"Power Request": ["Said yes", "Agreed to a call or handed over a contact. Pick the time for them."], "Positive": ["Warm, no ask", "Replied positively without asking for anything specific."], "More Info Request": ["Wants detail", "Asked how it works. Answer the question, then propose a slot."], "Email Me Request": ["Asked for email", "Wanted it in writing. Send it, then come back to the thread."], "Objection Handling": ["Pushed back", "Engaged but led with a blocker \u2014 usually price. Answer it straight."], "Referral Request": ["Pointed elsewhere", "Not them. Named someone else to contact."], "Custom Response": ["Other", "Didn't fit a standard bucket."], "Future Request": ["Later", "Warm but gave a timeline. Diarise rather than chase."]}, "client": "Scaletopia", "window": "2026-07-01 \u2192 2026-08-05", "built_at": "2026-08-07T12:18:12Z"};
+const esc = s => String(s??"").replace(/[&<>"']/g, c =>
+  ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const done = new Set();
+
+function routes(r){
+  const out = [];
+  if(r.phone)    out.push(`<a class="route" href="sms:${esc(r.phone)}"><b>text</b>${esc(r.phone)}</a>`);
+  if(r.email)    out.push(`<a class="route" href="mailto:${esc(r.email)}"><b>email</b>${esc(r.email)}</a>`);
+  if(r.linkedin) out.push(`<a class="route" href="${esc(r.linkedin)}" target="_blank" rel="noopener"><b>linkedin</b>profile</a>`);
+  if(r.website)  out.push(`<a class="route" href="${esc(r.website)}" target="_blank" rel="noopener"><b>site</b>${esc(r.website.replace(/^https?:\/\/(www\.)?/,"").replace(/\/$/,""))}</a>`);
+  return out.join("");
+}
+
+function lead(r, i, pfx){
+  const id = pfx + i;
+  const hot = (r.days_silent ?? 0) >= 21;
+  return `<div class="lead" id="${id}">
+    <div class="hd"><span class="nm">${esc(r.contact||"—")}</span>
+      <span class="co">${esc(r.company||"")}</span>
+      <span class="ti">${esc(r.job_title||"")}</span></div>
+    <span class="age ${hot?"-hot":""}">${r.days_silent==null?"—":r.days_silent+"d silent"}</span>
+    ${r.said ? `<div class="quote"><b>they said</b>${esc(r.said)}</div>` : ""}
+    ${r.ours ? `<div class="quote -ours"><b>we last sent</b>${esc(r.ours)}</div>` : ""}
+    <div class="routes">${routes(r)}
+      <button class="mark" data-id="${id}">Mark done</button></div>
+  </div>`;
+}
+
+function group(list, pfx){
+  let out = "";
+  D.ask_order.forEach(cat => {
+    const sub = list.filter(r => r.category === cat);
+    if(!sub.length) return;
+    const [title, why] = D.ask_copy[cat] || [cat, ""];
+    out += `<div class="grp"><h2>${esc(title)}<span class="c">${sub.length}</span></h2>
+      <p>${esc(why)}</p>${sub.map((r,i) => lead(r, i, pfx+cat.replace(/\W/g,""))).join("")}</div>`;
+  });
+  return out;
+}
+
+document.getElementById("bar").innerHTML =
+  `<span class="pill -n">${D.main.length} to contact</span>` +
+  D.ask_order.filter(c => D.main.some(r => r.category === c))
+    .map(c => `<span class="pill">${esc((D.ask_copy[c]||[c])[0])} ${D.main.filter(r=>r.category===c).length}</span>`).join("") +
+  `<span class="tick" id="tick"></span>`;
+
+document.getElementById("main").innerHTML = group(D.main, "m") + (D.thin.length ? `
+  <details class="thin"><summary>Replied, but never qualified into the CRM — ${D.thin.length}</summary>
+    <p>These people replied and were categorised, but no opportunity was ever created for them,
+      so nobody worked the thread. That's why they look thin — not because they were judged and
+      rejected. Worth a skim before you write them off.</p>
+    ${group(D.thin, "t")}</details>` : "");
+
+document.getElementById("foot").innerHTML = `
+  <p><b>Who's on this list.</b> Every reply between ${esc(D.window.replace("_to_"," and "))} that
+    counts as a positive under the CRM's own rule, never booked a meeting, and wasn't excluded
+    by hand as out-of-ICP.</p>
+  <p><b>Days silent</b> counts from the last message in the thread either way, so it's how long
+    the conversation has actually been dead — not how long since they first replied.</p>
+  <p>Built ${esc(D.built_at.slice(0,10))} from the SMS reply register.</p>`;
+
+function tick(){
+  const t = document.getElementById("tick");
+  t.textContent = done.size ? `${done.size} done · ${D.main.length - done.size} left` : "";
+}
+document.addEventListener("click", e => {
+  const b = e.target.closest(".mark"); if(!b) return;
+  const el = document.getElementById(b.dataset.id);
+  const on = el.classList.toggle("done");
+  on ? done.add(b.dataset.id) : done.delete(b.dataset.id);
+  b.textContent = on ? "Undo" : "Mark done";
+  tick();
+});
+</script>

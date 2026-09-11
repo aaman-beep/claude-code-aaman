@@ -1,0 +1,557 @@
+NextLeft meeting with John — transcript
+Participants: Aaman Ahmed (Scaletopia) · John McKusick (CEO & Founder, NextLeft)
+Context: Scaletopia outbound discovery call. NextLeft = SEO/content/GEO agency, San Diego + Raleigh.
+
+Speaker 2 | 00:00
+Hello, Amon, how are you?
+Aaman A | 00:04
+Hey John, how's it going?
+Speaker 2 | 00:06
+Good, how are you doing?
+Aaman A | 00:09
+Good. So I'm usually a Google Meet guy, just trying to get in and navigate it soon.
+Speaker 2 | 00:15
+All good.
+Aaman A | 00:16
+Say you're based in San Diego.
+Speaker 2 | 00:20
+I am, yeah, I'm in San Diego. How about you?
+Aaman A | 00:22
+Good, back and forth between London and Dubai currently...
+Speaker 2 | 00:25
+Hey...
+Aaman A | 00:25
+In Dubai. To be said, I'll be moving back to the UK, though for a full time in a few months. I think it feels a bit odd. Working like 9:00 pm for us while it's morning and stuff when most of the clients are in the US so I probably prefer the UK.
+Speaker 2 | 00:43
+Yeah, is it time zone pretty similar from the UK to Dubai?
+Aaman A | 00:48
+No, not really. It's a few hours. Let's just say, I think you're Pacific. Is it San Diego? Yeah, it's only like 6000 in the UK...
+Speaker 2 | 00:58
+Yeah...
+Aaman A | 00:58
+Then device like 10 hours, 11 hours. Yeah, well, there you go...
+Speaker 2 | 01:02
+Like the opposite. Yeah...
+Aaman A | 01:06
+Literally. Cool. So appreciate you dropped it on the call. I mean, I'm sure. I think on mail who reached out to be fair it... One of just our inbox managers who were just speaking with you, and yeah, I'd love to hear you guys have a call for you guys have done amazing work.
+I mean, to be fair, I don't see maybe a mistake. I don't really see having any abideb teams or anything like that. We'd just love to hear...
+Speaker 2 | 01:30
+Yeah, we have no...
+Aaman A | 01:30
+Some paper...
+Speaker 2 | 01:30
+Outbound. Yeah, know where that's really like the gap at this point is some kind of on either online outbound or in person outbound or both, and that's like I'm finally shifting gears, towards yeah, doing more of that as well. Yeah...
+Aaman A | 01:52
+Yeah, cool. So I'm happy to show what we're doing and all that and what's kind of working in space. And yeah, we can kind of take it from there. I'd like to kind of. I mean, I'd like to kind of ask. I see some of your clients, you have some crazy. You have a client crazy. Client Rosta, how would you sign? Most of them. Just your network.
+Speaker 2 | 02:13
+I've been in the space forever. So...
+Aaman A | 02:16
+Okay.
+Speaker 2 | 02:16
+Yeah, since the yeah, late 90 s. And so yeah, I used yeah, I ran like a very large agency prior to next left...
+Aaman A | 02:26
+Okay.
+Speaker 2 | 02:26
+And then next left has been we've been cranking for about almost ten years now...
+Aaman A | 02:31
+Right.
+Speaker 2 | 02:32
+And we're finally starting to see some like more hockey stick growth a little bit, but I'm still want to do much more.
+Aaman A | 02:39
+Sure...
+Speaker 2 | 02:39
+So, yeah, it's just... Over time, I've worked with some really cool clients. We do great work, we're very well respected, and have a great team and all that. So it's like I'm an ops person.
+And so it's like my agency that grew a lot previously, we grew to 300 people were huge. But my business partner was definitely more of the Rainmaker, and I was all Ops. And so with this, it's like I know myself that I'll keep gravitating towards Ops no matter what.
+I will not... I'm not the guy that's going to go dial or go meet everyone at the conference or any of that kind of thing.
+Aaman A | 03:21
+You're not as commercially focused, you'd say or...
+Speaker 2 | 03:24
+It's like, I don't know. The e like the example, I don't know. Have you been to, like, conferences like.
+Aaman A | 03:30
+No, but that's why I need to go to the States soon. I'm...
+Speaker 2 | 03:32
+Yeah...
+Aaman A | 03:32
+Planning on going to one in September. But... Yeah. I've been to the UK once.
+Speaker 2 | 03:37
+I like my analogy was that you are like that because you go to these conferences and there's usually one to three people at the conference. Most people meet maybe get five or ten good meetings.
+They'll meet five or ten people whether they're qualified or not. Who knows? Maybe that, if you're lucky, turns into one new client. Then there are other people at the conference, but it's very few of them. They'd like to meet every single person. There can be thousands of people there. They will meet everybody and have good interactions with everybody.
+They'll walk out of that place with ten to twenty, and they'll speak at the conference too, in front of it and do...
+Aaman A | 04:11
+Okay?
+Speaker 2 | 04:11
+It and maybe. And then everyone's gonna be talking about their speech because it's so good. Like that's the kind of that is not me at all. And so I...
+Aaman A | 04:21
+[Laughter] Yeah, okay...
+Speaker 2 | 04:22
+Yeah, I like I'm wanting to hire a person like that for conferences, but I think for like I think on the outbound side, there's that whole component as well. And so, like, it'd be good. Like, I'm like a systems guy, so I know I can build out those systems and processes I needed to, but I it'd be great if it's a, you know, if someone's already has a proven way. Then let's just do it.
+Aaman A | 04:47
+Sure, it makes sense. Even with Trade Show Advisor, when we have some agencies, like to make your lives easier, you just find the people who you think are going to be good things. Just reach out.
+Yeah, let's just meet in the booth at this time, as opposed to...
+Speaker 2 | 04:59
+Yeah...
+Aaman A | 04:59
+Like, trying to find people and stuff.
+Speaker 2 | 05:02
+Exactly. Yeah. Being proactive is huge on that. YP...
+Aaman A | 05:05
+Yeah, exactly. And I think...
+Speaker 2 | 05:07
+And the follow...
+Aaman A | 05:08
+I'm. I think I can kind of tell you're a bit more obscy just from, like, seeing the case studies and the results that you guys, like. You guys have, like, a astonishing result. And we work with you of like organic traffic.
+So agencies and a lot of people are scared to even attach any revenue figures or any ROI to it. Like a lot of people just giving us percentage metrics or like impression traffic. And that doesn't really matter, especially when it comes to outbound. Cool.
+So. But and then just a final point of who I'm assuming you'd be taking these calls if you have a person in mind to be taking these calls.
+Speaker 2 | 05:42
+Yeah, from a closer standpoint, we have several people, but really, at this point, it's myself and AJ on our team, and then we have another person, Earl, who's big on calls, and he's great at closing too.
+So we have... We can close. It's just that the number of calls that we're scheduled for right now is just not enough.
+Aaman A | 06:03
+Okay. I'm going to say, obviously, most agencies I'm speaking to or I've worked with typically have their pipeline come from inbound or they're running their own ads, and typically they're used to a sales motion of them being the one that goes jumping on a call like, "What do you want?" Whereas allbounds is a little bit different. We can tact with our lead.
+But just wanted to give you a heads-up.
+Speaker 2 | 06:27
+Yeah, that sounds good. Yeah, and for. Yeah, so, yeah, we let's. Yeah, we've...
+Aaman A | 06:32
+Sure.
+Speaker 2 | 06:32
+Done leads that are definitely not as warm as other leads. Is that what you're saying, like certain...?
+Aaman A | 06:37
+Yeah...
+Speaker 2 | 06:37
+Leads are maybe not as qualified or they're you're kind of selling a little more...
+Aaman A | 06:41
+Very much.
+Speaker 2 | 06:42
+But that's all good. Like we're we've done that, and it's definitely, yeah, you're it's a little bit more of a numbers game, but it's like, yeah, you approach those calls a little differently...
+Aaman A | 06:53
+Right.
+Speaker 2 | 06:54
+Because they're not, like, begging to work with you. They're like they're just like testing the waters. Like, they're like I'm, you know, I have a need. I'm not sure, but if you can convince me, I will work with you guys and so.
+And so, yeah, pary a bunch of experience with those calls. And they're great. I like them. They're actually like phone calls.
+Aaman A | 07:15
+Right...
+Speaker 2 | 07:15
+Get to explore a little bit.
+Aaman A | 07:17
+Cool. That makes sense. So how about I just show you typically? I'll have you heard of this company is in San Diego, Digital Partners. The farms would patch Giln or something like that.
+Speaker 2 | 07:30
+Yeah, I know. Patrick, yeah...
+Aaman A | 07:33
+Nice. Okay, yeah, so we've been working with them since March, I think...
+Speaker 2 | 07:37
+Okay, cool.
+Aaman A | 07:39
+Full three and have closed till dates on our side, I think. Is this the entire screen you're seeing? Yeah, nice. Okay, till date they've closed, I think, or the one that they put, including yesterday they closed 300,800 with us in the last four months like an annual ACV mainly going for accounting firms and HFC companies and maybe a law firm. So, yeah, as soon as I saw you guys, San Diego, I wanted to just ask if you...
+Speaker 2 | 08:12
+Yeah, that's...
+Aaman A | 08:12
+Kind of knew them.
+Speaker 2 | 08:12
+Awesome.
+Aaman A | 08:14
+Well, they're very well equipped for Alta, I think. Would it? Is it just, like, could I just sort of like, just, I'm not a salesy guy. I'd rather just show you what they're doing, what we need, what we needed from them...
+Speaker 2 | 08:25
+Yeah...
+Aaman A | 08:25
+To make it work, and then, like.
+Speaker 2 | 08:26
+That'd be awesome...
+Aaman A | 08:27
+Yeah, so...
+Speaker 2 | 08:29
+Because he's always I know he's always been definitely, like, more geared on the kind of outbound and, sales side. But yeah, it would be awesome to see kind of like...
+Aaman A | 08:38
+Right...
+Speaker 2 | 08:38
+Yeah, what the process is. Yeah. And we yeah, we're definitely like as of the last like year and a half, two years, we've gotten much more into home services. Before we were going after more niche stuff, and that was getting kind of is kind of difficult.
+But so we I think we're open to other verticals now. And we're very good at these verticals too.
+Aaman A | 09:02
+Sure.
+Speaker 2 | 09:03
+Some special sauce...
+Aaman A | 09:06
+Cool. Let's pull this up. Okay, all... Is the case, so let's go to... Okay. So just wanted to mainly quickly run through the name, high level anyways. The way we approach our BI at least has scale too, specifically for marketing agencies.
+I think it's very easy to generate traction. I think if even if you reach out to someone and say, "Hey, we've worked with ship, car, blah, all these companies. Let's have a chat, or can I send more info?"
+It's pretty easy to get interested replies. What's difficult is probably getting qualified people that have a budget and that will actually move across the pipeline and not just time waste to actually have the budget.
+I know it's specifically in our space. Sales cycles have been a bit crazy over the last few months. I don't know if that's micros or microbot. Point being is that we really focus on... As you can see, the first thing is either list your last twelve months. Who do you typically go for with wise? We just saw accounting, home services, they were really good at. We're about to expand into law very soon.
+But those two mainly stood out. So it'll just be quite easily just go for them. Then you've got your mini campaigns. What worked super well was... I don't really know about trade shows, but there was one called Engage, like the biggest accounting one in the year.
+I think they booked 14 meetings from us. Just texting and emailing the attendees to go to their booth that worked pretty well as well. And yeah, just for future if he has a killer sales guy called Matt mating call or something like that.
+He takes all the calls out of the fair. So I think they have some repeatable sales cycles going on, but I'm...
+Speaker 2 | 10:55
+Okay...
+Aaman A | 10:56
+Targeting and just making sure they're pre-qualified beforehand. Then we the two channels mainly run e mail and SMSR the same we reached out to you. How did you feel about that? That kind of text, by the way, was.
+Speaker 2 | 11:11
+It's fine, I think. Yeah, I don't care. I don't mind it as long as it's not like there's some that are just obnoxious. But I think the way the voice that you had with the tone was good.
+Aaman A | 11:21
+Yeah, and I'll share that in a minute. For us, it's just about getting the right offer to the right person. And it's either like if you're in or out. If you're out, fine, won't reach out again. But if you're like happy to kind of chat, with the messaging and then we have like a SDR that kind of books in the code directly that where once your calendar...
+Speaker 2 | 11:40
+Yeah...
+Aaman A | 11:41
+Now move quickly. Just wanted to go over before we even do anything, what really worked for us. At least only the last. Since January, we changed this model where we do a certain component of prerequisites before we sign any agency, one of them being this case study.
+Not the way you think, not just any case studies. I know you guys have your numbers and metrics, but ideally we want it in this kind of format, whether it's if you have a...
+Speaker 2 | 12:11
+No...
+Aaman A | 12:11
+Before state and after state. Ideally, how or how you did it in a bit...
+Speaker 2 | 12:15
+I could...
+Aaman A | 12:15
+More of a niche...
+Speaker 2 | 12:16
+That's awesome. Yeah, actually, we're launching our new site here. I was probably in two months now because I'm another site I need to launch. But we have already cataloged all our clients we ever had and have basically results and case studies for all of them.
+About 150 or so. Yeah, around that. Yeah, so it's yeah, so I can and I could it's all data, and so I could format it like this right away.
+Aaman A | 12:42
+Fantastic. Because even not just revenue stuff like for some organic companies where they help a small beauty brand outrank Sophori in certain keywords, these are like... Things. They really work.
+Well, cool, that's good to hear.
+Speaker 2 | 12:57
+Yeah, no problem, that's awesome.
+Aaman A | 12:59
+Then pretty much we just translate that into an outbound message or outbound email. So this is just an example, one I just called up last minute. This is one that they closed. Let go. Is it for you again? Similar to what we said, you either in or out thing.
+Then could this be worth exploring? Then we have our...
+Speaker 2 | 13:22
+Yeah, that's just great.
+Aaman A | 13:23
+Trying to look on the call. So we send around 300 texts a day for 350 so 7000 texts a month and then 12 to 15000 emails a month. So we're not trying to span your market, but at the same time, we need to hit enough volume to get the pipeline you need.
+Speaker 2 | 13:38
+Yeah, that's awesome.
+Aaman A | 13:42
+Yeah, and pretty much...
+Speaker 2 | 13:43
+And what is it like...
+Aaman A | 13:44
+There. Sorry.
+Speaker 2 | 13:44
+What would we be in this platform at all? Or is it just that you're basically scheduling calls or... What would our... Yeah, what would that process be?
+Aaman A | 13:55
+Can you think of any client who really asks if you talk about visibility, copy replies, and calls? You can log in if you want the main. So yeah, visibility-wise, there we have a dashboard where block pipeline progression, the copies, and every time we book a call, you'll get full context of what we've said in that.
+But up until that meeting as well.
+Speaker 2 | 14:16
+Perfect. And then from a like a CRM level I guess or how like what? SK like we have like I have all of them now I think like Callendly or like we use we have a HubSpot calendar two and...
+Aaman A | 14:32
+Yeah.
+Speaker 2 | 14:32
+They all they're all antegrated into our calendars. So...
+Aaman A | 14:34
+Yeah. Can. These perfectly they're like they're the best at all of them. Do you guys...
+Speaker 2 | 14:38
+Yeah, it's...
+Aaman A | 14:38
+Use any CRM...?
+Speaker 2 | 14:39
+Great.
+Aaman A | 14:39
+In terms of records and things like that...
+Speaker 2 | 14:41
+Yeah, we like we've we use HubSpot as our kind of main one. We start we've I've never been a fan of whatever the one I think the one that you guys you had on your website, but I forget what it's called.
+It's like not pipeline deals, it's like what like what's the like, is there a certain cor m that you guys use that you like.
+Aaman A | 15:08
+For this high level? The one that's the SMS...
+Speaker 2 | 15:09
+Yeah, go...
+Aaman A | 15:10
+1. And...
+Speaker 2 | 15:10
+High level. High level is struggled with every time...
+Aaman A | 15:14
+Yeah...
+Speaker 2 | 15:14
+But it works...
+Aaman A | 15:14
+That kind of crap. Yeah, they're kind of crab like. We just use them for, like, SMS outreach. And think about that...
+Speaker 2 | 15:21
+Got it. Yeah, the things piled yeah, it's kind of piled together but cool but yeah so yeah, whatever. Yeah, we use HubSpot for the CRM it's great for Lise to come through like we it's all integrated.
+And the really then it like we don't have enough inbound yet to like even that even matters, but we can quickly ramp into something that's like more robust for managing pipeline if there's more leads coming in.
+It's like because we probably do don't know, probably like two, maybe two discovery, maybe three discovery calls a week.
+Aaman A | 16:03
+Yeah, you can even put on the...
+Speaker 2 | 16:04
+And so it's like...
+Aaman A | 16:05
+Sheet. I mean, we do...
+Speaker 2 | 16:06
+Yeah, we...
+Aaman A | 16:06
+It, we just have the...
+Speaker 2 | 16:06
+Do. That's...
+Aaman A | 16:07
+Yeah...
+Speaker 2 | 16:09
+So it's like we don't need a bunch of this stuff yet. But...
+Aaman A | 16:11
+Right.
+Speaker 2 | 16:11
+I've. Yeah, I've been playing with a bunch. I love software and tools and stuff, so. So we can. Yeah, I think as we get there.
+Aaman A | 16:19
+To be fair, like, like with us, like with these like CRMs and stuff, like we have like your bigger agencies and stuff with like SDRS and stuff. They're using their sales forces and things like...
+Speaker 2 | 16:34
+Yeah.
+Aaman A | 16:34
+That... I think honestly Hubs well is fine. Most agencies use it. Plus, I think the only time we would need to do something is if you get an STR that wants to follow up and chase somebody...
+Speaker 2 | 16:44
+Yeah...
+Aaman A | 16:44
+Lost opportunities, which will be a while away anyways.
+Speaker 2 | 16:49
+Yeah, exactly.
+Aaman A | 16:51
+Well, like one thing that we are like big on is like a like internal CIR RM like this will be integrated. You' think. But from here, like we are just really keen on like as I told you this start every call. What do they kind of look like from a things standpoint?
+Like is it going into the maybe for last month for example, are they going to next stage? Are they no showing are they unqualified whatever it might be like we're just super keen on like really focusing on yeah like that that's a big piece for us. And...
+Speaker 2 | 17:26
+Yeah, that's awesome. Yeah, we yeah, cool. Yeah, we've been building tons of software now for the last like two years now. And so it's like it would be cool even on the CRM pipeline side, it'd be kind of cool to like.
+Yeah. Just have it be a custom software. It's...
+Aaman A | 17:46
+Right...
+Speaker 2 | 17:46
+Like better.
+Aaman A | 17:48
+Have you...?
+Speaker 2 | 17:48
+HubSpot is pretty good but...
+Aaman A | 17:51
+We just use... We're a bit more modern tech, but we just used a tool like I wasn't really in the hub for a while. To be fair, I just...
+Speaker 2 | 17:58
+Yeah...
+Aaman A | 17:58
+Used what was the most basic for us.
+Speaker 2 | 18:01
+What's it called? X yeah...
+Aaman A | 18:04
+Attio ATTIOI...
+Speaker 2 | 18:06
+Audio yeah adio sweet no I yeah I started getting into it. It's pretty damn cool. So yeah we could easily use audio bet yeah it's really nice.
+Aaman A | 18:16
+The fact that you're...
+Speaker 2 | 18:16
+CA we have...
+Aaman A | 18:17
+We're talking about CRM pipeline just tells me you're obsessed.
+Speaker 2 | 18:21
+Yeah. So it's like... Because I'm just thinking through... I'm like, "Okay, right now again, it's just getting this stuff on the calendar." But yeah, we'll be able to shift it into more of a process that someone can hop into...
+Aaman A | 18:37
+Yeah, do you plan...?
+Speaker 2 | 18:38
+It's just a measurement because it's like, "Did we follow up on all that stuff?" Because a lot of these deals, especially when they're colder, you can have great conversations. You get a proposal, and then they don't close, and then it's like, "Well, how often, how are we following up, how many times are we following up?" What are we saying?
+Then, measuring that. So we like do like have the best out like follow up closing outreach as well. And there's a bunch of stuff around like that's where like one of our guys that he's doesn't have enough leads right now, but he's like master manipulator. Where he's like in a kind of a good way. Just he ask questions of like that he feels terrible by not answering.
+Aaman A | 19:20
+Okay, sometimes...
+Speaker 2 | 19:20
+So say, you...
+Aaman A | 19:21
+Those yes...
+Speaker 2 | 19:21
+Told me you were. You told me to reach out to you in a week, so I'm reaching out. What's, like if you have any what's going on, you're like...
+Aaman A | 19:28
+Right. Or like, I'm assuming this is not a fair anymore by, you know, all these things...
+Speaker 2 | 19:33
+Well, that's like, yeah, like, did I know he like his one of his is like, did I do something wrong?
+Aaman A | 19:40
+Is it your, like how's your how's like, how's the sales go? Like. Only on. Like. Two calls a week. But.
+Speaker 2 | 19:47
+Well, that's the thing right now. He's, like, very part time because, like...
+Aaman A | 19:50
+Okay...
+Speaker 2 | 19:50
+He used to be full time, but I had to put on part time because there's not enough leads. But I could. That's why I think the main point there is, like, I could bring them right back on it. Like, we're if we started having, like, more full calendars.
+Like, I could bring them on or I could even have them be like we can close the softballs. Like my like me and AJ and then, like, the ones that are kind of like going, like, off into space a little bit, and I give him all those...
+Aaman A | 20:14
+Right.
+Speaker 2 | 20:14
+Then he can bring them back home.
+Aaman A | 20:17
+Can you just quickly kind of move me through a little bit on the ICP as in and there's so many niches and stuff? More of like "Is there a certain revenue that you guys have? What's the pricing looking like? What's the commitment sort of thing?"
+Speaker 2 | 20:33
+Yeah, everything. That's where I'm curious. With Patrick too. I remember he's pretty low costs. I think he was like $1,500 at least in the past, like $1,500 a month. We try to go a little higher than that.
+I'd say our average client is probably around $5,600 a month. But we just closed three this month for $1,500 and $2,000 a month.
+Aaman A | 21:04
+That's local ones?
+Speaker 2 | 21:04
+The problem. Yeah, they're mostly like individual location doing something exactly. But we prefer like we're very good at like multi location like central like we work with like private equity home services where they have like forty locations.
+So it's like 40 separate plumbers, electricians and HVA CSO that's like a whole special skill that a lot of people don't have to be honest. But trying to find those guys is, like, really hard. It's not like if we want to see like really our goal, I'd say, is like we want to close like two to four clients a month at, like if they average 4kmrr, we'd be happy. It may be good.
+So. And then the services around that are like the ICP around that, like home services is fine. Services great. Now we're really building out that vertical like pretty aggressively, and we're very involved in the vertical as well.
+And then the other one is like f like financial services. So like banks and credit unions are like another niche of ours. So those are all like both are like local. And then outside of that, like e commerce works like we do agree on e commerce, there's just a little more work.
+But we have a bunch of Shopify clients that are pretty high level stuff. And then. And then B2B. Like do a lot of like B2B... Sass, all that as well. So we're pretty well-rounded, but we do whatever we have. I don't really do outreach on this, and I don't necessarily want to go after these because the industry is struggling, but we do work with several dispensaries as well.
+Aaman A | 22:52
+Or CBD.
+Speaker 2 | 22:53
+Like cannabis, yeah, no...
+Aaman A | 22:54
+They're so easy.
+Speaker 2 | 22:55
+Cannabis like...
+Aaman A | 22:56
+Yeah, they're so easy to get me so like, but they don't close out in that budget, so I'd...
+Speaker 2 | 22:58
+Yeah...
+Aaman A | 22:59
+Rather not from what I've seen anyway.
+Speaker 2 | 23:02
+We work with the two best and biggest dispensaries in San Diego, and...
+Aaman A | 23:08
+Okay...
+Speaker 2 | 23:08
+So and they're killing it. So when we say we work with these guys, they're all crap and that you guys are legit. Everyone in the country would know these two brands. We work with the one that the first one of the first dispensaries in the country.
+Then we're working with the Hot Shot dispensary that's crushing too. So those are good case studies, but I don't...
+Aaman A | 23:28
+Nice yet...
+Speaker 2 | 23:28
+Love dispensers because they're like they're getting better, but it's just kind of like a weird like weird they're like they best client.
+Aaman A | 23:36
+Only 10% of that client have a budget. The majority don't in that space, especially when I've done our barn anyway.
+Speaker 2 | 23:43
+Yeah.
+Aaman A | 23:44
+We have a few of those clients, those PE those four clients where they go like, yeah, I've heard of these guys, which I kind of like I've heard a ship calm before on being so like, this is great. S...
+Speaker 2 | 23:54
+Yeah, I can. Yeah, if you said, I can pull that. If we start working together, I can pull that spreadsheet so you can have a better picture of all the clients and the ICPS.
+Aaman A | 24:03
+Yeah, just a quick one on what you talked about in terms of your retainer sizes and stuff like that. Just a bit of beta... Which is typically what we've seen at least why you get to most of their deals are above $400,000.
+I don't...
+Speaker 2 | 24:20
+Yes...
+Aaman A | 24:20
+Know how they close annual contracts, but that's the confusing part to me.
+Speaker 2 | 24:24
+There's. Yeah, and we're fine. Like we don't pitch annual contracts, we just pitch month to month.
+Aaman A | 24:29
+Yeah.
+Speaker 2 | 24:29
+But if they're able to close, if they can close annual, we'd love to close annual, that'd be great. But...
+Aaman A | 24:34
+Yet of course...
+Speaker 2 | 24:35
+At this point, part of our pitch is that we don't lock in. We're month to month, just let's get going, let's start.
+Aaman A | 24:41
+Right, and I think that's the way to...
+Speaker 2 | 24:43
+And I...
+Aaman A | 24:43
+Go for most new SH maybe your CBDP can do that if you're specializing in it like CPA they do quite well on that. So I...
+Speaker 2 | 24:50
+Yeah...
+Aaman A | 24:50
+Think that's the...
+Speaker 2 | 24:51
+We have. Yeah, like the CFO c PA side, we could do very well too. So we work with like some big brand like fractional CFOs and so the CPS would love to work with us, I think, on that front too. But it's again it's CPAS are little harder just because it's like there's the volumes are very low compared like people looking for a CPA in like San Diego, whatever. It exists and it's out there, but it's definitely a lot harder to get a lead than, like, someone going to a dispensary or getting a like fixing...
+Aaman A | 25:25
+Right?
+Speaker 2 | 25:25
+Their plumbing or. So it's like it's a lot more like pressure on us like to get deals. And we're not like yeah, like from it just we'd have to tweak what are we have to tweak things a little bit. Like why?
+I think one of the reasons, like a dispensary and the home services work so well and the banking world is because, like, the organic Google and AI searches are like, really valuable to them. And, because still, like when someone's like bank near me or plumber near it's like still like massively on Google searches as well, like the AIIS now too, like people are searching in those.
+So it's just it's like how people find that service. Like CPAS are different, like usually it's a referral...
+Aaman A | 26:12
+Yes.
+Speaker 2 | 26:14
+Right, or something. And then, like, shopping, like, e commerce is great, but it's so competitive. Like, everyone, like you're competing against Amazon, plus you're competing against all these other shops trying to sell their stuff. Whereas, like, we.
+Yeah. I...
+Aaman A | 26:29
+I mean...
+Speaker 2 | 26:29
+Like. Like. Banking's my favorite. But...
+Aaman A | 26:31
+Okay, I mean, you say that, though.
+Speaker 2 | 26:32
+It's harder to get in...
+Aaman A | 26:34
+Yeah...
+Speaker 2 | 26:34
+Hard to get in...
+Aaman A | 26:34
+I was going to say, you say that, but I think one thing I'll probably just let you in on is I think if you ever did outbound as well. I think one thing about us is that we're working actively with twenty-six other agencies.
+So I'll probably cut your speed time in half or the majority of... I just know all the niches that work and don't. For example, banks and credit unions. I just think it's quite difficult to get into outbound...
+Speaker 2 | 26:59
+Not go to work they...
+Aaman A | 27:00
+Small market. Then it's just like unless we go for... Unless we put all our efforts into banking and just go for that
+Speaker 2 | 27:03
+Yeah...
+Aaman A | 27:06
+Little segment, it's just not worth the squeeze.
+Speaker 2 | 27:10
+I agree. I'm wide open. Yeah, whatever you suggest, what you see working. Let's just go and plug and play and start loading up the pipeline. I'm...
+Aaman A | 27:16
+Yeah...
+Speaker 2 | 27:16
+All for it.
+Aaman A | 27:17
+Cool. At least on the same page there.
+Speaker 2 | 27:19
+So what? Yeah, so how like with their last minute here, like...
+Aaman A | 27:22
+Yes. S...
+Speaker 2 | 27:22
+How what do you guys charge? Like...
+Aaman A | 27:24
+Yeah...
+Speaker 2 | 27:24
+How does it all work?
+Aaman A | 27:25
+Sure. So the way we do it for all our clients, we always start with a 30-day pilot. Typically, what that pilot looks like for some reason, I'm going to... Why get a little confused on when I explained the pilot, but I'll just put it here so it's a little visually clear.
+So typically we do a $3,900 for a 30-day pilot. Typically, since, as I said, we know what doesn't work, we launch SMS campaigns within the week. Female second week. We're probably like we can guarantee at least four qualified shows in the first 30 days, assuming we have everything we need. Case studies, data, all of these things. Happy to guarantee this.
+Then if we do, cool, we'll continue to post trial. If we don't, we can kind of call it quits and kind of just refund that whole amount. 2300 to fifteen hundred is just like infrastructure and setup and stuff.
+Yeah, again, just heavy on the assuming like we don't guarantee anything unless we have the prerequisite. Just because I know I can deliver in that field. From there. It's a post from post trial. We offer like paper.
+It's basically like a paper qualified show on a retainer. So let. I mean, I'll give you a trunk with why they're paying us four point five per a month for three months for like twenty five qualified shows across that quarter.
+So across the quarter, 25 shows by the end of the third month. If we didn't hit the if we hit 20, we would either refund them the five appointments or credit it back to their next quarter. So basically.
+Speaker 2 | 29:05
+Okay... Yup, awesome. Then how... What was the per-qualified show? Yeah. So... Like what's the...
+Aaman A | 29:15
+Yeah. So...
+Speaker 2 | 29:15
+Like how might...
+Aaman A | 29:16
+That will... That's typically what I do on a growth plan. I would want to map out all the niches that we have. The difficulty with ICP is literally only dependent on how difficult and how much resources it takes to get an NSQR.
+So... Obviously, that's typically the main thing. But just ball off $500 to $800 per qualified show or $400 to $800 per qualified show.
+Speaker 2 | 29:40
+Okay...
+Aaman A | 29:41
+We are very adamant about trying to make it work within your cost acquisition costs, typically.
+Speaker 2 | 29:46
+Yeah, perfect.
+Aaman A | 29:48
+Because I know once it does, you probably just want to scale the appointment.
+Speaker 2 | 29:52
+Yeah, if they're closing, if the deals are closing...
+Aaman A | 29:55
+Yeah...
+Speaker 2 | 29:55
+Then yeah, then you can back it out and say, yeah, what? Yeah, your return on a your return on spend and then, yeah, obviously you want to be have you be incentivized to go get more working, so...
+Aaman A | 30:08
+Pretty much...
+Speaker 2 | 30:09
+Awesome. All...
+Aaman A | 30:10
+Awesome.
+Speaker 2 | 30:10
+Right, I'm on. I have to go, I have a call, I'm two minutes late, but that's okay. So great to meet you. Do you want to send over something like what the next steps are?
+Aaman A | 30:19
+Yeah, typically timeline. If this was all good... When would you want to be going in September or...?
+Speaker 2 | 30:23
+Yeah, I know time. Yeah, my timing's great. We could do a pilot. I'd be totally open to that. So...
+Aaman A | 30:29
+Sure, I'll think more into everything and then when I have the front call, just prep some things I might just...
+Speaker 2 | 30:37
+Okay...
+Aaman A | 30:37
+Ask for a few little things of certain case studies metrics or something. I'll put that...
+Speaker 2 | 30:42
+Yeah...
+Aaman A | 30:42
+Together. We can walk through it and we can potentially do a pilot or not.
+Speaker 2 | 30:46
+Okay, so you want to put something on the schedule, I'll help you close...
+Aaman A | 30:49
+Yeah. Sure, man.
+Speaker 2 | 30:54
+So yeah, maybe just you want to meet next week.
+Aaman A | 30:57
+Yeah, same time...
+Speaker 2 | 30:59
+Yeah, next week, same time, but we could do a different day, let's see. Gosh, actually, what time is this? Ten? Actually, yeah, Thursday is my first 10:00 next week. We could do earlier, like Tuesday, like 08:30.
+Aaman A | 31:21
+I'm cool with Thursday. 08:30 it was... Okay, let's see Thursday...
+Speaker 2 | 31:24
+Okay, sounds good, great to meet you...
+Aaman A | 31:30
+Appreciate johnt he s.
+Speaker 2 | 31:32
+Appreciate you too. Okay, bye.

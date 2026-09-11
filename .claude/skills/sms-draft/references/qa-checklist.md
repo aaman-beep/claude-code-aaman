@@ -105,7 +105,7 @@ don't pass it through to ranking.
 
 Winners set the bar; losers set the tripwires. Two non-negotiables about how this gate works:
 
-1. **The loser pool is LIVE, never a local list.** Pull it fresh every run via the `evergreen-data` skill:
+1. **The loser pool is LIVE, never a local list.** Pull it fresh every run via the `evergreen-research` skill:
    `POST /api/search {type:"copies", status:"loser", query:"<this angle/offer/lever>", route:true, limit:5}`
    (a second pull pinned to the client's `niche` if routing looks off). The pool grows with every campaign
    that reports back — which is the point: **this gate gets stricter as the system learns.** A static list

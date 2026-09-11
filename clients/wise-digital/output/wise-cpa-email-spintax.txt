@@ -1,0 +1,24 @@
+SUBJECT (steps 1 and 2; step 2 prefixes 'Re: '):
+{{COMPANY}<>WISE Digital|{COMPANY} referrals|dark horse cpas|{COMPANY} + organic search|referral ceiling|{COMPANY} pipeline|two offices to 50 locations|{COMPANY} growth}
+
+EMAIL1:
+{Hi|Hey}, I know {you're pitched by|you're constantly pitched by|your inbox is full of} marketing agencies {promising to grow|promising growth for|pitching growth for} {COMPANY}.
+
+But {we recently grew|we recently helped grow|we recently scaled} Dark Horse CPAs from $1.5m to $21m in 5 years, {primarily by using organic and AI search so the right clients found them, rather than their growth being capped by what referrals could send|mostly by using organic and AI search to bring in the clients they actually wanted, instead of waiting on referrals to send them|largely by getting them off referral dependence and into organic and AI search, so the clients they wanted came to them directly} - which took them from a two-office practice into a 50-location national firm.
+
+{Not sure if this is relevant at the moment, but could I walk you through what we did for them?|No clue if it's relevant atm, but could I walk you through what we did for them?|Don't know if it's relevant right now, but mind if I walk you through what we did for them?}
+
+{Best,|Cheers,|Thanks,}
+{SENDER_EMAIL_SIGNATURE}
+
+P.S. If this isn't relevant or of any interest at this point, {reply back|let me know|respond} and I'll no longer contact you.
+
+FOLLOWUP (Re: + thread_reply):
+{You're probably assuming|My guess is you're assuming|Suspect you're assuming} this only works {once you're already one of the bigger firms|once you're already a big firm|when you're already one of the larger firms}.
+
+Dark Horse were {two offices|a two-office practice|at two offices} when we started btw - {the growth came from search, not from adding partners|it came from search, not from hiring more partners|that growth came off search, not off adding partners}.
+
+{No pressure at all|No pressure either way|Zero pressure} - just wondering if this sounds interesting or if it's {a complete miss|a total miss|completely off}?
+
+{Best,|Cheers,|Thanks,}
+{SENDER_EMAIL_SIGNATURE}

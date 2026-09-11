@@ -19,7 +19,9 @@ The SMS workflow, in order:
 | 3 | `mechanism-wordsmith` | Reframes a literal mechanism into sticky, SMS-ready lines |
 | 4 | `sms-draft` | Assembles ship-ready T1/T2 SMS variants and QAs them against the Voice Profile |
 | — | `sms-performance` | Mines GoHighLevel for what a client's copy ACTUALLY did (replies, opt-outs, variants) |
-| — | `evergreen-data` | Data supply from the Evergreen API: pains, buyer lingo, tiered proof, winners/losers, campaign stats, the knowledge graph |
+| — | `evergreen-stats` | Numbers only from the Evergreen API: sent, PRs, positives, booked, conversion, which variant won, reports, benchmarks, churn |
+| — | `evergreen-research` | Evidence in and out: pains, buyer lingo, tiered proof, winners/losers with why-it-worked, client voice/positioning, objections, saved guidelines |
+| — | `evergreen-data` | Reference only — the full Evergreen endpoint catalogue behind the two above |
 | — | `call-corpus-search` | Searches the sales-call corpus for a pain/objection/theme |
 
 Supporting pieces:
@@ -29,7 +31,7 @@ Supporting pieces:
 - [tools/ghl_mine.py](tools/ghl_mine.py) / [tools/sms_report.py](tools/sms_report.py) — the GHL send-log miners behind `sms-performance`.
 - [clients/](clients/) — per-client workspaces (`source/` inputs, `output/` deliverables).
 
-The **Evergreen system** (Hilal's Supabase knowledge graph: all clients' calls, campaigns, copies, deals) is the data backbone — reached through the `evergreen-data` skill, which documents every endpoint.
+The **Evergreen system** (Hilal's Supabase knowledge graph: all clients' calls, campaigns, copies, deals) is the data backbone — reached through `evergreen-stats` (numbers) and `evergreen-research` (evidence). `evergreen-data` is the full endpoint reference behind them.
 
 ---
 
@@ -46,7 +48,7 @@ A complete diagram of the legacy system lives at [GTM_SYSTEM_FLOW.md](GTM_SYSTEM
 | Folder | What lives here | Who reads it |
 |---|---|---|
 | [skills/](skills/) | **Legacy prompts**. The old manually-loaded step files. Superseded by `.claude/skills/` for SMS work. | Historical reference |
-| [.claude/skills/](.claude/skills/) | **Auto-firing Claude Code skills — the current system.** `sms-brief`, `case-study-developer`, `mechanism-wordsmith`, `sms-draft`, `sms-performance`, `evergreen-data`, `call-corpus-search`. | Claude Code auto-loads on intent match |
+| [.claude/skills/](.claude/skills/) | **Auto-firing Claude Code skills — the current system.** `sms-brief`, `case-study-developer`, `mechanism-wordsmith`, `sms-draft`, `sms-performance`, `evergreen-stats`, `evergreen-research`, `evergreen-data`, `call-corpus-search`. | Claude Code auto-loads on intent match |
 | [tools/](tools/) | Python CLIs: Fireflies fetcher, chunker, embedder, 5 corpus-search CLIs, Slack/Fathom helpers. | Skills shell out to these; you can run them by hand too. |
 | [sheet/](sheet/) | The Supabase ingest pipeline (`fetch_all.py`, `build_final.py`, `upload_supabase.py`) + SQL migrations. | Run once per new client to load their calls into the corpus. |
 | [sops/](sops/) | **Standard Operating Procedures**. How-to guides for the human operator — step-by-step checklists. | Humans + the AI reads them as reference |

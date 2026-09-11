@@ -4,7 +4,9 @@
     "secrets": "NO CREDENTIALS LIVE HERE. Each channel names an MCP server; the API key / Private Integration Token is read at runtime from ~/.claude.json (outside the repo). Add a client's creds with `claude mcp add`, then reference the server name here.",
     "sms.workflow_prefix": "GHL sub-accounts get REUSED between clients. Tools scope to the client's own era = the earliest createdAt among workflows whose name starts with this prefix. Set era_start to override with a hard date.",
     "sms.locationId": "Found in the GHL URL when inside the sub-account: /v2/location/<THIS>/\u2026",
-    "todo": "Clients with sms.locationId = null still need a Private Integration Token (Settings -> Private Integrations, read-only scopes) and their location ID."
+    "todo": "Clients with sms.locationId = null still need a Private Integration Token (Settings -> Private Integrations, read-only scopes) and their location ID.",
+    "sms.locationId_previous": "A sub-account this client USED to send from. Kept so historical mines can still reach it; the live one is sms.locationId. Creds for the old one live under the '<mcp>-legacy' MCP server.",
+    "sms.era_start": "Hard start date for this client's era in the CURRENT sub-account. Set it whenever the sub-account is shared with another client - scoping by workflow_prefix alone is not enough."
   },
   "digital-resource": {
     "label": "Digital Resource",
@@ -141,19 +143,85 @@
       "mcp": "emailbison-gofish"
     }
   },
+  "wise-digital": {
+    "label": "WISE Digital Partners",
+    "output": "clients/wise-digital/output",
+    "sms": {
+      "platform": "ghl",
+      "mcp": "ghl-wise-digital",
+      "locationId": "zZnyFj8m8JxFUF3XJWJB",
+      "workflow_prefix": "Wise Digital",
+      "era_start": null
+    },
+    "email": {
+      "platform": "emailbison",
+      "mcp": null
+    }
+  },
   "scaletopia": {
     "label": "Scaletopia",
     "output": "clients/scaletopia/output",
     "sms": {
       "platform": "ghl",
       "mcp": "ghl-scaletopia",
-      "locationId": "UqMcuYNiET94KiGWH5Ec",
+      "locationId": "TYVYHj7lX8bamHkOKz4s",
       "workflow_prefix": "Scaletopia",
-      "era_start": null
+      "era_start": "2026-08-03",
+      "locationId_previous": "UqMcuYNiET94KiGWH5Ec",
+      "mcp_previous": "ghl-scaletopia-legacy",
+      "era_note": "Sending moved to TYVYHj7lX8bamHkOKz4s ~2026-08-03 (built for mobile deliverability, sends from toll-free +18334970232). Old loc's last workflow send was 2026-08-05. WARNING: the new sub-account is SHARED with Velox Media - 52 workflows, ~46 of them Velox (Feb-May 2026). Scope by workflow_prefix + era_start or Velox traffic pollutes Scaletopia's history."
     },
     "email": {
       "platform": "emailbison",
       "mcp": "emailbison-scaletopia"
+    }
+  },
+  "seedx": {
+    "label": "SeedX",
+    "output": "clients/seedx/output",
+    "_note": "Evergreen-only: no GHL sub-account or EmailBison workspace wired up yet. Enough of an entry for the Evergreen-backed tools (reply registers, PR rollups) to resolve the client; anything that needs a live send log will refuse until sms/email get real MCP names.",
+    "sms": {
+      "platform": "ghl",
+      "mcp": null,
+      "locationId": null,
+      "workflow_prefix": "SeedX",
+      "era_start": null
+    },
+    "email": {
+      "platform": "emailbison",
+      "mcp": null
+    }
+  },
+  "acceler8": {
+    "label": "Acceler8",
+    "output": "clients/acceler8/output",
+    "_note": "Evergreen-only \u2014 see the note on seedx.",
+    "sms": {
+      "platform": "ghl",
+      "mcp": null,
+      "locationId": null,
+      "workflow_prefix": "Acceler8",
+      "era_start": null
+    },
+    "email": {
+      "platform": "emailbison",
+      "mcp": null
+    }
+  },
+  "nextleft": {
+    "label": "NextLeft",
+    "output": "clients/nextleft/output",
+    "_note": "Evergreen-only \u2014 see the note on seedx.",
+    "sms": {
+      "platform": "ghl",
+      "mcp": null,
+      "locationId": null,
+      "workflow_prefix": "NextLeft",
+      "era_start": null
+    },
+    "email": {
+      "platform": "emailbison",
+      "mcp": null
     }
   }
 }

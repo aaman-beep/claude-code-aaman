@@ -1,0 +1,17 @@
+SUBJECT (live campaign 863 block, whitespace cleaned):
+{ecom playbook|playbook to go upmarket|AG1 & Volcom?|dtc playbook|dtc playbook for {COMPANY}|going upmarket in ecom|ecom upmarket play for {COMPANY}|ecom playbook for {COMPANY}}
+
+--- PLAIN ---
+{FIRST_NAME}, I know your inbox is {flooded by|full of|slammed with} agencies {promising to get you more leads and clients|promising you more leads and clients|promising to bring you more leads and clients}.
+
+But we've cracked cold outreach for Chamber Media - {they've closed 18 retainers with us in the last six months|they've signed 18 retainers with us in the last six months|18 retainers closed with us in the last six months}, including {getting in front of|landing meetings with|getting us in the room with} AG1, Volcom and Feastables.
+
+Since I know {COMPANY} also {works with|partners with|serves} ecom brands, {if it's useful, could I share what we did for them?|if it's helpful, could I share what we did for them?|if that's useful, could I share what we did for them?}
+
+{Best,|Cheers,|Thanks,}
+{SENDER_EMAIL_SIGNATURE}
+
+P.S. we also run a 30 day pilot, so you can {test us before committing to anything|try us before committing to anything|test us out before you commit}.
+
+--- HTML (paste into Bison) ---
+<p>{FIRST_NAME}, I know your inbox is {flooded by|full of|slammed with} agencies {promising to get you more leads and clients|promising you more leads and clients|promising to bring you more leads and clients}.</p><p><br></p><p>But we've cracked cold outreach for Chamber Media - {they've closed 18 retainers with us in the last six months|they've signed 18 retainers with us in the last six months|18 retainers closed with us in the last six months}, including {getting in front of|landing meetings with|getting us in the room with} AG1, Volcom and Feastables.</p><p><br></p><p>Since I know {COMPANY} also {works with|partners with|serves} ecom brands, {if it's useful, could I share what we did for them?|if it's helpful, could I share what we did for them?|if that's useful, could I share what we did for them?}</p><p><br></p><p>{Best,|Cheers,|Thanks,}</p><p>{SENDER_EMAIL_SIGNATURE}</p><p><br></p><p>P.S. we also run a 30 day pilot, so you can {test us before committing to anything|try us before committing to anything|test us out before you commit}.</p>

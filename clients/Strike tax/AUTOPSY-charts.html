@@ -1,0 +1,237 @@
+<title>Strike Tax — Red Zone Autopsy</title>
+<style>
+  :root{
+    --bg:#f3f1ee; --surface:#fbfaf8; --surface-2:#f0ece7;
+    --ink:#221c19; --muted:#6d635d; --faint:#95897f; --line:#e4ded7;
+    --accent:#b23a2e; --bad:#c0442f; --warn:#b0791f; --good:#3f7d63;
+    --sms:#2f7d8a; --email:#4a6f9c; --band:rgba(178,58,46,.07); --band-line:rgba(178,58,46,.35);
+    --font-display:"Helvetica Neue",Helvetica,Arial,"Segoe UI",sans-serif;
+    --font-body:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    --font-mono:"SF Mono",ui-monospace,"Cascadia Mono","Roboto Mono",Menlo,Consolas,monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --bg:#161210; --surface:#201a16; --surface-2:#251e19;
+      --ink:#f0ebe6; --muted:#a89c93; --faint:#7d7168; --line:#332b24;
+      --accent:#d9584a; --bad:#e0614c; --warn:#d29a44; --good:#5aa07f;
+      --sms:#4aa4b1; --email:#7699c8; --band:rgba(217,88,74,.10); --band-line:rgba(217,88,74,.4);
+    }
+  }
+  :root[data-theme="light"]{
+    --bg:#f3f1ee; --surface:#fbfaf8; --surface-2:#f0ece7; --ink:#221c19; --muted:#6d635d; --faint:#95897f;
+    --line:#e4ded7; --accent:#b23a2e; --bad:#c0442f; --warn:#b0791f; --good:#3f7d63;
+    --sms:#2f7d8a; --email:#4a6f9c; --band:rgba(178,58,46,.07); --band-line:rgba(178,58,46,.35);
+  }
+  :root[data-theme="dark"]{
+    --bg:#161210; --surface:#201a16; --surface-2:#251e19; --ink:#f0ebe6; --muted:#a89c93; --faint:#7d7168;
+    --line:#332b24; --accent:#d9584a; --bad:#e0614c; --warn:#d29a44; --good:#5aa07f;
+    --sms:#4aa4b1; --email:#7699c8; --band:rgba(217,88,74,.10); --band-line:rgba(217,88,74,.4);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);
+    line-height:1.55;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:1000px;margin:0 auto;padding:clamp(20px,4vw,52px) clamp(16px,4vw,40px) 72px;}
+  .eyebrow{font-family:var(--font-mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--accent);font-weight:600;}
+  h1{font-family:var(--font-display);font-weight:800;letter-spacing:-.02em;text-wrap:balance;
+    font-size:clamp(28px,5vw,44px);line-height:1.04;margin:.35em 0 .3em;}
+  .verdict{font-size:clamp(15px,1.9vw,18px);color:var(--muted);max-width:66ch;margin:0;}
+  .verdict b{color:var(--ink);font-weight:600;}
+  .meta{font-family:var(--font-mono);font-size:11.5px;color:var(--faint);margin-top:18px;
+    display:flex;gap:18px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:14px;}
+
+  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:30px 0 8px;}
+  @media (max-width:720px){.kpis{grid-template-columns:repeat(2,1fr)}}
+  .kpi{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 16px 14px;
+    position:relative;overflow:hidden;}
+  .kpi::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--sev,var(--muted));}
+  .kpi .n{font-family:var(--font-mono);font-size:clamp(22px,3.2vw,29px);font-weight:600;
+    letter-spacing:-.01em;font-variant-numeric:tabular-nums;line-height:1;}
+  .kpi .k{font-size:12.5px;color:var(--muted);margin-top:8px;line-height:1.35;}
+  .kpi.bad{--sev:var(--bad)} .kpi.warn{--sev:var(--warn)} .kpi.good{--sev:var(--good)}
+
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px;}
+  @media (max-width:720px){.grid{grid-template-columns:1fr}}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:12px;
+    padding:18px 18px 16px;display:flex;flex-direction:column;}
+  .card.full{grid-column:1/-1}
+  .card h2{font-family:var(--font-display);font-weight:700;letter-spacing:-.01em;font-size:16.5px;margin:.1em 0 .1em;}
+  .card .lbl{font-family:var(--font-mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);}
+  .card .cap{font-size:12.5px;color:var(--muted);margin:10px 0 0;line-height:1.4;}
+  .card .cap b{color:var(--ink);font-weight:600}
+  .chart{width:100%;margin-top:12px;overflow-x:auto;}
+  svg{display:block;width:100%;height:auto;font-family:var(--font-mono);}
+  .ax{fill:var(--faint);font-size:10px;font-variant-numeric:tabular-nums;}
+  .val{fill:var(--ink);font-size:10.5px;font-weight:600;font-variant-numeric:tabular-nums;}
+  .grid-l{stroke:var(--line);stroke-width:1;}
+  .legend{display:flex;gap:16px;flex-wrap:wrap;font-family:var(--font-mono);font-size:11px;color:var(--muted);margin-top:6px;}
+  .legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px;}
+  .foot{margin-top:34px;padding-top:16px;border-top:1px solid var(--line);font-family:var(--font-mono);
+    font-size:11px;color:var(--faint);line-height:1.7;}
+  @media (prefers-reduced-motion:no-preference){.bar-anim{animation:g .6s ease-out both}}
+  @keyframes g{from{opacity:0} to{opacity:1}}
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Churn Post-Mortem · Scaletopia × Strike Tax Advisory</div>
+    <h1>We scaled a known-broken engine — and raised the promise at the same time.</h1>
+    <p class="verdict">A modest performer (6 wins in 8 months on $3,500/mo) <b>upsold to $8,200/mo for 15–20 appointments right as it was already sliding</b> — no closed-won since April, and our own copy audit had just flagged the copy as frozen. Then SMS scaled onto burner copy while email, the channel that actually converted, never moved.</p>
+    <div class="meta">
+      <span>Buyer · Jonathan Cardella</span><span>Ran ~10 months → terminated ~Jul 7 2026</span><span>Send logs to Jul 13 2026</span><span>Strawman — see AUTOPSY.md</span>
+    </div>
+  </header>
+
+  <section class="kpis">
+    <div class="kpi warn"><div class="n">6</div><div class="k">closed-won total — <b>all Jan–Apr</b>, none since</div></div>
+    <div class="kpi bad"><div class="n">0</div><div class="k">wins in the <b>$8,200 era</b> (Jun–Jul, 8 meetings)</div></div>
+    <div class="kpi bad"><div class="n">3.3×</div><div class="k">cost per booked meeting <b>$622 → $2,050</b></div></div>
+    <div class="kpi bad"><div class="n">45%</div><div class="k">of the email volume we <b>promised</b> was delivered</div></div>
+  </section>
+
+  <div class="grid">
+    <section class="card full">
+      <div class="lbl">Chart 1 · the trend</div>
+      <h2>All six wins landed before the upsell</h2>
+      <div class="chart"><svg id="c-trend" viewBox="0 0 960 300" role="img" aria-label="Monthly booked, shows and wins with the $8,200 era shaded"></svg></div>
+      <div class="legend"><span><i style="background:var(--muted)"></i>Booked</span><span><i style="background:var(--faint)"></i>Showed</span><span><i style="background:var(--accent)"></i>Wins</span><span><i style="background:var(--band-line)"></i>$8,200 upsell era</span></div>
+      <p class="cap">Peak was January (11 booked, 2 won). The <b>$8,200 upsell (June)</b> bought 5 then 3 meetings and <b>zero wins</b> — below the pre-upsell average.</p>
+    </section>
+
+    <section class="card">
+      <div class="lbl">Chart 2 · the funnel</div>
+      <h2>Where meetings leaked</h2>
+      <div class="chart"><svg id="c-funnel" viewBox="0 0 440 250" role="img" aria-label="Funnel from booked to won"></svg></div>
+      <p class="cap">The first drop is the biggest — <b>42% of booked meetings never showed</b>. Close rate end-to-end <b>11.3%</b>.</p>
+    </section>
+
+    <section class="card">
+      <div class="lbl">Chart 3 · promise vs delivery</div>
+      <h2>Email never scaled</h2>
+      <div class="chart"><svg id="c-promise" viewBox="0 0 440 250" role="img" aria-label="Promised versus actual June volume for SMS and email"></svg></div>
+      <p class="cap">SMS hit the ramp target; <b>email came in at 8,903 vs the ~20k promised</b> — and it converted positives at 89% vs SMS's 32%. We scaled the weaker channel.</p>
+    </section>
+
+    <section class="card full">
+      <div class="lbl">Chart 4 · targeting</div>
+      <h2>Most volume went to the worst-fitting vertical</h2>
+      <div class="chart"><svg id="c-vert" viewBox="0 0 960 250" role="img" aria-label="SMS volume share versus net engagement by vertical"></svg></div>
+      <div class="legend"><span><i style="background:var(--muted)"></i>Share of SMS volume</span><span><i style="background:var(--good)"></i>Net engagement (reply% − opt-out%) positive</span><span><i style="background:var(--bad)"></i>net negative</span></div>
+      <p class="cap"><b>SaaS took 46% of SMS volume at near-zero net engagement</b>; Machinery — best engagement <b>and</b> where every industrial win came from — got less than half that. 56% of all SMS ran on burner copy (opt-outs ≥ replies).</p>
+    </section>
+  </div>
+
+  <p class="foot">
+    Sources · SMS: batches.json + sms-copy-history.csv (GHL send log) · Email: emailbison.json (39 campaigns) · Funnel: sales dashboard · one live GHL conversation pull for qualitative color.<br>
+    Prices/era dates are placeholders pending confirmation. "Positive-reply" counts come from the campaign snapshot. Full findings, ranked, in clients/Strike tax/AUTOPSY.md.
+  </p>
+</div>
+
+<script>
+const NS="http://www.w3.org/2000/svg";
+const cv=v=>getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+function el(t,a){const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);return e;}
+function txt(x,y,s,cls,extra){const e=el("text",Object.assign({x,y,class:cls||"ax"},extra||{}));e.textContent=s;return e;}
+
+/* ---------- Chart 1: trend ---------- */
+(function(){
+  const svg=document.getElementById("c-trend");
+  const W=960,H=300,mL=34,mR=14,mT=18,mB=40, pw=W-mL-mR, ph=H-mT-mB;
+  const months=["Oct","Nov","Dec","Jan","Feb","Mar","Apr","May","Jun","Jul"];
+  const booked=[8,3,4,11,4,2,8,5,5,3], shows=[5,2,2,6,3,2,4,3,4,0], wins=[0,0,0,2,2,1,1,0,0,0];
+  const eraStart=8; const ymax=12;
+  const x=i=>mL+ (i+.5)/months.length*pw;
+  const y=v=>mT+ph-(v/ymax)*ph;
+  const bw=pw/months.length*0.30;
+  // era band
+  const bx=mL+eraStart/months.length*pw;
+  svg.appendChild(el("rect",{x:bx,y:mT,width:mL+pw-bx,height:ph,fill:cv("--band")}));
+  svg.appendChild(el("line",{x1:bx,y1:mT,x2:bx,y2:mT+ph,stroke:cv("--band-line"),"stroke-width":1,"stroke-dasharray":"3 3"}));
+  svg.appendChild(txt(bx+7,mT+13,"$8,200 upsell","ax",{fill:cv("--accent"),"font-weight":600}));
+  // gridlines
+  for(let g=0;g<=12;g+=3){svg.appendChild(el("line",{x1:mL,y1:y(g),x2:mL+pw,y2:y(g),class:"grid-l"}));svg.appendChild(txt(mL-8,y(g)+3,g,"ax",{"text-anchor":"end"}));}
+  // bars
+  booked.forEach((b,i)=>{
+    svg.appendChild(el("rect",{class:"bar-anim",x:x(i)-bw-1,y:y(b),width:bw,height:y(0)-y(b),rx:2,fill:cv("--muted")}));
+    svg.appendChild(el("rect",{class:"bar-anim",x:x(i)+1,y:y(shows[i]),width:bw,height:y(0)-y(shows[i]),rx:2,fill:cv("--faint")}));
+    svg.appendChild(txt(x(i),H-mB+16,months[i],"ax",{"text-anchor":"middle","fill":i>=eraStart?cv("--accent"):cv("--faint")}));
+  });
+  // wins line + markers
+  let d="";wins.forEach((w,i)=>{d+=(i?"L":"M")+x(i)+" "+y(w)+" ";});
+  svg.appendChild(el("path",{d,fill:"none",stroke:cv("--accent"),"stroke-width":2}));
+  wins.forEach((w,i)=>{svg.appendChild(el("circle",{cx:x(i),cy:y(w),r:w?4:2.5,fill:w?cv("--accent"):cv("--surface"),stroke:cv("--accent"),"stroke-width":1.5}));
+    if(w)svg.appendChild(txt(x(i),y(w)-9,w,"val",{"text-anchor":"middle",fill:cv("--accent")}));});
+})();
+
+/* ---------- Chart 2: funnel ---------- */
+(function(){
+  const svg=document.getElementById("c-funnel");
+  const W=440,mL=8,mR=8,rowH=42,top=8;
+  const stages=[["Booked",53],["Showed",31],["Next stage",15],["Proposals",11],["Won",6]];
+  const max=53, bw=W-mL-mR-70;
+  stages.forEach((s,i)=>{
+    const yy=top+i*rowH, w=Math.max(2,s[1]/max*bw);
+    const good=i===stages.length-1;
+    svg.appendChild(el("rect",{x:mL+70,y:yy,width:bw,height:22,rx:3,fill:cv("--surface-2")}));
+    svg.appendChild(el("rect",{class:"bar-anim",x:mL+70,y:yy,width:w,height:22,rx:3,fill:good?cv("--good"):cv("--muted")}));
+    svg.appendChild(txt(mL+66,yy+15,s[0],"ax",{"text-anchor":"end",fill:cv("--ink")}));
+    const pct=Math.round(s[1]/53*100);
+    svg.appendChild(txt(mL+70+w+6,yy+15,s[1]+"  ·  "+pct+"%","val"));
+  });
+})();
+
+/* ---------- Chart 3: promise vs delivery ---------- */
+(function(){
+  const svg=document.getElementById("c-promise");
+  const W=440,mL=8,mR=8,top=26, bw=W-mL-mR-58, max=21000;
+  const rows=[["SMS",14000,17030,cv("--sms")],["Email",20000,8903,cv("--email")]];
+  svg.appendChild(txt(mL+58,16,"June volume — target vs actual","ax",{fill:cv("--faint")}));
+  rows.forEach((r,i)=>{
+    const yy=top+i*84;
+    const tgtX=mL+58+r[1]/max*bw, actW=r[2]/max*bw;
+    const ok=r[2]>=r[1];
+    // track
+    svg.appendChild(el("rect",{x:mL+58,y:yy,width:bw,height:26,rx:4,fill:cv("--surface-2")}));
+    // actual
+    svg.appendChild(el("rect",{class:"bar-anim",x:mL+58,y:yy,width:Math.max(2,actW),height:26,rx:4,fill:ok?cv("--good"):cv("--bad")}));
+    // target marker
+    svg.appendChild(el("line",{x1:tgtX,y1:yy-6,x2:tgtX,y2:yy+32,stroke:cv("--ink"),"stroke-width":1.5,"stroke-dasharray":"3 2"}));
+    svg.appendChild(txt(tgtX,yy-9,"target "+(r[1]/1000)+"k","ax",{"text-anchor":"middle"}));
+    svg.appendChild(txt(mL+54,yy+17,r[0],"ax",{"text-anchor":"end",fill:cv("--ink")}));
+    svg.appendChild(txt(mL+62,yy+45,r[2].toLocaleString()+"  ("+Math.round(r[2]/r[1]*100)+"% of promise)","val",{fill:ok?cv("--good"):cv("--bad")}));
+  });
+})();
+
+/* ---------- Chart 4: vertical share vs net engagement ---------- */
+(function(){
+  const svg=document.getElementById("c-vert");
+  const W=960,H=250,mT=16,rowH=64,left=140;
+  const rows=[
+    ["SaaS / Software",46,1.22,1.19],
+    ["Unknown / untagged",26,0.82,1.02],
+    ["Machinery / Mfg",22,1.39,0.84],
+  ];
+  const shareBW=280, maxShare=50;
+  // right panel: net engagement diverging
+  const netL=left+shareBW+90, netW=300, netMax=0.6; const zero=netL+netW*0.4;
+  svg.appendChild(txt(left,mT-2,"share of SMS volume","ax",{fill:cv("--faint")}));
+  svg.appendChild(txt(netL,mT-2,"net engagement  (reply% − opt-out%)","ax",{fill:cv("--faint")}));
+  svg.appendChild(el("line",{x1:zero,y1:mT+6,x2:zero,y2:mT+6+rows.length*rowH-18,stroke:cv("--line"),"stroke-width":1}));
+  svg.appendChild(txt(zero,mT+6+rows.length*rowH-4,"0","ax",{"text-anchor":"middle"}));
+  rows.forEach((r,i)=>{
+    const yy=mT+12+i*rowH;
+    svg.appendChild(txt(left-10,yy+15,r[0],"ax",{"text-anchor":"end",fill:cv("--ink"),"font-size":"11.5px"}));
+    // share bar
+    const w=r[1]/maxShare*shareBW;
+    svg.appendChild(el("rect",{x:left,y:yy,width:shareBW,height:24,rx:3,fill:cv("--surface-2")}));
+    svg.appendChild(el("rect",{class:"bar-anim",x:left,y:yy,width:w,height:24,rx:3,fill:cv("--muted")}));
+    svg.appendChild(txt(left+w+7,yy+16,r[1]+"%","val"));
+    // net diverging
+    const net=+(r[2]-r[3]).toFixed(2);
+    const nw=Math.abs(net)/netMax*(netW*0.6);
+    const pos=net>=0;
+    svg.appendChild(el("rect",{class:"bar-anim",x:pos?zero:zero-nw,y:yy+2,width:Math.max(2,nw),height:20,rx:3,fill:pos?cv("--good"):cv("--bad")}));
+    svg.appendChild(txt(pos?zero+nw+6:zero-nw-6,yy+17,(pos?"+":"")+net.toFixed(2)+"%","val",{"text-anchor":pos?"start":"end",fill:pos?cv("--good"):cv("--bad")}));
+  });
+})();
+</script>

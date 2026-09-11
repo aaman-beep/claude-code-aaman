@@ -1,0 +1,194 @@
+<title>Scaletopia — follow-up list, 2026-08-03 → 2026-08-09</title>
+<style>
+:root{
+  --paper:#F7F7F5; --surface:#FFFFFF; --sunk:#EFEFEB;
+  --ink:#17181A; --ink-2:#4C4E52; --ink-3:#7C7F85;
+  --rule:#E0E0DA; --rule-2:#C7C7BF;
+  --accent:#1F5C3D; --accent-soft:#E3EFE8;
+  --hot:#B33A17; --hot-soft:#FBE8E1; --gold:#96700B;
+  --sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root{
+  --paper:#0F1110; --surface:#181A19; --sunk:#1F2220;
+  --ink:#EAEBE8; --ink-2:#A6A9A4; --ink-3:#787C78;
+  --rule:#2A2E2B; --rule-2:#3C413D;
+  --accent:#6FC095; --accent-soft:#16281F;
+  --hot:#F0906C; --hot-soft:#35201A; --gold:#D6AA4B;
+}}
+:root[data-theme="dark"]{
+  --paper:#0F1110; --surface:#181A19; --sunk:#1F2220;
+  --ink:#EAEBE8; --ink-2:#A6A9A4; --ink-3:#787C78;
+  --rule:#2A2E2B; --rule-2:#3C413D;
+  --accent:#6FC095; --accent-soft:#16281F;
+  --hot:#F0906C; --hot-soft:#35201A; --gold:#D6AA4B;
+}
+:root[data-theme="light"]{
+  --paper:#F7F7F5; --surface:#FFFFFF; --sunk:#EFEFEB;
+  --ink:#17181A; --ink-2:#4C4E52; --ink-3:#7C7F85;
+  --rule:#E0E0DA; --rule-2:#C7C7BF;
+  --accent:#1F5C3D; --accent-soft:#E3EFE8;
+  --hot:#B33A17; --hot-soft:#FBE8E1; --gold:#96700B;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
+     font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:940px;margin:0 auto;padding:0 20px}
+
+header{padding:32px 0 18px;border-bottom:2px solid var(--ink)}
+h1{margin:0;font-size:26px;font-weight:660;letter-spacing:-.022em}
+.sub{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;
+     color:var(--ink-3);margin-top:5px}
+.lede{margin:12px 0 0;color:var(--ink-2);max-width:62ch;font-size:14.5px}
+.bar{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px;align-items:center}
+.pill{font-family:var(--mono);font-size:11.5px;padding:5px 10px;border-radius:999px;
+      background:var(--sunk);color:var(--ink-2);font-variant-numeric:tabular-nums}
+.pill.-n{background:var(--accent);color:var(--surface);font-weight:600}
+.tick{margin-left:auto;font-size:12.5px;color:var(--ink-3);font-family:var(--mono)}
+
+.grp{margin-top:34px}
+.grp h2{margin:0 0 2px;font-size:17px;font-weight:650;letter-spacing:-.015em;
+        display:flex;align-items:baseline;gap:9px}
+.grp h2 .c{font-family:var(--mono);font-size:11.5px;background:var(--accent);color:var(--surface);
+           padding:2px 8px;border-radius:999px;font-variant-numeric:tabular-nums}
+.grp > p{margin:0 0 12px;font-size:13.5px;color:var(--ink-3);max-width:68ch}
+
+.lead{background:var(--surface);border:1px solid var(--rule);border-radius:10px;
+      padding:14px 16px;margin-bottom:9px;display:grid;
+      grid-template-columns:1fr auto;gap:4px 16px;align-items:start}
+.lead.done{opacity:.42}
+.lead.done .nm{text-decoration:line-through}
+.hd{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 9px;min-width:0}
+.nm{font-weight:650;font-size:16px;letter-spacing:-.01em}
+.ti{font-size:13px;color:var(--ink-3)}
+.co{font-size:13.5px;color:var(--ink-2);font-weight:500}
+.co a{color:var(--accent)}
+.age{font-family:var(--mono);font-size:11px;padding:3px 8px;border-radius:999px;
+     background:var(--sunk);color:var(--ink-3);white-space:nowrap;font-weight:600}
+.age.-hot{background:var(--hot-soft);color:var(--hot)}
+.quote{grid-column:1/-1;margin:8px 0 0;padding:9px 13px;background:var(--sunk);
+       border-left:3px solid var(--accent);border-radius:0 7px 7px 0;font-size:14px}
+.quote b{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;
+         text-transform:uppercase;color:var(--ink-3);margin-bottom:3px}
+.quote.-ours{border-left-color:var(--rule-2);background:transparent;
+             border:1px dashed var(--rule-2);border-radius:7px;color:var(--ink-2);font-size:13px}
+.routes{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:7px;margin-top:9px;align-items:center}
+.route{font-family:var(--mono);font-size:12px;padding:5px 10px;border-radius:6px;
+       border:1px solid var(--rule-2);color:var(--ink-2);text-decoration:none;
+       display:inline-flex;gap:6px;align-items:center}
+.route:hover{border-color:var(--accent);color:var(--accent)}
+.route b{font-family:var(--sans);font-size:10px;text-transform:uppercase;letter-spacing:.06em;
+         color:var(--ink-3);font-weight:600}
+.mark{margin-left:auto;font:inherit;font-size:12px;background:none;cursor:pointer;
+      border:1px solid var(--rule-2);border-radius:6px;padding:5px 11px;color:var(--ink-2)}
+.mark:hover{border-color:var(--accent);color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+details.thin{margin:44px 0 0;border:1px dashed var(--rule-2);border-radius:10px;padding:2px 18px 10px}
+details.thin > summary{cursor:pointer;font-weight:640;font-size:15px;padding:14px 0;list-style:none}
+details.thin > summary::-webkit-details-marker{display:none}
+details.thin > summary::before{content:"▸ ";color:var(--ink-3)}
+details.thin[open] > summary::before{content:"▾ "}
+details.thin > p{font-size:13.5px;color:var(--ink-3);max-width:68ch;margin:0 0 12px}
+footer{margin:50px 0 40px;padding-top:16px;border-top:1px solid var(--rule);
+       font-size:12.5px;color:var(--ink-3);max-width:70ch}
+footer p{margin:0 0 8px}
+@media (max-width:680px){
+  .lead{grid-template-columns:1fr}
+  .age{justify-self:start}
+  .mark{margin-left:0}
+}
+@media print{
+  body{background:#fff} .mark,.tick{display:none} .lead{break-inside:avoid;border-color:#bbb}
+  details.thin{break-before:page} details.thin[open] > summary::before{content:""}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<header><div class="wrap">
+  <h1>Follow-up list</h1>
+  <div class="sub">Scaletopia · cold SMS · 2026-08-03 → 2026-08-09</div>
+  <p class="lede">Qualified positive replies that never booked. Ordered by what they asked
+    for, then by how long they've been sitting.</p>
+  <div class="bar" id="bar"></div>
+</div></header>
+
+<main class="wrap" id="main"></main>
+<footer class="wrap" id="foot"></footer>
+
+<script>
+const D = {"main": [{"contact": "Michael Begg", "job_title": "Co-Founder, CEO", "company": "AMZ Advisers", "website": "https://amzadvisers.com", "linkedin": "https://www.linkedin.com/in/mbegg/", "email": "mike@amzadvisers.com", "phone": "+12032187389", "location": "United States", "category": "Power Request", "days_silent": 6, "we_replied": true, "created_at": "2026-08-03T18:48:46.000Z", "campaign_name": "", "warm_tier": "stalled", "source": "deal", "said": "My email is Mike not Michael", "ours": "Great, just sent the email over to mike@amzadvisers.com, lmk if you've got it - speak soon.", "n_messages": 12}, {"contact": "Jeff Cocca", "job_title": "VP of Growth Marketing / Partner", "company": "Libre Design & Digital", "website": "https://libredesign.com", "linkedin": "https://www.linkedin.com/in/jefferycocca/", "email": "jeffery.cocca@libredesign.com", "phone": "+19519702663", "location": "United States", "category": "Power Request", "days_silent": 5, "we_replied": true, "created_at": "2026-08-04T17:34:35.000Z", "campaign_name": "", "warm_tier": "stalled", "source": "both", "said": "I'm not back until next. Do you have case studies you could share prior?", "ours": "Sure, you can check them at <https://scaletopia.io/case-studies/>", "n_messages": 11}, {"contact": "Ahmad Islam", "job_title": "Chief Executive Officer", "company": "Ten35", "website": "https://ten35.com", "linkedin": "https://www.linkedin.com/in/ahmad-i-b99112/", "email": "", "phone": "+18326577800", "location": "United States", "category": "Power Request", "days_silent": 4, "we_replied": true, "created_at": "2026-08-05T16:19:40.000Z", "campaign_name": "", "warm_tier": "stalled", "source": "both", "said": "Sure", "ours": "Perfect. If you've got a few minutes tomorrow 12 pm or maybe Friday 11 am cst, I'd be happy to hop on a 15 minute call and discuss what we'd do for Ten35 specifically.", "n_messages": 4}, {"contact": "Robert Murray", "job_title": "CEO & Co-founder", "company": "Intrigue media", "website": "https://intriguemedia.com", "linkedin": "https://www.linkedin.com/in/robert-murray-33889117/", "email": "robert@intrigueme.ca", "phone": "+12269791206", "location": "United States", "category": "Power Request", "days_silent": 4, "we_replied": true, "created_at": "2026-08-05T17:29:28.000Z", "campaign_name": "", "warm_tier": "stalled", "source": "both", "said": "I'm out for a few weeks, please email me at robert@intrigueme.ca and I'll have my ea help get something scheduled \ud83d\udc4d", "ours": "Awesome. If you've got a few minutes tomorrow 1 pm or maybe Friday 12 pm est, I'd be happy to hop on a 15 minute call and discuss.", "n_messages": 5}, {"contact": "Luke Mcginnis", "job_title": "VP of Growth and Ops (Buy Box Experts - Spreetail)", "company": "Buy Box Experts", "website": "https://buyboxexperts.com", "linkedin": "http://www.linkedin.com/in/luke-mcginnis1", "email": "", "phone": "+12063755990", "location": "United States", "category": "More Info Request", "days_silent": 5, "we_replied": true, "created_at": "2026-08-04T17:38:08.000Z", "campaign_name": "", "warm_tier": "stalled", "source": "both", "said": "1.) yes. How much does it cost per month? I have a roughly $3k monthly budget opening up", "ours": "either way happy to connect, done this for like 5+ amazon agencies.. Pirawna, BAD marketing, Evolved commerce etc.", "n_messages": 8}, {"contact": "Alexander Kung", "job_title": "Co-Founder & CEO", "company": "Sequence commerce", "website": "sequencecommerce.com", "linkedin": "", "email": "alex@pst ti", "phone": "+1 604-762-7386", "location": "", "category": "More Info Request", "days_silent": null, "we_replied": true, "created_at": "2026-08-05T22:33:42.000Z", "campaign_name": "", "warm_tier": "stalled", "source": "both", "said": "Hi Rose, I'm open to hearing more about your playbook and how it works. Nice fake AI avatar btw. Best, Alex On Wed, 5 Aug 2026 at 16:26, Rose Snyder rose@builtengine.co wrote: Alexander, I know you're getting BOMBARDED by everyone promising you more leads.. I had an outbound idea for Sequence commerce too - if I were in your seat I'd go after dtc skincare brands spending $10k+/month on amazon and meta ads but without optimized campaign management. It's the playbook that landed Chamber Media 14 retainers (USD 74K MRR) with us within a 5-month window. Should I share more on how it works, or have you experimented with something similar already? Best, Rose Snyder | Scaletopia Partnerships Manager P.S. We also kick things with a 30-day pilot, so you get a feel for the results before committing. P.P.S. If this isn't relevant or of any interest at this point, reply back and I'll no longer contact you. -- Alex Kung Chief Executive Officer Sequence Commerce, Managed Services c: +1 581 - 702 - 2593 p: +1 365 - 654 - 6168 (Office) | +1 289 - 380 - 8080 (Mobile) w:sequencecommerce.com http://sequencecommerce.com | *amzprep.com http://amzprep.com*", "ours": "Awesome Alex, If you have got a few minutes tomorrow 10:30 am or maybe Friday 9 am pst. I'd be happy to hop on a quick call and discuss the playbook. Best, Rose Snyder | Scaletopia Partnerships Manager", "n_messages": 2}], "thin": [{"contact": "Moyra Rodger", "job_title": "CEO", "company": "Magnify digital", "website": "", "linkedin": "", "email": "", "phone": "", "location": "", "category": "Power Request", "days_silent": null, "we_replied": false, "created_at": "2026-08-05T21:13:52.000Z", "campaign_name": "Scaletopia - icp signal based (General list) |  20-500E | NA | Google", "warm_tier": "no_reply_sent", "source": "contact_only", "said": "You\u2019re right, I am inundated with these email. I\u2019m taking a limited number of these meetings. Happy to include you in that cohort for a short call. FYI - We are not just looking for ad work. Best, Moyra _______________________________ Moyra Rodger", "ours": "", "n_messages": 1}, {"contact": "Renee Miller", "job_title": "Founder/Executive Creative Director", "company": "", "website": "", "linkedin": "", "email": "", "phone": "+13104420101", "location": "", "category": "More Info Request", "days_silent": 4, "we_replied": false, "created_at": "2026-08-06T19:42:17.000Z", "campaign_name": "Scaletopia - ICP Hook Enriched | 25-500E | NA", "warm_tier": "no_reply_sent", "source": "contact_only", "said": "", "ours": "", "n_messages": 4}, {"contact": "Kalle Sjogrell", "job_title": "Business Development Executive", "company": "Hawke media", "website": "", "linkedin": "", "email": "", "phone": "", "location": "", "category": "More Info Request", "days_silent": null, "we_replied": false, "created_at": "2026-08-04T19:54:29.000Z", "campaign_name": "Scaletopia - icp signal based (General list) |  20-500E | NA | Google", "warm_tier": "no_reply_sent", "source": "contact_only", "said": "I appreciate it, Alex. We have many lead generation tools in place, but I can include your name if you want to send me a quick one-pager. Cheers, Kalle Sjogrell | Business Development Executive 2415 Michigan Avenue Santa Monica, CA 90404 On Tue, Aug 4, 2026 at 12:34 PM Alex Morris alex@outboundup.co wrote: Kalle, I know your inbox is getting SLAMMED with everyone promising you more leads.. But I had an outbound idea for Hawke media - if I was running your outbound I'd go after fashion & apparel brands spending $10k+/month on paid social and search but no outsourced cmo. It's the playbook that landed Chamber Media 14 retainers (USD 74K MRR) with us over a 5-month stretch. Could I drop more info on how it works, or have you already tried something like this? Best, Alex Morris | Scaletopia Partnerships Manager P.S. We also run a 30-day pilot before you commit to anything, so you can test us out first. P.P.S. If this isn't relevant or of any interest at this point, let me know and I'll no longer contact you.", "ours": "", "n_messages": 1}, {"contact": "Michael Begg", "job_title": "Partner", "company": "Reach social", "website": "", "linkedin": "", "email": "", "phone": "", "location": "", "category": "Objection Handling", "days_silent": null, "we_replied": false, "created_at": "2026-08-04T23:52:47.000Z", "campaign_name": "Scaletopia - All Marketing Agencies | 11-500E | New Copy", "warm_tier": "no_reply_sent", "source": "contact_only", "said": "Hi Aaman, What are the pay-per-result rates? Thanks, Mike On Mon, Aug 3, 2026 at 4:49 PM Aaman Ahmed aaman.ahmed@expandscaletopia.com wrote: Hi Michael, Apologies for sending it to the wrong email, here it is now. Most Amazon agencies hit a ceiling with outbound because they're relying on generic sequences that don't land. We use AI-timed text and email outreach that feels human, targets the right clients, and only charges on results delivered. That's how Chamber Media signed 18 retainers in 8 months and capped their client intake. A few case studies worth a look: Chamber Media: 110 qualified calls in 6 months, $72k new MRR scaletopia.io/case *study/chamber-mediaPirawna: 45 qualified calls in 3 months, $44k new MRR scaletopia.io/case http://scaletopia.io/case* study/how-we-booked-pirawna-45-qualified-calls-in-3-months-including-mr-beast-feastables DreamLabs: $32k MRR in a 7-day sales cycle scaletopia.io/case_study/how-we-helped-dreamlabs-sign-a-120000-year-client-in-a-7-day-sales-cycle-using-trigger-based-outreach All on a pay on results basis. If you've got a few minutes Thursday afternoon or Frida, I'd be happy to hop", "ours": "", "n_messages": 1}], "ask_order": ["Power Request", "Positive", "More Info Request", "Email Me Request", "Objection Handling", "Referral Request", "Custom Response", "Future Request"], "ask_copy": {"Power Request": ["Said yes", "Agreed to a call or handed over a contact. Pick the time for them."], "Positive": ["Warm, no ask", "Replied positively without asking for anything specific."], "More Info Request": ["Wants detail", "Asked how it works. Answer the question, then propose a slot."], "Email Me Request": ["Asked for email", "Wanted it in writing. Send it, then come back to the thread."], "Objection Handling": ["Pushed back", "Engaged but led with a blocker \u2014 usually price. Answer it straight."], "Referral Request": ["Pointed elsewhere", "Not them. Named someone else to contact."], "Custom Response": ["Other", "Didn't fit a standard bucket."], "Future Request": ["Later", "Warm but gave a timeline. Diarise rather than chase."]}, "client": "Scaletopia", "window": "2026-08-03 \u2192 2026-08-09", "built_at": "2026-08-10T10:42:19Z"};
+const esc = s => String(s??"").replace(/[&<>"']/g, c =>
+  ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const done = new Set();
+
+function routes(r){
+  const out = [];
+  if(r.phone)    out.push(`<a class="route" href="sms:${esc(r.phone)}"><b>text</b>${esc(r.phone)}</a>`);
+  if(r.email)    out.push(`<a class="route" href="mailto:${esc(r.email)}"><b>email</b>${esc(r.email)}</a>`);
+  if(r.linkedin) out.push(`<a class="route" href="${esc(r.linkedin)}" target="_blank" rel="noopener"><b>linkedin</b>profile</a>`);
+  if(r.website)  out.push(`<a class="route" href="${esc(r.website)}" target="_blank" rel="noopener"><b>site</b>${esc(r.website.replace(/^https?:\/\/(www\.)?/,"").replace(/\/$/,""))}</a>`);
+  return out.join("");
+}
+
+function lead(r, i, pfx){
+  const id = pfx + i;
+  const hot = (r.days_silent ?? 0) >= 21;
+  return `<div class="lead" id="${id}">
+    <div class="hd"><span class="nm">${esc(r.contact||"—")}</span>
+      <span class="co">${esc(r.company||"")}</span>
+      <span class="ti">${esc(r.job_title||"")}</span></div>
+    <span class="age ${hot?"-hot":""}">${r.days_silent==null?"—":r.days_silent+"d silent"}</span>
+    ${r.said ? `<div class="quote"><b>they said</b>${esc(r.said)}</div>` : ""}
+    ${r.ours ? `<div class="quote -ours"><b>we last sent</b>${esc(r.ours)}</div>` : ""}
+    <div class="routes">${routes(r)}
+      <button class="mark" data-id="${id}">Mark done</button></div>
+  </div>`;
+}
+
+function group(list, pfx){
+  let out = "";
+  D.ask_order.forEach(cat => {
+    const sub = list.filter(r => r.category === cat);
+    if(!sub.length) return;
+    const [title, why] = D.ask_copy[cat] || [cat, ""];
+    out += `<div class="grp"><h2>${esc(title)}<span class="c">${sub.length}</span></h2>
+      <p>${esc(why)}</p>${sub.map((r,i) => lead(r, i, pfx+cat.replace(/\W/g,""))).join("")}</div>`;
+  });
+  return out;
+}
+
+document.getElementById("bar").innerHTML =
+  `<span class="pill -n">${D.main.length} to contact</span>` +
+  D.ask_order.filter(c => D.main.some(r => r.category === c))
+    .map(c => `<span class="pill">${esc((D.ask_copy[c]||[c])[0])} ${D.main.filter(r=>r.category===c).length}</span>`).join("") +
+  `<span class="tick" id="tick"></span>`;
+
+document.getElementById("main").innerHTML = group(D.main, "m") + (D.thin.length ? `
+  <details class="thin"><summary>Replied, but never qualified into the CRM — ${D.thin.length}</summary>
+    <p>These people replied and were categorised, but no opportunity was ever created for them,
+      so nobody worked the thread. That's why they look thin — not because they were judged and
+      rejected. Worth a skim before you write them off.</p>
+    ${group(D.thin, "t")}</details>` : "");
+
+document.getElementById("foot").innerHTML = `
+  <p><b>Who's on this list.</b> Every reply between ${esc(D.window.replace("_to_"," and "))} that
+    counts as a positive under the CRM's own rule, never booked a meeting, and wasn't excluded
+    by hand as out-of-ICP.</p>
+  <p><b>Days silent</b> counts from the last message in the thread either way, so it's how long
+    the conversation has actually been dead — not how long since they first replied.</p>
+  <p>Built ${esc(D.built_at.slice(0,10))} from the SMS reply register.</p>`;
+
+function tick(){
+  const t = document.getElementById("tick");
+  t.textContent = done.size ? `${done.size} done · ${D.main.length - done.size} left` : "";
+}
+document.addEventListener("click", e => {
+  const b = e.target.closest(".mark"); if(!b) return;
+  const el = document.getElementById(b.dataset.id);
+  const on = el.classList.toggle("done");
+  on ? done.add(b.dataset.id) : done.delete(b.dataset.id);
+  b.textContent = on ? "Undo" : "Mark done";
+  tick();
+});
+</script>

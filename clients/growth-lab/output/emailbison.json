@@ -1,0 +1,386 @@
+{
+  "pulled_at": "2026-07-13T20:24:33.029061+00:00",
+  "client": "growth-lab",
+  "campaigns": [
+    {
+      "id": 901,
+      "name": "Growth Lab - Personal Injury | 3-200E | United States | Other ESPs",
+      "status": "active",
+      "type": "outbound",
+      "created_at": "2026-06-18T20:25:51.000000Z",
+      "leads": 2170,
+      "leads_contacted": 1692,
+      "sent": 2986,
+      "opens": 0,
+      "replies": 16,
+      "bounced": 146,
+      "interested": 0,
+      "unsubscribed": 0,
+      "completion": 69.33,
+      "steps": [
+        {
+          "id": 2125,
+          "order": 1,
+          "variant": false,
+          "wait_in_days": 3,
+          "thread_reply": false,
+          "subject_raw": "{MAIN EXPERTISE} cases?",
+          "body_raw_html": "<p>{Hi|Hey|Hello} {FIRST_NAME},</p><p><br></p><p>{I noticed {COMPANY} is competing for {MAIN EXPERTISE} cases in {CITY} - that's one of those markets where strong google visibility translates into signed retainers.|I saw {COMPANY} handles {MAIN EXPERTISE} cases in {CITY} - that's one of those markets where solid google visibility turns into signed retainers.|I came across {COMPANY} competing for {MAIN EXPERTISE} cases in {CITY} - that's one of those markets where good google visibility leads straight into signed retainers.}</p><p><br></p><p>{For example - we recently helped Abraham Watkins in Houston add 889 intake inquiries a month from google by ranking them no.1 for \"explosion accident lawyer near me\" (23M USD in signed settlements so far). Done in under 2 years.|As an example - we recently helped Abraham Watkins in Houston bring in 889 intake inquiries a month from google by ranking them at no.1 for \"explosion accident lawyer near me\" (23M USD in signed settlements so far). Within 2 years.|For reference - we recently helped Abraham Watkins in Houston pull in 889 intake inquiries a month from google by putting them at no.1 for \"explosion accident lawyer near me\" (23M USD in signed settlements so far). Inside 2 years.}</p><p><br></p><p>{Most firms I talk to have 3-4 specific SEO mistakes that, once fixed, makes a real difference.|Most firms I speak with have 3-4 specific SEO mistakes that, once sorted, makes a noticeable difference.|A lot of the firms I talk to have 3-4 specific SEO mistakes that, once taken care of, makes a big difference.}</p><p><br></p><p>{We just work with 3 firms per city, let me know if it's worth exploring the problems I see with your SEO? (also their impact on overall results)|We just take on 3 firms per city, let me know if it's worth digging into the problems I see with your SEO? (also their impact on overall results)|We cap it at 3 firms per city, let me know if it's worth looking into the problems I see with your SEO? (also how they're affecting your overall results)}</p><p><br></p><p>{Best,|Cheers,|Thanks,}</p><p>{SENDER_EMAIL_SIGNATURE}</p><p><br></p><p>P.S. {we also helped Abrar &amp; Vergara in El Paso (4M USD sexual abuse settlement), Wendt Law in Kansas City (1.8M USD in PI settlements), and Galo Law in San Antonio (890k USD in signed cases) sign cases through google.|we also helped Abrar &amp; Vergara in El Paso (4M USD sexual abuse settlement), Wendt Law in Kansas City (1.8M USD in PI settlements), and Galo Law in San Antonio (890k USD in signed cases) land cases through google.|we've also helped Abrar &amp; Vergara in El Paso (4M USD sexual abuse settlement), Wendt Law in Kansas City (1.8M USD in PI settlements), and Galo Law in San Antonio (890k USD in signed cases) close cases through google.}</p><p><br></p><p><br></p><p>P.P.S. If this isn't relevant or of any interest at this point, {reply back|let me know|respond} and I'll no longer contact you.</p>",
+          "subject_plain": "{MAIN EXPERTISE} cases?",
+          "body_plain": "Hi {FIRST_NAME},\n\nI noticed {COMPANY} is competing for {MAIN EXPERTISE} cases in {CITY} - that's one of those markets where strong google visibility translates into signed retainers.\n\nFor example - we recently helped Abraham Watkins in Houston add 889 intake inquiries a month from google by ranking them no.1 for \"explosion accident lawyer near me\" (23M USD in signed settlements so far). Done in under 2 years.\n\nMost firms I talk to have 3-4 specific SEO mistakes that, once fixed, makes a real difference.\n\nWe just work with 3 firms per city, let me know if it's worth exploring the problems I see with your SEO? (also their impact on overall results)\n\nBest,\n\n{SENDER_EMAIL_SIGNATURE}\n\nP.S. we also helped Abrar & Vergara in El Paso (4M USD sexual abuse settlement), Wendt Law in Kansas City (1.8M USD in PI settlements), and Galo Law in San Antonio (890k USD in signed cases) sign cases through google.\n\nP.P.S. If this isn't relevant or of any interest at this point, reply back and I'll no longer contact you.",
+          "sent": 1692,
+          "replies": 10,
+          "interested": 0,
+          "bounced": 129,
+          "unsubscribed": 0
+        },
+        {
+          "id": 2126,
+          "order": 2,
+          "variant": false,
+          "wait_in_days": 1,
+          "thread_reply": true,
+          "subject_raw": "Re: {MAIN EXPERTISE} cases?",
+          "body_raw_html": "<p>Hi {FIRST_NAME},</p><p><br></p><p>{Wanted to follow up because of an article TIME wrote last week.|Following up because of something TIME published last week.|Reaching back out because of an article TIME wrote last week.} {Google announced they are rebuilding search around AI and called it the biggest change in 25 years.|Google announced they're rebuilding search around AI and called it the biggest shift in 25 years.|Google revealed they're restructuring search around AI and called it the largest change in 25 years.}</p><p><br></p><p>{What that means for you is the firms that rank in AI search right now will be the firms that rank when most people are searching through AI in a year or two.|What this means for you is the firms showing up in AI search right now will be the firms that rank when most people are using AI to search in a year or two.|What that comes down to for you is the firms that are ranking in AI search today will be the ones that rank when the majority of people are searching through AI in a year or two.} {The window to reach and grab it first just opened.|The window to get there first just opened up.|The window to claim that spot first just cracked open.}</p><p><br></p><p>{We work with 3 firms per cityy. Want to see if {COMPANY} could be one of them?|We work with 3 firms per cityy. Want to find out if {COMPANY} could be one of them?|We work with 3 firms per cityy. Want to see if {COMPANY} could be one of them?}</p><p><br></p><p>Rachel</p>",
+          "subject_plain": "Re: {MAIN EXPERTISE} cases?",
+          "body_plain": "Hi {FIRST_NAME},\n\nWanted to follow up because of an article TIME wrote last week. Google announced they are rebuilding search around AI and called it the biggest change in 25 years.\n\nWhat that means for you is the firms that rank in AI search right now will be the firms that rank when most people are searching through AI in a year or two. The window to reach and grab it first just opened.\n\nWe work with 3 firms per cityy. Want to see if {COMPANY} could be one of them?\n\nRachel",
+          "sent": 1294,
+          "replies": 6,
+          "interested": 0,
+          "bounced": 17,
+          "unsubscribed": 0
+        }
+      ],
+      "monthly": {
+        "2026-06": {
+          "sent": 1263,
+          "replies": 5,
+          "interested": 0,
+          "bounced": 109
+        },
+        "2026-07": {
+          "sent": 1723,
+          "replies": 11,
+          "interested": 0,
+          "bounced": 37
+        }
+      }
+    },
+    {
+      "id": 882,
+      "name": "Growth Lab - Personal Injury | 3-200E | United States | Google",
+      "status": "active",
+      "type": "outbound",
+      "created_at": "2026-05-28T17:43:25.000000Z",
+      "leads": 985,
+      "leads_contacted": 736,
+      "sent": 1425,
+      "opens": 0,
+      "replies": 14,
+      "bounced": 5,
+      "interested": 2,
+      "unsubscribed": 0,
+      "completion": 74.06,
+      "steps": [
+        {
+          "id": 2065,
+          "order": 1,
+          "variant": false,
+          "wait_in_days": 3,
+          "thread_reply": false,
+          "subject_raw": "{MAIN EXPERTISE} cases?",
+          "body_raw_html": "<p>{Hi|Hey|Hello} {FIRST_NAME},</p><p><br></p><p>{I noticed {COMPANY} is competing for {MAIN EXPERTISE} cases in {CITY} - that's one of those markets where strong google visibility translates into signed retainers.|I saw {COMPANY} handles {MAIN EXPERTISE} cases in {CITY} - that's one of those markets where solid google visibility turns into signed retainers.|I came across {COMPANY} competing for {MAIN EXPERTISE} cases in {CITY} - that's one of those markets where good google visibility leads straight into signed retainers.}</p><p><br></p><p>{For example - we recently helped Abraham Watkins in Houston add 889 intake inquiries a month from google by ranking them no.1 for \"explosion accident lawyer near me\" (23M USD in signed settlements so far). Done in under 2 years.|As an example - we recently helped Abraham Watkins in Houston bring in 889 intake inquiries a month from google by ranking them at no.1 for \"explosion accident lawyer near me\" (23M USD in signed settlements so far). Within 2 years.|For reference - we recently helped Abraham Watkins in Houston pull in 889 intake inquiries a month from google by putting them at no.1 for \"explosion accident lawyer near me\" (23M USD in signed settlements so far). Inside 2 years.}</p><p><br></p><p>{Most firms I talk to have 3-4 specific SEO mistakes that, once fixed, makes a real difference.|Most firms I speak with have 3-4 specific SEO mistakes that, once sorted, makes a noticeable difference.|A lot of the firms I talk to have 3-4 specific SEO mistakes that, once taken care of, makes a big difference.}</p><p><br></p><p>{We just work with 3 firms per city, let me know if it's worth exploring the problems I see with your SEO? (also their impact on overall results)|We just take on 3 firms per city, let me know if it's worth digging into the problems I see with your SEO? (also their impact on overall results)|We cap it at 3 firms per city, let me know if it's worth looking into the problems I see with your SEO? (also how they're affecting your overall results)}</p><p><br></p><p>{Best,|Cheers,|Thanks,}</p><p>{SENDER_EMAIL_SIGNATURE}</p><p><br></p><p>P.S. {we also helped Abrar &amp; Vergara in El Paso (4M USD sexual abuse settlement), Wendt Law in Kansas City (1.8M USD in PI settlements), and Galo Law in San Antonio (890k USD in signed cases) sign cases through google.|we also helped Abrar &amp; Vergara in El Paso (4M USD sexual abuse settlement), Wendt Law in Kansas City (1.8M USD in PI settlements), and Galo Law in San Antonio (890k USD in signed cases) land cases through google.|we've also helped Abrar &amp; Vergara in El Paso (4M USD sexual abuse settlement), Wendt Law in Kansas City (1.8M USD in PI settlements), and Galo Law in San Antonio (890k USD in signed cases) close cases through google.}</p><p><br></p><p><br></p><p>P.P.S. If this isn't relevant or of any interest at this point, {reply back|let me know|respond} and I'll no longer contact you.</p>",
+          "subject_plain": "{MAIN EXPERTISE} cases?",
+          "body_plain": "Hi {FIRST_NAME},\n\nI noticed {COMPANY} is competing for {MAIN EXPERTISE} cases in {CITY} - that's one of those markets where strong google visibility translates into signed retainers.\n\nFor example - we recently helped Abraham Watkins in Houston add 889 intake inquiries a month from google by ranking them no.1 for \"explosion accident lawyer near me\" (23M USD in signed settlements so far). Done in under 2 years.\n\nMost firms I talk to have 3-4 specific SEO mistakes that, once fixed, makes a real difference.\n\nWe just work with 3 firms per city, let me know if it's worth exploring the problems I see with your SEO? (also their impact on overall results)\n\nBest,\n\n{SENDER_EMAIL_SIGNATURE}\n\nP.S. we also helped Abrar & Vergara in El Paso (4M USD sexual abuse settlement), Wendt Law in Kansas City (1.8M USD in PI settlements), and Galo Law in San Antonio (890k USD in signed cases) sign cases through google.\n\nP.P.S. If this isn't relevant or of any interest at this point, reply back and I'll no longer contact you.",
+          "sent": 736,
+          "replies": 10,
+          "interested": 2,
+          "bounced": 5,
+          "unsubscribed": 0
+        },
+        {
+          "id": 2081,
+          "order": 2,
+          "variant": false,
+          "wait_in_days": 1,
+          "thread_reply": true,
+          "subject_raw": "Re: {MAIN EXPERTISE} cases?",
+          "body_raw_html": "<p>Hi {FIRST_NAME},</p><p><br></p><p>{Wanted to follow up because of an article TIME wrote last week.|Following up because of something TIME published last week.|Reaching back out because of an article TIME wrote last week.} {Google announced they are rebuilding search around AI and called it the biggest change in 25 years.|Google announced they're rebuilding search around AI and called it the biggest shift in 25 years.|Google revealed they're restructuring search around AI and called it the largest change in 25 years.}</p><p><br></p><p>{What that means for you is the firms that rank in AI search right now will be the firms that rank when most people are searching through AI in a year or two.|What this means for you is the firms showing up in AI search right now will be the firms that rank when most people are using AI to search in a year or two.|What that comes down to for you is the firms that are ranking in AI search today will be the ones that rank when the majority of people are searching through AI in a year or two.} {The window to reach and grab it first just opened.|The window to get there first just opened up.|The window to claim that spot first just cracked open.}</p><p><br></p><p>{We work with 3 firms per cityy. Want to see if {COMPANY} could be one of them?|We work with 3 firms per cityy. Want to find out if {COMPANY} could be one of them?|We work with 3 firms per cityy. Want to see if {COMPANY} could be one of them?}</p><p><br></p><p>Rachel</p>",
+          "subject_plain": "Re: {MAIN EXPERTISE} cases?",
+          "body_plain": "Hi {FIRST_NAME},\n\nWanted to follow up because of an article TIME wrote last week. Google announced they are rebuilding search around AI and called it the biggest change in 25 years.\n\nWhat that means for you is the firms that rank in AI search right now will be the firms that rank when most people are searching through AI in a year or two. The window to reach and grab it first just opened.\n\nWe work with 3 firms per cityy. Want to see if {COMPANY} could be one of them?\n\nRachel",
+          "sent": 688,
+          "replies": 4,
+          "interested": 0,
+          "bounced": 0,
+          "unsubscribed": 0
+        }
+      ],
+      "monthly": {
+        "2026-05": {
+          "sent": 259,
+          "replies": 2,
+          "interested": 0,
+          "bounced": 1
+        },
+        "2026-06": {
+          "sent": 1165,
+          "replies": 12,
+          "interested": 2,
+          "bounced": 4
+        }
+      }
+    },
+    {
+      "id": 881,
+      "name": "Growth Lab - Personal Injury | 3-200E | United States | Catch all",
+      "status": "completed",
+      "type": "outbound",
+      "created_at": "2026-05-28T17:18:17.000000Z",
+      "leads": 99,
+      "leads_contacted": 99,
+      "sent": 99,
+      "opens": 0,
+      "replies": 1,
+      "bounced": 5,
+      "interested": 0,
+      "unsubscribed": 0,
+      "completion": 100,
+      "steps": [
+        {
+          "id": 2063,
+          "order": 1,
+          "variant": false,
+          "wait_in_days": 1,
+          "thread_reply": false,
+          "subject_raw": "{MAIN EXPERTISE} cases?",
+          "body_raw_html": "<p>{Hi|Hey|Hello} {FIRST_NAME},</p><p><br></p><p>{I noticed {COMPANY} is competing for {MAIN EXPERTISE} cases in {CITY} - that's one of those markets where strong google visibility translates into signed retainers.|I saw {COMPANY} handles {MAIN EXPERTISE} cases in {CITY} - that's one of those markets where solid google visibility turns into signed retainers.|I came across {COMPANY} competing for {MAIN EXPERTISE} cases in {CITY} - that's one of those markets where good google visibility leads straight into signed retainers.}</p><p><br></p><p>{For example - we recently helped Abraham Watkins in Houston add 889 intake inquiries a month from google by ranking them no.1 for \"explosion accident lawyer near me\" (23M USD in signed settlements so far). Done in under 2 years.|As an example - we recently helped Abraham Watkins in Houston bring in 889 intake inquiries a month from google by ranking them at no.1 for \"explosion accident lawyer near me\" (23M USD in signed settlements so far). Within 2 years.|For reference - we recently helped Abraham Watkins in Houston pull in 889 intake inquiries a month from google by putting them at no.1 for \"explosion accident lawyer near me\" (23M USD in signed settlements so far). Inside 2 years.}</p><p><br></p><p>{Most firms I talk to have 3-4 specific SEO mistakes that, once fixed, makes a real difference.|Most firms I speak with have 3-4 specific SEO mistakes that, once sorted, makes a noticeable difference.|A lot of the firms I talk to have 3-4 specific SEO mistakes that, once taken care of, makes a big difference.}</p><p><br></p><p>{We just work with 3 firms per city, let me know if it's worth exploring the problems I see with your SEO? (also their impact on overall results)|We just take on 3 firms per city, let me know if it's worth digging into the problems I see with your SEO? (also their impact on overall results)|We cap it at 3 firms per city, let me know if it's worth looking into the problems I see with your SEO? (also how they're affecting your overall results)}</p><p><br></p><p>{Best,|Cheers,|Thanks,}</p><p>{SENDER_EMAIL_SIGNATURE}</p><p><br></p><p>P.S. {we also helped Abrar &amp; Vergara in El Paso (4M USD sexual abuse settlement), Wendt Law in Kansas City (1.8M USD in PI settlements), and Galo Law in San Antonio (890k USD in signed cases) sign cases through google.|we also helped Abrar &amp; Vergara in El Paso (4M USD sexual abuse settlement), Wendt Law in Kansas City (1.8M USD in PI settlements), and Galo Law in San Antonio (890k USD in signed cases) land cases through google.|we've also helped Abrar &amp; Vergara in El Paso (4M USD sexual abuse settlement), Wendt Law in Kansas City (1.8M USD in PI settlements), and Galo Law in San Antonio (890k USD in signed cases) close cases through google.}</p><p><br></p><p><br></p><p>P.P.S. If this isn't relevant or of any interest at this point, {reply back|let me know|respond} and I'll no longer contact you.</p>",
+          "subject_plain": "{MAIN EXPERTISE} cases?",
+          "body_plain": "Hi {FIRST_NAME},\n\nI noticed {COMPANY} is competing for {MAIN EXPERTISE} cases in {CITY} - that's one of those markets where strong google visibility translates into signed retainers.\n\nFor example - we recently helped Abraham Watkins in Houston add 889 intake inquiries a month from google by ranking them no.1 for \"explosion accident lawyer near me\" (23M USD in signed settlements so far). Done in under 2 years.\n\nMost firms I talk to have 3-4 specific SEO mistakes that, once fixed, makes a real difference.\n\nWe just work with 3 firms per city, let me know if it's worth exploring the problems I see with your SEO? (also their impact on overall results)\n\nBest,\n\n{SENDER_EMAIL_SIGNATURE}\n\nP.S. we also helped Abrar & Vergara in El Paso (4M USD sexual abuse settlement), Wendt Law in Kansas City (1.8M USD in PI settlements), and Galo Law in San Antonio (890k USD in signed cases) sign cases through google.\n\nP.P.S. If this isn't relevant or of any interest at this point, reply back and I'll no longer contact you.",
+          "sent": 99,
+          "replies": 1,
+          "interested": 0,
+          "bounced": 5,
+          "unsubscribed": 0
+        }
+      ],
+      "monthly": {
+        "2026-05": {
+          "sent": 99,
+          "replies": 1,
+          "interested": 0,
+          "bounced": 5
+        }
+      }
+    },
+    {
+      "id": 861,
+      "name": "Growth Lab - Probate/Trust & Estate Law | 3-200E | United States | Outlook",
+      "status": "paused",
+      "type": "outbound",
+      "created_at": "2026-05-11T14:49:07.000000Z",
+      "leads": 5451,
+      "leads_contacted": 5397,
+      "sent": 5398,
+      "opens": 0,
+      "replies": 7,
+      "bounced": 38,
+      "interested": 0,
+      "unsubscribed": 0,
+      "completion": 99.01,
+      "steps": [
+        {
+          "id": 2008,
+          "order": 1,
+          "variant": false,
+          "wait_in_days": 1,
+          "thread_reply": false,
+          "subject_raw": "{MAIN EXPERTISE} cases?",
+          "body_raw_html": "<p>Hi {FIRST_NAME},</p><p><br></p><p>{I noticed {COMPANY} is competing for {MAIN EXPERTISE} cases in {CITY} - that's one of those markets where strong google visibility translates into signed retainers.|I saw {COMPANY} handles {MAIN EXPERTISE} cases in {CITY} - that's one of those markets where solid google visibility turns into signed retainers.|I came across {COMPANY} competing for {MAIN EXPERTISE} cases in {CITY} - that's one of those markets where good google visibility leads directly to signed retainers.}</p><p><br></p><p>{For example - we recently helped Frisella Neilson in San Diego bring in USD 763k in contested probate billables by ranking them no.1 on google for \"San Diego Trusts Lawyer.\" All in under 12 months.|As an example - we recently helped Frisella Neilson in San Diego bring in USD 763k in contested probate billables by getting them to no.1 on google for \"San Diego Trusts Lawyer.\" All within 12 months.|For reference - we recently helped Frisella Neilson in San Diego bring in USD 763k in contested probate billables by putting them no.1 on google for \"San Diego Trusts Lawyer.\" All in under 12 months.}</p><p><br></p><p>{Most firms I talk to have 3-4 specific SEO mistakes that, once fixed, makes an immediate difference.|Most firms I speak with have 3-4 specific SEO mistakes that, once sorted, makes an immediate difference.|A lot of the firms I talk to have 3-4 specific SEO mistakes that, once taken care of, makes an immediate difference.}</p><p><br></p><p>{We just work with 3 firms per city, let me know if it's worth exploring problems I see with your SEO? (also their impact on overall results)|We just take on 3 firms per city, let me know if it's worth digging into the problems I see with your SEO? (also their impact on overall results)|We cap it at 3 firms per city, let me know if it's worth looking into the problems I see with your SEO? (also how they're affecting your overall results)}</p><p><br></p><p>{Best,|Cheers,|Thanks,}</p><p>{SENDER_EMAIL_SIGNATURE}</p><p><br></p><p>PS - {we also helped Abrar &amp; Vergara in El Paso (4M sexual abuse settlement), Wendt Law in Kansas City (1.8M in PI settlements), and Galo Law in San Antonio (890k in signed cases) sign cases through google.|we also helped Abrar &amp; Vergara in El Paso (4M sexual abuse settlement), Wendt Law in Kansas City (1.8M in PI settlements), and Galo Law in San Antonio (890k in signed cases) land cases through google.|we've also helped Abrar &amp; Vergara in El Paso (4M sexual abuse settlement), Wendt Law in Kansas City (1.8M in PI settlements), and Galo Law in San Antonio (890k in signed cases) close cases through google.}</p><p><br></p><p><br></p><p>P.P.S. If this isn't relevant or of any interest at this point, {reply back|let me know|respond} and I'll no longer contact you.</p>",
+          "subject_plain": "{MAIN EXPERTISE} cases?",
+          "body_plain": "Hi {FIRST_NAME},\n\nI noticed {COMPANY} is competing for {MAIN EXPERTISE} cases in {CITY} - that's one of those markets where strong google visibility translates into signed retainers.\n\nFor example - we recently helped Frisella Neilson in San Diego bring in USD 763k in contested probate billables by ranking them no.1 on google for \"San Diego Trusts Lawyer.\" All in under 12 months.\n\nMost firms I talk to have 3-4 specific SEO mistakes that, once fixed, makes an immediate difference.\n\nWe just work with 3 firms per city, let me know if it's worth exploring problems I see with your SEO? (also their impact on overall results)\n\nBest,\n\n{SENDER_EMAIL_SIGNATURE}\n\nPS - we also helped Abrar & Vergara in El Paso (4M sexual abuse settlement), Wendt Law in Kansas City (1.8M in PI settlements), and Galo Law in San Antonio (890k in signed cases) sign cases through google.\n\nP.P.S. If this isn't relevant or of any interest at this point, reply back and I'll no longer contact you.",
+          "sent": 5396,
+          "replies": 7,
+          "interested": 0,
+          "bounced": 38,
+          "unsubscribed": 0
+        }
+      ],
+      "monthly": {
+        "2026-05": {
+          "sent": 3021,
+          "replies": 5,
+          "interested": 0,
+          "bounced": 23
+        },
+        "2026-06": {
+          "sent": 2375,
+          "replies": 2,
+          "interested": 0,
+          "bounced": 15
+        }
+      }
+    },
+    {
+      "id": 860,
+      "name": "Growth Lab - Probate/Trust & Estate Law | 3-200E | United States | Google",
+      "status": "completed",
+      "type": "outbound",
+      "created_at": "2026-05-11T14:48:37.000000Z",
+      "leads": 766,
+      "leads_contacted": 766,
+      "sent": 766,
+      "opens": 0,
+      "replies": 6,
+      "bounced": 3,
+      "interested": 0,
+      "unsubscribed": 0,
+      "completion": 100,
+      "steps": [
+        {
+          "id": 2007,
+          "order": 1,
+          "variant": false,
+          "wait_in_days": 1,
+          "thread_reply": false,
+          "subject_raw": "{MAIN EXPERTISE} cases?",
+          "body_raw_html": "<p>Hi {FIRST_NAME},</p><p><br></p><p>{I noticed {COMPANY} is competing for {MAIN EXPERTISE} cases in {CITY} - that's one of those markets where strong google visibility translates into signed retainers.|I saw {COMPANY} handles {MAIN EXPERTISE} cases in {CITY} - that's one of those markets where solid google visibility turns into signed retainers.|I came across {COMPANY} competing for {MAIN EXPERTISE} cases in {CITY} - that's one of those markets where good google visibility leads directly to signed retainers.}</p><p><br></p><p>{For example - we recently helped Frisella Neilson in San Diego bring in USD 763k in contested probate billables by ranking them no.1 on google for \"San Diego Trusts Lawyer.\" All in under 12 months.|As an example - we recently helped Frisella Neilson in San Diego bring in USD 763k in contested probate billables by getting them to no.1 on google for \"San Diego Trusts Lawyer.\" All within 12 months.|For reference - we recently helped Frisella Neilson in San Diego bring in USD 763k in contested probate billables by putting them no.1 on google for \"San Diego Trusts Lawyer.\" All in under 12 months.}</p><p><br></p><p>{Most firms I talk to have 3-4 specific SEO mistakes that, once fixed, makes an immediate difference.|Most firms I speak with have 3-4 specific SEO mistakes that, once sorted, makes an immediate difference.|A lot of the firms I talk to have 3-4 specific SEO mistakes that, once taken care of, makes an immediate difference.}</p><p><br></p><p>{We just work with 3 firms per city, let me know if it's worth exploring problems I see with your SEO? (also their impact on overall results)|We just take on 3 firms per city, let me know if it's worth digging into the problems I see with your SEO? (also their impact on overall results)|We cap it at 3 firms per city, let me know if it's worth looking into the problems I see with your SEO? (also how they're affecting your overall results)}</p><p><br></p><p>{Best,|Cheers,|Thanks,}</p><p>{SENDER_EMAIL_SIGNATURE}</p><p><br></p><p>PS - {we also helped Abrar &amp; Vergara in El Paso (4M sexual abuse settlement), Wendt Law in Kansas City (1.8M in PI settlements), and Galo Law in San Antonio (890k in signed cases) sign cases through google.|we also helped Abrar &amp; Vergara in El Paso (4M sexual abuse settlement), Wendt Law in Kansas City (1.8M in PI settlements), and Galo Law in San Antonio (890k in signed cases) land cases through google.|we've also helped Abrar &amp; Vergara in El Paso (4M sexual abuse settlement), Wendt Law in Kansas City (1.8M in PI settlements), and Galo Law in San Antonio (890k in signed cases) close cases through google.}</p><p><br></p><p><br></p><p>P.P.S. If this isn't relevant or of any interest at this point, {reply back|let me know|respond} and I'll no longer contact you.</p>",
+          "subject_plain": "{MAIN EXPERTISE} cases?",
+          "body_plain": "Hi {FIRST_NAME},\n\nI noticed {COMPANY} is competing for {MAIN EXPERTISE} cases in {CITY} - that's one of those markets where strong google visibility translates into signed retainers.\n\nFor example - we recently helped Frisella Neilson in San Diego bring in USD 763k in contested probate billables by ranking them no.1 on google for \"San Diego Trusts Lawyer.\" All in under 12 months.\n\nMost firms I talk to have 3-4 specific SEO mistakes that, once fixed, makes an immediate difference.\n\nWe just work with 3 firms per city, let me know if it's worth exploring problems I see with your SEO? (also their impact on overall results)\n\nBest,\n\n{SENDER_EMAIL_SIGNATURE}\n\nPS - we also helped Abrar & Vergara in El Paso (4M sexual abuse settlement), Wendt Law in Kansas City (1.8M in PI settlements), and Galo Law in San Antonio (890k in signed cases) sign cases through google.\n\nP.P.S. If this isn't relevant or of any interest at this point, reply back and I'll no longer contact you.",
+          "sent": 766,
+          "replies": 6,
+          "interested": 0,
+          "bounced": 3,
+          "unsubscribed": 0
+        }
+      ],
+      "monthly": {
+        "2026-05": {
+          "sent": 766,
+          "replies": 6,
+          "interested": 0,
+          "bounced": 3
+        }
+      }
+    },
+    {
+      "id": 845,
+      "name": "Growth Lab - Probate/Trust & Estate Law | 3-200E | United States",
+      "status": "completed",
+      "type": "outbound",
+      "created_at": "2026-05-06T18:22:32.000000Z",
+      "leads": 761,
+      "leads_contacted": 761,
+      "sent": 761,
+      "opens": 0,
+      "replies": 6,
+      "bounced": 12,
+      "interested": 0,
+      "unsubscribed": 0,
+      "completion": 100,
+      "steps": [
+        {
+          "id": 1992,
+          "order": 1,
+          "variant": false,
+          "wait_in_days": 1,
+          "thread_reply": false,
+          "subject_raw": "{MAIN EXPERTISE} cases?",
+          "body_raw_html": "<p>Hi {FIRST_NAME},</p><p><br></p><p>{I noticed {COMPANY} is competing for {MAIN EXPERTISE} cases in {CITY} - that's one of those markets where strong google visibility translates into signed retainers.|I saw {COMPANY} handles {MAIN EXPERTISE} cases in {CITY} - that's one of those markets where solid google visibility turns into signed retainers.|I came across {COMPANY} competing for {MAIN EXPERTISE} cases in {CITY} - that's one of those markets where good google visibility leads directly to signed retainers.}</p><p><br></p><p>{For example - we recently helped Frisella Neilson in San Diego bring in USD 763k in contested probate billables by ranking them no.1 on google for \"San Diego Trusts Lawyer.\" All in under 12 months.|As an example - we recently helped Frisella Neilson in San Diego bring in USD 763k in contested probate billables by getting them to no.1 on google for \"San Diego Trusts Lawyer.\" All within 12 months.|For reference - we recently helped Frisella Neilson in San Diego bring in USD 763k in contested probate billables by putting them no.1 on google for \"San Diego Trusts Lawyer.\" All in under 12 months.}</p><p><br></p><p>{Most firms I talk to have 3-4 specific SEO mistakes that, once fixed, makes an immediate difference.|Most firms I speak with have 3-4 specific SEO mistakes that, once sorted, makes an immediate difference.|A lot of the firms I talk to have 3-4 specific SEO mistakes that, once taken care of, makes an immediate difference.}</p><p><br></p><p>{We just work with 3 firms per city, let me know if it's worth exploring problems I see with your SEO? (also their impact on overall results)|We just take on 3 firms per city, let me know if it's worth digging into the problems I see with your SEO? (also their impact on overall results)|We cap it at 3 firms per city, let me know if it's worth looking into the problems I see with your SEO? (also how they're affecting your overall results)}</p><p><br></p><p>{Best,|Cheers,|Thanks,}</p><p>{SENDER_EMAIL_SIGNATURE}</p><p><br></p><p>PS - {we also helped Abrar &amp; Vergara in El Paso (4M sexual abuse settlement), Wendt Law in Kansas City (1.8M in PI settlements), and Galo Law in San Antonio (890k in signed cases) sign cases through google.|we also helped Abrar &amp; Vergara in El Paso (4M sexual abuse settlement), Wendt Law in Kansas City (1.8M in PI settlements), and Galo Law in San Antonio (890k in signed cases) land cases through google.|we've also helped Abrar &amp; Vergara in El Paso (4M sexual abuse settlement), Wendt Law in Kansas City (1.8M in PI settlements), and Galo Law in San Antonio (890k in signed cases) close cases through google.}</p><p><br></p><p><br></p><p>P.P.S. If this isn't relevant or of any interest at this point, {reply back|let me know|respond} and I'll no longer contact you.</p>",
+          "subject_plain": "{MAIN EXPERTISE} cases?",
+          "body_plain": "Hi {FIRST_NAME},\n\nI noticed {COMPANY} is competing for {MAIN EXPERTISE} cases in {CITY} - that's one of those markets where strong google visibility translates into signed retainers.\n\nFor example - we recently helped Frisella Neilson in San Diego bring in USD 763k in contested probate billables by ranking them no.1 on google for \"San Diego Trusts Lawyer.\" All in under 12 months.\n\nMost firms I talk to have 3-4 specific SEO mistakes that, once fixed, makes an immediate difference.\n\nWe just work with 3 firms per city, let me know if it's worth exploring problems I see with your SEO? (also their impact on overall results)\n\nBest,\n\n{SENDER_EMAIL_SIGNATURE}\n\nPS - we also helped Abrar & Vergara in El Paso (4M sexual abuse settlement), Wendt Law in Kansas City (1.8M in PI settlements), and Galo Law in San Antonio (890k in signed cases) sign cases through google.\n\nP.P.S. If this isn't relevant or of any interest at this point, reply back and I'll no longer contact you.",
+          "sent": 761,
+          "replies": 6,
+          "interested": 0,
+          "bounced": 12,
+          "unsubscribed": 0
+        }
+      ],
+      "monthly": {
+        "2026-05": {
+          "sent": 761,
+          "replies": 6,
+          "interested": 0,
+          "bounced": 12
+        }
+      }
+    },
+    {
+      "id": 821,
+      "name": "Follow-up campaign for SMS",
+      "status": "draft",
+      "type": "outbound",
+      "created_at": "2026-04-27T19:33:03.000000Z",
+      "leads": 0,
+      "leads_contacted": 0,
+      "sent": 0,
+      "opens": 0,
+      "replies": 0,
+      "bounced": 0,
+      "interested": 0,
+      "unsubscribed": 0,
+      "completion": 0,
+      "steps": [],
+      "monthly": {}
+    },
+    {
+      "id": 820,
+      "name": "OOO Follow-up",
+      "status": "active",
+      "type": "reply_followup",
+      "created_at": "2026-04-27T19:32:05.000000Z",
+      "leads": 0,
+      "leads_contacted": 1,
+      "sent": 1,
+      "opens": 0,
+      "replies": 1,
+      "bounced": 0,
+      "interested": 0,
+      "unsubscribed": 0,
+      "completion": 100,
+      "steps": [
+        {
+          "id": 1951,
+          "order": 1,
+          "variant": false,
+          "wait_in_days": 1,
+          "thread_reply": false,
+          "subject_raw": "Placeholder: the first subject will automatically be generated in the followup thread",
+          "body_raw_html": "<p>Hey {FIRST_NAME}, you mentioned on your email you'll be back into the office today - just reaching back out to see if my email resonated at all or just not a priority at the moment?</p><p><br></p><p>{SENDER_EMAIL_SIGNATURE}</p>",
+          "subject_plain": "Placeholder: the first subject will automatically be generated in the followup thread",
+          "body_plain": "Hey {FIRST_NAME}, you mentioned on your email you'll be back into the office today - just reaching back out to see if my email resonated at all or just not a priority at the moment?\n\n{SENDER_EMAIL_SIGNATURE}",
+          "sent": 1,
+          "replies": 1,
+          "interested": 0,
+          "bounced": 0,
+          "unsubscribed": 0
+        }
+      ],
+      "monthly": {
+        "2026-05": {
+          "sent": 1,
+          "replies": 1,
+          "interested": 0,
+          "bounced": 0
+        }
+      }
+    },
+    {
+      "id": 819,
+      "name": "Follow-up campaign",
+      "status": "draft",
+      "type": "reply_followup",
+      "created_at": "2026-04-27T19:31:54.000000Z",
+      "leads": 0,
+      "leads_contacted": 0,
+      "sent": 0,
+      "opens": 0,
+      "replies": 0,
+      "bounced": 0,
+      "interested": 0,
+      "unsubscribed": 0,
+      "completion": 0,
+      "steps": [],
+      "monthly": {}
+    }
+  ]
+}

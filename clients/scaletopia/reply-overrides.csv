@@ -1,0 +1,14 @@
+match,verdict,reason
+builtbyviv.com,exclude,White-label marketing platform — not an agency
+square205.com,exclude,18 employees
+caseengine.com,exclude,11 employees
+creatorade.ca,exclude,12 employees
+jlbusa.com,exclude,18 employees
+get-creative.co,exclude,Started as an agency then moved to an AI marketing platform
+katalys.com,exclude,Tech platform — not an agency
+milkedmedia.com,exclude,11 employees
+lerws.com,exclude,1 employee
+ascalex.com,exclude,14 employees
+luminoustec.net,exclude,AI tech company — not an agency
+7272046046,not_warm,Alpha Marketing — abusive reply with a fake email address; tagged Power Request in error
+7029946354,not_warm,Hennessey Digital — number belongs to Chamber Media's CEO; we texted our own case study
