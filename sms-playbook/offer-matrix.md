@@ -1,10 +1,12 @@
 # Offer Matrix — the universality router
 
-> ⏸ **ON HOLD (Aaman's call).** This read as over-built / confusing. **Routing for now comes from
-> `winners.csv`** — match the case study to the closest tagged winner(s) (same offer/niche) and pull
-> lever / what-carries / pattern / mechanism-or-omit from there. Kept for reference, not in the critical
-> path. (If revived, fold in the correction: **ammo / case-strength picks the lever, sophistication only
-> flavours tone** — not the other way round.)
+> ⏸ **ON HOLD (Aaman's call).** This read as over-built / confusing. **Routing for now comes from the
+> winners** — match the case study to the closest tagged winner(s) (same offer/niche) and pull
+> lever / what-carries / pattern / mechanism-or-omit from there. Pull those winners from **Evergreen**
+> (`POST /api/search {"type":"copies","status":"winner"}` + `{"type":"offers"}` by `service`), which is
+> the live version of the routing this matrix hand-rolled; `winners.csv` is the local seed. Kept for
+> reference, not in the critical path. (If revived, fold in the correction: **ammo / case-strength picks
+> the lever, sophistication only flavours tone** — not the other way round.)
 
 > The lookup that makes the system work across ALL clients, not just Kynship. It takes an **offer
 > archetype** and tells you which lever to lean on, what carries the text, and — critically — **whether to

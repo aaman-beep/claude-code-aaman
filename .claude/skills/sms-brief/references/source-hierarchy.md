@@ -4,6 +4,21 @@ This is the rule for what sources you read, in what order, and how you weight th
 
 ## The four tiers
 
+### Tier 0 — Evergreen (the shared knowledge base — check before all tiers)
+Scaletopia's live research provider already holds mined evidence for most clients: **pains, lingo,
+objections, beliefs, dream outcomes** (per client, confidence-scored, traced to the source call),
+the **niche brain**, tiered **case studies**, **winner/loser copies with real results**, and client
+**materials** (voice/positioning). Pull it FIRST — it is curated across every call and campaign we've
+run, so it often answers a field before you open a single transcript.
+
+- **Reach it:** `https://knowledgebase-production-f52e.up.railway.app`, header
+  `Authorization: Bearer $EVERGREEN_API_KEY`; discover endpoints via `GET /api/docs`. Driven by the
+  `evergreen-research` skill (`GET /api/clients/{slug}`, `POST /api/search {type:"pains"|...}`,
+  `GET /api/clients/{slug}/replies`, `POST /api/clusters`).
+- **Weight:** treat confirmed Evergreen items as Tier-1-grade (they are mined from the same live
+  calls); `needs_more`-confidence items rank with Tier 2. Transcripts below are still ground truth
+  for anything Evergreen lacks — and any NEW pain you mine should be saved back into Evergreen.
+
 ### Tier 1 — Live data (weight 3)
 The buyer's actual words, captured live.
 

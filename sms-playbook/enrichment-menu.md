@@ -37,8 +37,14 @@
 
 ## How to decide (read this, don't guess)
 
-1. **Start from the offer archetype** (match the case study to the closest tagged winner(s) in
-   `winners.csv` — that's the live router; `offer-matrix.md` is on hold). The archetype suggests
+> Source real values for the slots instead of leaving "verify before sending": `{{competitor}}` /
+> `{{ICP_signal}}` / `{{dream_client}}` can come from **Evergreen** — `POST /api/prospects/lookup` and
+> reply-thread search (`{"type":"deals"|"contacts"}`), plus mined `pains` for the pain-grounded weaves.
+> See FUNDAMENTALS → "Reaching Evergreen".
+
+1. **Start from the offer archetype** (match the case study to the closest tagged winner(s) — pull them
+   from **Evergreen** `POST /api/search {"type":"copies","status":"winner"}` + `{"type":"offers"}`; that's
+   the live router, with `winners.csv` as the seed and `offer-matrix.md` on hold). The archetype suggests
    the lead lever, and the lever points at the enrichments below.
 2. **Lever → enrichment shortlist:**
    - **FOMO** → `competitor_1/2/3`, `dream_client`, or their own uncaptured result (a

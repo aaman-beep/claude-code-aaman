@@ -14,6 +14,11 @@ This structure will handle most use cases without spending hours perfecting prom
 ## The Hierarchy of Value Proposition Creation
 **The Pyramid of Persuasion (In Order of Importance)**
 
+> The structure below is doctrine; the EVIDENCE that fills it comes from **Evergreen**: Tier 1's specific
+> problem + implication from mined `pains`/`objections`, Tier 2's unique mechanism from `offers`, and its
+> social proof from `case_studies` + winning `copies` (with real results). The example numbers below are
+> illustrative — never ship them as real. See FUNDAMENTALS → "Reaching Evergreen".
+
 ### 🥇 Tier 1: Specific Problem + Implication (40% of impact)
 Why it's #1: If you don't identify a real, painful problem AND its consequences, nothing else matters.
 - **A. The Specific Problem:** Observable and verifiable, happening right now, measurable impact, not generic fluff.

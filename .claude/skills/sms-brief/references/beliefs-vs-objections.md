@@ -2,6 +2,8 @@
 
 The original flowchart combined "hidden objections" into one field. That's wrong because it's two different things, and conflating them produces sloppy copy.
 
+> Evergreen mines both, separately: `kind=belief` and `kind=objection` per client (`POST /api/search {"type":"pains"}`), plus this-week objections via `GET /api/clients/{slug}/replies`. Pull those first, then use this Blueprint to keep 4a vs 4b clean.
+
 This Blueprint defines the distinction and gives worked examples.
 
 ---

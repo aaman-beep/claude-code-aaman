@@ -11,8 +11,10 @@
 > relevance) is a different question — a strong FOMO text and a strong Curious text can both be carried by
 > the same case study. Don't collapse the two.
 >
-> **Before picking a lever, go to the winners (`winners.csv` / `winner-structure.md`) first** — find the
-> closest offer/niche and see which lever actually worked there. Familiarity first, invention second.
+> **Before picking a lever, go to the winners first** — pull them from **Evergreen** (`POST /api/search
+> {"type":"copies","status":"winner"}`, filtered by offer/niche) so you see which lever actually worked
+> **with its real results** (positive_rate), and `/variant-performance` for which arm won. The local
+> `winners.csv` / `winner-structure.md` are the seed underneath. Familiarity first, invention second.
 
 ---
 

@@ -1,5 +1,9 @@
 # Brief Structure
 
+> Each field's "Source priority" below starts with **Evergreen (Tier 0)** — pull mined pains, lingo,
+> objections, beliefs, dream, and reply behaviour from `GET /api/clients/{slug}` + `POST /api/search`
+> + `GET /api/clients/{slug}/replies` before Master Sheet / transcripts / web. See `source-hierarchy.md`.
+
 The output document has 8 fields. Field 4 splits into 4a and 4b — they are different things and must not be conflated.
 
 Length is whatever the buyer evidence supports. Half a page or three pages — both are fine if backed by real sources. What's not fine: padding with generic statements to make it look longer, or skipping fields because you didn't find evidence (use GAP markers instead).

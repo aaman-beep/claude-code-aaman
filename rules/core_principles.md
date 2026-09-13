@@ -3,6 +3,7 @@
 ## ICP Principles
 **Principle 1: Proven Hypothesis is King**
 Case studies aren't just social proof - they're evidence of a proven hypothesis. When you have a case study showing you helped Company A achieve Outcome X, targeting similar companies dramatically increases success probability.
+> Source the proven hypotheses from **Evergreen**, not memory: `POST /api/search {"type":"case_studies"}` (tiered S–D, with measurable results) and `{"type":"offers"}` (the cross-client `service` key surfaces where the same win transfers to a new segment). See FUNDAMENTALS → "Reaching Evergreen".
 Why it matters: Cold outreach is about reducing risk. A relevant case study shows you've already solved this exact problem.
 Definition: The target market must have a genuine, pressing need for your client's specific solution.
 

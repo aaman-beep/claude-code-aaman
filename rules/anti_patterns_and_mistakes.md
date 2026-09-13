@@ -44,6 +44,8 @@
    - The Fix: 60-90 minutes max, then test and refine based on real data.
 
 ## Market Research Mistakes
+> Avoid #3 (flimsy sources) and #5 (missing voice-of-customer) by treating **Evergreen** as the sanctioned voice-of-customer store: mined `pains`/`lingo`/`objections` are drawn from real calls and confidence-scored + traced to the source call (`GET /api/clients/{slug}`, `POST /api/search`, `POST /api/clusters`). Pull from there before web-scraping, and verify claims against it. See FUNDAMENTALS → "Reaching Evergreen".
+
 1. **Dumping Generic or Bulk AI content**: Overloading docs with copied, unchecked info—dilutes actionable insights and makes findings unusable for outreach.
 2. **Ignoring Persona Segmentation**: Targeting industries or companies as a whole, instead of homing in on the real humans and their pain points, leads to bland, ineffective messaging.
 3. **Relying on Flimsy Data Sources**: Using blog posts, AI-scraped summaries, or vendor PR instead of authentic customer interviews, forums, transcripts, or direct quotes results in disconnected, jargon-heavy research.

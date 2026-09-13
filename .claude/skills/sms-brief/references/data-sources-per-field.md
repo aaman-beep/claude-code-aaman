@@ -4,6 +4,12 @@ Quick-reference table mapping each brief field to its source priority order. Use
 
 For full source definitions and weights, see `source-hierarchy.md`.
 
+> **Check Evergreen first for every row below.** It is Tier 0 (see `source-hierarchy.md`) and usually
+> already holds these fields, mined and confidence-scored: pains/lingo/objections/beliefs/dream via
+> `GET /api/clients/{slug}` + `POST /api/search`; this-week objections via `GET /api/clients/{slug}/replies`;
+> reply behaviour via the deals/contacts reply threads. The transcript/Master-Sheet/web columns fill
+> whatever Evergreen lacks — and new findings get saved back.
+
 ---
 
 ## The mapping

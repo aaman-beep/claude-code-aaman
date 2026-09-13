@@ -2,6 +2,8 @@
 
 Source: extracted from Scaletopia's Winning SMS Templates Database (13 templates). Every pattern below is anchored to at least one verbatim winning example. Patterns NOT in the winning library are NOT in this file — that is the discipline. If a strategist wants to introduce a new pattern, it must be backed by a verified winning template.
 
+> The live winning library is **Evergreen** — `POST /api/search {"type":"copies","status":"winner"}` and `{"type":"components"}` (verdict-tagged `unique_mechanism` parts), plus `{"type":"offers"}` for the literal mechanism + proof_hint. Pull from there to anchor a pattern with real results; the 13 local templates are the seed. Same discipline: no pattern without a verified winner behind it.
+
 ---
 
 ## How to use this file

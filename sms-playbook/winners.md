@@ -4,9 +4,11 @@
 > levers, and sms-draft's scaffolds are all derived from this file. When you add a winner here, the
 > whole system gets smarter.
 >
-> **Winner benchmark (for later):** a "winner" = roughly **≤ 250 sends per positive reply**.
-> Performance isn't tagged yet — we switch it on once it's tracked. Everything below is a known
-> winner by reputation.
+> **Winner benchmark:** a "winner" = roughly **≤ 250 sends per positive reply**.
+> Performance IS tracked now — **Evergreen** carries every copy's real results (sent, positives, booked,
+> positive_rate) via `POST /api/search {"type":"copies"}` and `/variant-performance`. Winners are
+> metric-defined there, not reputation-defined. This local file is the original tagged seed; when you
+> add a winner, also save it to Evergreen (`POST /api/agents/save-copy`) so the whole system compounds.
 
 ---
 

@@ -326,7 +326,7 @@ Pay attention to:
 3. The beliefs — let them pick the angle and lever, not just the wording.
 4. The layer tags — use **OPERATOR TASTE** to make calls, **ON-THE-TEXT RULES** to write lines.
 
-**QA step (required):** before finalizing, cross-reference the draft against `winners.csv` — read between the lines and check it's in the *ballpark* of a winner's familiarity (not life-for-life). Then run the two-prong litmus. Remember copy decays — small deliberate deviations are how new winners are found; the numbers decide.
+**QA step (required):** before finalizing, cross-reference the draft against the winners in **Evergreen** (`POST /api/search {"type":"copies","status":"winner"}`, matched by offer/niche — they carry real results; `winners.csv` is the local seed) — read between the lines and check it's in the *ballpark* of a winner's familiarity (not life-for-life). Then run the two-prong litmus. Remember copy decays — small deliberate deviations are how new winners are found; the numbers decide.
 
 *This is a source of truth, applied with judgment — never a cookie-cutter. The market picks the winner; this profile just makes sure every contender sounds like Scaletopia.*
 

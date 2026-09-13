@@ -1,5 +1,10 @@
 # Value Propisition/Offer frameworks:
 
+> These are the SHAPES. Fill the slots — `{{Pain Point}}`, `{{Unique Mechanism}}`, `{{Social Proof}}`,
+> `{{Outcome}}` — from **Evergreen**, not from the illustrative examples below: mined `pains`, `offers`
+> (mechanism), and `case_studies`/winning `copies` (real proof + outcome). The examples here are just to
+> show the shape. See FUNDAMENTALS → "Reaching Evergreen".
+
 **Framework 1:**
 {{Pain Point}} + {{Implication}} → {{Unique Mechanism}} → {{Social Proof}} + {{Outcome}}
 - **Scaletopia Example:** "Relying on referrals for new business + Stagnant growth with dry pipeline → We use AI to identify companies actively hiring CMOs (high budget + urgency) → Dreamlabs Agency signed $15k/mo deal within 7 days of first text + Predictable pipeline of 8-11 qualified appointments monthly"

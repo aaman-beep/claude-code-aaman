@@ -27,7 +27,7 @@ Read everything and hunt for the **one true detail with a spark** — not a read
 2. **The website / case-study page** — where the real nuance often hides ("larger-than-life visuals and
    **humor**… unskippable"). This is where Transparent Labs' actual bite lived.
 3. **The founder quote / the actual ads / creative** — the texture the paperwork leaves out.
-4. **A similar-service winner** in `winners.csv` — how the same kind of work read when it landed.
+4. **A similar-service winner** — pull it from **Evergreen** (`POST /api/search {"type":"copies","status":"winner"}` by offer/niche, and `{"type":"offers"}` sharing the same `service` key) to see how the same kind of work read when it landed, **with its real results**. `winners.csv` is the local seed.
 
 You're not looking for a finished mechanism. You're looking for the **detail that's interesting** —
 the thing that, once sharpened, would make the ICP lean in.
@@ -151,7 +151,8 @@ funnel/halo that isn't in the case** — that's the overfit trap (it's a GoFish-
 ## What good looks like (exemplars, not a taxonomy)
 
 Don't sort the mechanism into a "pattern." These are just shapes that have worked — pull the closest
-winner from `winners.csv` by offer/niche to see how it actually read:
+winner from **Evergreen** (`POST /api/search {"type":"copies","status":"winner"}` by offer/niche;
+`winners.csv` is the seed) to see how it actually read, and at what result:
 
 - **Just say the tactic plainly** — when it's obviously desirable, plain *is* the bite (W4/5/8/9/10/11/14).
   Especially SEO / commoditized work.

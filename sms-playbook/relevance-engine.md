@@ -9,6 +9,10 @@
 > unaided — "could do the same for {{company}} in {{niche}}." That's rung 0. It's the generic V1,
 > and it's the ceiling we're breaking. Built on the 17 winners; plain language, no buzzwords.
 > Pair it with `enrichment-menu.md` (which enrichment feeds which move).
+>
+> **Feed the ladder from Evergreen:** rung-1/2 relevance comes from mined `pains`/`lingo`/`objections`
+> and the niche brain (`GET /api/clients/{slug}`, `POST /api/search`, `POST /api/clusters`), and the
+> on-niche case pick from tiered `case_studies` — not from guessing. See FUNDAMENTALS → "Reaching Evergreen".
 
 ---
 

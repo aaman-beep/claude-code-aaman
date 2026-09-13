@@ -6,6 +6,28 @@
 
 ---
 
+## Reaching Evergreen (the shared knowledge — pull from it first)
+
+Before you write, most of the evidence you need already exists in **Evergreen**, Scaletopia's
+shared research/data provider. It is not the writer — it serves the facts you write FROM: mined
+**pains / lingo / objections** per client, tiered **case studies (S–D)**, **winner & loser copies
+with why-it-worked/failed AND real results** (sent, positives, booked, positive_rate), swipeable
+**components** with verdicts, **offers** (mechanism + proof_hint), real **reply threads**, client
+**materials** (voice/positioning), and saved **guidelines**.
+
+- **Reach it:** base URL `https://knowledgebase-production-f52e.up.railway.app`, header
+  `Authorization: Bearer $EVERGREEN_API_KEY` (the key is in this playbook's `.env`; no header → 401).
+- **Discover every endpoint yourself:** `GET /api/docs` (index + descriptions), `GET /api/openapi`
+  (schema). Don't guess a path or bulk-pull GHL/Airtable for what Evergreen already has.
+- **Skills that drive it:** `evergreen-research` (pull/save findings), `evergreen-stats` (numbers).
+- **Rule of thumb:** Evergreen is the live source of truth. The local `winners.csv` / `losers.csv` /
+  Master Sheet are the *seed* it was built from — read Evergreen first; treat local files as fallback.
+
+Everywhere below that says "winners", "case study", "pains", or "master sheet", that evidence
+should come from Evergreen when it has it. Your craft — voice, levers, structure — stays yours.
+
+---
+
 ## 1. The job of a first text
 
 Make the right person think **"tell me more."** That's it.
@@ -124,5 +146,6 @@ head. **Forcing a DTC-style unique mechanism onto an SEO offer is exactly why v1
 - Only run frames the case study can pay for; never fake ammo.
 - Strong case → fly high; ordinary case → get specific.
 - Never force a unique mechanism onto an offer that doesn't have one (the Big Leap rule).
-- Nothing gets invented — every claim traces to the brief, case study, master sheet, or winners.
+- Nothing gets invented — every claim traces to the brief, case study, master sheet, or winners
+  (pulled from **Evergreen** first — see "Reaching Evergreen" above; local files are the seed).
 - A human takes the last 8→9.

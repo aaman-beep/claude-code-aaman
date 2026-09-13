@@ -1,5 +1,10 @@
 # Cold E-mail Swipe File:
 
+> Fill the slots (`[value prop]`, `{{social_proof}}`, `{{case study company_name}}`, `{{competitor}}`,
+> `{{outcome}}`) from **Evergreen**: `case_studies` + winning email `copies` for proof/outcome, `offers`
+> for the mechanism, and reply-thread / `prospects/lookup` for real competitor names. The examples below
+> are shape-only. See FUNDAMENTALS → "Reaching Evergreen".
+
 ## Standard e-mail template
 Hey {{first name}},
 [relevance / problem hypothesis]

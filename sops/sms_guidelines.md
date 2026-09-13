@@ -116,6 +116,11 @@ Before submitting any SMS copy, verify that ALL of the following criteria are me
 
 ## Critical Failure Pattern: Generic Pain Without Unique Mechanism
 
+> The UM + micro-proof this section demands should come from **Evergreen**, not memory: mechanisms from
+> `POST /api/search {"type":"offers"}` / `{"type":"components"}` (verdict-tagged), and the micro-proof from
+> `{"type":"case_studies"}` / winning `copies` (with real sent/positives/booked). Verify "real pain, not
+> generic" against the mined `pains` for the client. See FUNDAMENTALS → "Reaching Evergreen".
+
 ### The Unique Mechanism (UM) Requirement
 
 **Example Feedback from QA:**

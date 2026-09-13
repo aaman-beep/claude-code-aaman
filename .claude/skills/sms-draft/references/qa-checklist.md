@@ -93,7 +93,7 @@
 ## Winner benchmark (the last gate before ranking)
 
 Passing 11/13 isn't enough — the bar is **winner-grade**. For each variant that clears the grid, **name the
-closest logged winner** (`winners.csv` / `winner-structure.md`, matched by offer/niche) and state plainly
+closest logged winner** (from **Evergreen**: `POST /api/search {"type":"copies","status":"winner"}` matched by offer/niche — it carries the real results; `winners.csv` / `winner-structure.md` are the seed) and state plainly
 whether it clears that winner's bar on the three that decide replies: **relevance · sounds-human ·
 proof-fit**. If it doesn't clear the winner it's modelled on, it isn't winner-grade yet — **rewrite or drop**,
 don't pass it through to ranking.

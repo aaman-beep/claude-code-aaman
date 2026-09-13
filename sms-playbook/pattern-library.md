@@ -1,5 +1,9 @@
 # Pattern Library (two-tier) — derived from the 17 tagged winners
 
+> Seeded FROM `winners.csv`; the live, growing evidence is in **Evergreen** — pull `copies` (winners,
+> by niche/offer, with real results) + swipeable `components` (verdict-tagged) and `offers` (mechanism
+> + proof_hint) to extend these patterns beyond the original 17. See FUNDAMENTALS → "Reaching Evergreen".
+>
 > Built FROM `winners.csv`, not invented. The big lesson in your own data: **what carries a cold text
 > is usually the case study + speaking their exact world — NOT a clever mechanism.** The mechanism is
 > genuinely the bite in maybe 3 of 17. So the library is two tiers, and you pick Tier 1 first.

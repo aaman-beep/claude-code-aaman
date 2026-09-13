@@ -2,6 +2,8 @@
 
 When Tier 1 (transcripts) and Tier 2 (Master Sheet) don't fill a field, the skill falls back to Tier 3 web research via `scripts/fetch_web_research.py`. This Blueprint defines the search queries used per field, so we don't reinvent them on every run.
 
+> First check **Evergreen (Tier 0)** and cross-client `POST /api/clusters` — a pain validated across clients (`client_count>1`) beats any web scrape. Only reach for these web templates once Evergreen and the client's own calls come up short.
+
 All queries assume substitution of `{persona}` (e.g., "VP of Marketing"), `{industry}` (e.g., "DTC supplements"), and `{tool_category}` (e.g., "SEO agencies", "marketing agencies"), provided by the calling skill.
 
 ---

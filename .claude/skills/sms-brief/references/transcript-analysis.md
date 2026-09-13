@@ -2,6 +2,10 @@
 
 Sales call transcripts are Tier 1 — the highest-weight source. They contain unfiltered buyer language, which is what makes Layer A copy land or fail.
 
+> Check **Evergreen (Tier 0)** first: the pains/lingo/objections from these calls may already be mined
+> (`GET /api/clients/{slug}`, `POST /api/search {"type":"pains"|"calls"}`, traced to `source_call`). Analyze
+> raw transcripts for what it lacks — and save new findings back (`POST /api/agents/transcript`) so it compounds.
+
 This Blueprint defines what to extract from a raw transcript and how to tag each extraction so it can be cited later.
 
 ## What you're looking for

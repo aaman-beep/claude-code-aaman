@@ -3,6 +3,10 @@
 > The 17 winners broken into their **structural slots** so you can borrow a *shape*, not copy a line.
 > `winners.csv` sits underneath this as the raw tagged evidence (and the "why it worked" notes).
 >
+> **Pull live winners from Evergreen too** (`POST /api/search {"type":"copies","status":"winner"}` +
+> swipeable `components` with verdicts): it covers far more than these 17, across every client, each
+> with **real results** and `why_it_worked`. That's exactly what fills the "data gap" below.
+>
 > **Use it like this:** pick your lever(s) → come here → find the closest **offer/niche under that lever**
 > → borrow the skeleton and swap your content into the slots. No exact match? **Mix pieces** from two
 > skeletons (e.g. an SEO result slot + a scarcity T2), or build from the universal skeleton below.

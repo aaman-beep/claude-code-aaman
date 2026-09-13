@@ -4,6 +4,8 @@ This is the accuracy contract for the brief AND the checklist for the Step 8 Int
 
 The skill applies these checks BEFORE the strategist sees anything. The point is to catch generic statements, unsourced claims, and fake-verbatim quotes internally — not to make the strategist catch them.
 
+> A claim backed by an **Evergreen** mined item (confidence-scored, traced to a source call) counts as sourced — cite it like any other source. Prefer confirmed-confidence Evergreen items; mark `needs_more` ones as unverified, same as a single-source Master Sheet row.
+
 ---
 
 ## The Four Tests

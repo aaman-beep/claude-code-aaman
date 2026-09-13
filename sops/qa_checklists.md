@@ -1,5 +1,10 @@
 # Email script creation checklist:
 
+> Back each check with **Evergreen** evidence: industry lingo + relevance from mined `pains`/`lingo`
+> (`GET /api/clients/{slug}`, `POST /api/search {"type":"pains"}`); the case study + unique mechanism
+> from `{"type":"case_studies"}` / `{"type":"offers"}`; and compare tone against winning `copies`.
+> See FUNDAMENTALS → "Reaching Evergreen".
+
 - Does the email incorporate the language of why it’s relevant to them? (why them/why now?)
 - Does the email sound like you’re from the same industry as the prospect with specific/nuanced lingo?
 - When you read the email out loud, does it sound like a manual email from a human?

@@ -2,7 +2,7 @@
 
 ## 🎯 Critical Instruction
 
-**When drafting SMS copy, always cross-reference these frameworks with the proven examples located in the local directory `/Users/hilalaziz/Documents/GTM_strategy/internal/winning-sms` to ensure tone, length, and cadence match our highest-converting live campaigns.**
+**When drafting SMS copy, always cross-reference these frameworks with the proven winners in Evergreen** — `POST /api/search {"type":"copies","status":"winner"}` (filter by niche/persona), which returns the highest-converting live copy **with its real results** and `why_it_worked`, plus the saved `guidelines`. This replaces the old local path `/Users/hilalaziz/Documents/GTM_strategy/internal/winning-sms` (that machine-specific folder is not part of this playbook). See FUNDAMENTALS → "Reaching Evergreen".
 
 ---
 
@@ -249,8 +249,8 @@ Use when: prospect went cold after initial interest, or reply was lukewarm ("int
 
 Before finalizing any SMS copy:
 
-1. Cross-reference with `/Users/hilalaziz/Documents/GTM_strategy/internal/winning-sms` for tone matching
-2. Run through the SMS QA Checklist (see `internal/sops/sms_guidelines.md`)
+1. Cross-reference with the Evergreen winners for tone matching (`POST /api/search {"type":"copies","status":"winner"}`)
+2. Run through the SMS QA Checklist (`sops/sms_guidelines.md`)
 3. Ensure you have a Unique Mechanism (not generic pain)
 4. Include specific outcomes and micro proof
 5. Read it aloud - does it sound human and conversational?

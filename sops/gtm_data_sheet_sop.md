@@ -14,6 +14,7 @@ Extract the core inputs that define how the client wins.
 
 **Step 2: Analyze Client Case Studies (15–20 mins)**
 Use real success stories to define your “like-for-like” segments.
+> Pull these from **Evergreen** first: `POST /api/search {"type":"case_studies"}` (tiered S–D, with the measurable result already recorded) and `{"type":"offers"}` (the cross-client `service` key shows where a win repeats in a new segment). Only read raw client case studies for what Evergreen lacks. See FUNDAMENTALS → "Reaching Evergreen".
 1. Identify 2–4 relevant case studies from the client.
 2. For each case, record:
    - What type of company it was (industry, size, tech complexity)

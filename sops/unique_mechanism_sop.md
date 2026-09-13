@@ -12,6 +12,7 @@ A Unique Mechanism is the specific way your client achieves results that sets th
 **2. Framework - How to Identify & Create a Unique Mechanism**
 
 **Step 1: Extract Key Actions From Client Case Studies & Onboarding form**
+- Check **Evergreen first** — the mechanism is often already mined: `POST /api/search {"type":"offers"}` (each offer's `mechanism` + `proof_hint`) and `{"type":"case_studies"}` (tiered, with the `unique_mechanism` field). Only fall back to reading the raw case studies / onboarding form for what Evergreen lacks.
 - Look at case studies or onboarding forms to list out all the key steps that drive client results.
 - Example: We redesign websites, then run ads on Meta, Google, and TikTok.
 
