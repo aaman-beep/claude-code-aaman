@@ -160,9 +160,22 @@ Reminder: pick 1–2. Email 1 and Email 3 (separate threads) can use different p
 
 This skill produces only the `{{unique_mechanism}}` string. Full SMS assembly is downstream. If the strategist asks "now write the SMS," redirect — that is a separate skill.
 
+## Portability gate (tag every variant)
+
+Who has to *perform* the mechanism decides whether it's safe to lead with:
+
+- **Agency performs it → PORTABLE.** The prospect just receives the result. Safe to lead with.
+- **Prospect must perform it → OBJECTION RISK.** A mechanism that asks the reader to do the work
+  reads as effort ("sounds like a lot / not for me") and invites the objection before the meeting.
+  Reframe so the agency carries the mechanism, or drop it.
+
+Tag each variant `portable` or `objection-risk`. Prefer portable. If the strongest-sounding variant
+is objection-risk, say so plainly and offer a portable reframe rather than shipping it unflagged.
+
 ## Hard rules
 
 - Never invent a tactic that isn't in the literal mechanism input. If the input says "1,000 micro-influencers", variants may say 1,000 — they may not say 5,000.
+- Tag every variant with the **portability gate** (portable vs objection-risk); prefer portable.
 - Never wordsmith jargon into a variant. If the literal mechanism is "Cost Cap campaigns per SKU", the variant must translate that into plain English (e.g., "set a hard ceiling on what we'd pay per sale, per product"). The strategist should be able to defend every word on a sales call.
 - Never produce a variant that breaks an SMS template's grammar. Test by mentally inserting it into Template 1: "I took {{client}} from {{X}} to {{Y}} using {{variant}}". If it reads weird, rewrite.
 - Never produce more than 7 variants. If more than 7 patterns apply, the strategist picks the top 7 by quality score; do not pad with low-quality variants.
