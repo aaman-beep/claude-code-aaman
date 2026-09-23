@@ -125,22 +125,21 @@ covered, not one shape rephrased.
 ## STAGE 5 — BENCHMARK  *(the highest-value gate — run it on EVERY draft, no exceptions)*
 
 This is the routing that was at zero. Before any draft is graded, check it against reality. For each
-draft (or each distinct shape), query Evergreen:
+draft, make **one call**:
 
-- **Nearest winners:** `POST /api/search {"type":"copies","client":"{slug}","status":"winner","query":"<draft t1+t2>"}`
-  → read their `positive_rate` / `booked` (real results are attached). Does the draft resemble a proven winner?
-- **Nearest losers:** same call with `"status":"loser"` → read `why_it_failed` and the similarity `score`.
-- **Similarity-to-loser FLAG:** if a draft is close to a known loser (e.g. a 0.19% angle), it is
-  **reworked or dropped** — never shipped because it "sounds good." The database had this answer on
-  file; the only failure is not asking.
-- Also fold in `sms-performance` for anything the GHL send-log knows that Evergreen doesn't yet.
+`POST /api/benchmark-copy {"client":"{slug}","t1":"<draft t1>","t2":"<draft t2>"}`
 
-**ARTIFACT:** per variant — nearest winner + its rate, nearest loser + its why, similarity, and a
-verdict **keep / rework / drop**.
-**GATE:** no variant reaches QA without a benchmark verdict. Anything that mirrors a loser is gone.
+It returns, in one shot: nearest **winners** (with real `positive_rate`/`booked`), nearest
+**losers** (with `why_it_failed`), `similarity_to_winner`, `similarity_to_loser`, and a
+**verdict — KEEP / REWORK / DROP / TEST** with a plain recommendation.
+- **DROP / REWORK** = the draft is too close to a known loser (e.g. a 0.19% angle). Do not ship it
+  because it "sounds good" — the database had this answer on file; the only failure is not asking.
+- **KEEP** = it resembles a proven winner. **TEST** = novel, unproven — fine to test, flag as such.
+- Fold in `sms-performance` for anything the GHL send-log knows that Evergreen doesn't yet.
 
-> Coming: a one-call `POST /api/benchmark-copy` (draft in → winners/losers/rates/similarity/verdict
-> out). Until it lands, run the two searches above — the gate is the same either way.
+**ARTIFACT:** per variant — the benchmark verdict + nearest winner/rate + nearest loser/why.
+**GATE:** no variant reaches QA without a benchmark verdict. Any DROP is gone; any REWORK goes back
+to Stage 4 before it can pass.
 
 ---
 
