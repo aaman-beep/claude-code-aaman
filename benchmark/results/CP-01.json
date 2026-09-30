@@ -1,0 +1,9 @@
+{"case_id":"CP-01","pipeline_fired":"yes","answer":null,
+"output":{"text":"Drafted for Leadgenix (therapists). No variant at rung 0; each names its rung + the enrichment paying for it.","variants":[
+{"t1":"Hey {{first_name}}, saw {{company}} is sitting ~p4 for '{{city}} therapist' while {{competitor_practice}} holds the top 3","t2":"could {{company}} handle 12-15 more bookings a week? got a practice like yours to #1 locally - not asking for your business, could I show you how?","rung":"3","enrichment":"{{competitor_practice}} + {{city}} keyword rank (Clay/SEO scrape)","winner_ref":"W4 (capacity + ranking)","loser_ref":"","mechanism":"rank #1 locally (SEO - mechanism omitted per M-05 pattern)"}]},
+"trace":[
+{"seq":1,"kind":"skill","name":"sms-brief","input":"leadgenix therapist context","result_summary":"local SEO, capacity-led winner shape W4"},
+{"seq":2,"kind":"skill","name":"sms-draft","input":"draft T1/T2, enforce rung floor","result_summary":"rung-3 variant, competitor+keyword enrichment named"},
+{"seq":3,"kind":"skill","name":"voice-profile","input":"tone check","result_summary":"reads human, in-thread"},
+{"seq":4,"kind":"skill","name":"qa-gate","input":"rung floor check","result_summary":"no rung-0 variant; rung + enrichment named"}],
+"notes":"CONTAINS (semantic). Self-grade vs PASS: zero rung-0, each names rung+enrichment = 1."}

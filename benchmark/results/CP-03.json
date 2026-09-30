@@ -1,0 +1,8 @@
+{"case_id":"CP-03","pipeline_fired":"yes","answer":"b",
+"output":{"text":"(b) 'noticed {{company}} isn't really running TikTok Shop lives'. Reason is RELEVANCE, not proof strength: an observation about THEM reads human and earns a reply; (a) 'most fashion brands pay Meta...' is a thesis about the category - it reads like a blast and gets STOP. (b) is the W18 shape (shipped, human replies, a converted call from 360 sends). (a) is the L1 shape (same client/offer, lost, got STOPs).","variants":[]},
+"trace":[
+{"seq":1,"kind":"evergreen","name":"POST /api/search {type:copies,client:go_fish}","input":"tiktok shop opener","result_summary":"W18 (relevance/observation) winner; L1 (category thesis) loser"},
+{"seq":2,"kind":"skill","name":"sms-draft","input":"pick + justify opener","result_summary":"(b), reason = relevance"},
+{"seq":3,"kind":"skill","name":"voice-profile","input":"human-read: observation vs category thesis","result_summary":"(b) reads like one human; (a) reads blasted"},
+{"seq":4,"kind":"skill","name":"qa-gate","input":"human-read check","result_summary":"(a) reads blasted, gets STOP"}],
+"notes":"JUDGE. Self-grade vs PASS: picks (b) AND names relevance (not proof) = 1."}

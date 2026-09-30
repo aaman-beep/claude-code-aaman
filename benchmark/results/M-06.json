@@ -1,0 +1,4 @@
+{"case_id":"M-06","pipeline_fired":"yes","answer":"authority",
+"output":{"text":"That's AUTHORITY, not a mechanism. 'I used to lead digital ad strategy at Google' is credibility. This is exactly W7 (Tiger Tracks) - it's carried by the Google authority, and its actual mechanism ('training target CPA models...') is weak and not worth copying. Mislabelling this makes the system copy the wrong part of the winner.","variants":[]},
+"trace":[{"seq":1,"kind":"skill","name":"mechanism-wordsmith","input":"'used to lead digital ad strategy at Google' - mechanism or not?","result_summary":"authority (credibility), not mechanism; ref W7"}],
+"notes":"MCQ answer=authority."}

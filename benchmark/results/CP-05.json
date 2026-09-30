@@ -1,0 +1,8 @@
+{"case_id":"CP-05","pipeline_fired":"yes","answer":null,
+"output":{"text":"Flag the phrasing, keep the hook. The relevance hook ('{{company}} isn't showing up on ChatGPT for commercial terms like {{term}}') is genuinely strong - keep it. But the line reads AI-written, so it needs a human rewrite. This is L2 (SeedX), which lost for exactly this: strong gap hook undercut by robotic phrasing. Reject the whole thing = wrong (you'd throw away a good hook).","variants":[]},
+"trace":[
+{"seq":1,"kind":"evergreen","name":"POST /api/search {type:copies,status:loser}","input":"chatgpt visibility gap","result_summary":"L2: strong hook, AI-written phrasing killed it"},
+{"seq":2,"kind":"skill","name":"sms-draft","input":"separate hook from phrasing","result_summary":"hook strong; phrasing flagged for human rewrite"},
+{"seq":3,"kind":"skill","name":"voice-profile","input":"human-read","result_summary":"reads AI-written"},
+{"seq":4,"kind":"skill","name":"qa-gate","input":"","result_summary":"flag phrasing, credit hook"}],
+"notes":"JUDGE. Self-grade vs PASS: flags phrasing while crediting the hook = 1 (rejecting the whole thing would be 0)."}

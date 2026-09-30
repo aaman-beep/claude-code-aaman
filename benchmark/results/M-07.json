@@ -1,0 +1,6 @@
+{"case_id":"M-07","pipeline_fired":"yes","answer":null,
+"output":{"text":"Reject for cold SMS. 'Reporting on contribution margin instead of ROAS' needs explaining - the reader has to be educated before they can care, which blows the SMS budget and loads them. Shipped as L5 and L6 (Kynship), both lost. The idea is fine; the channel is wrong. Prefer the simple W19 Kynship mechanism ('creator content that doesn't even feel like an ad').","variants":[]},
+"trace":[
+{"seq":1,"kind":"evergreen","name":"POST /api/search {type:copies,client:kynship,status:loser}","input":"contribution margin ROAS","result_summary":"L5/L6: lost - 'too technical, needs explaining'"},
+{"seq":2,"kind":"skill","name":"mechanism-wordsmith","input":"evaluate for cold SMS","result_summary":"reject: needs explaining"}],
+"notes":"JUDGE. Self-grade vs PASS: rejects with 'needs explaining' = 1."}

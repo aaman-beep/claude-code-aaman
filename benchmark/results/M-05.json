@@ -1,0 +1,4 @@
+{"case_id":"M-05","pipeline_fired":"yes","answer":"omit",
+"output":{"text":"Omit the mechanism. SEO for a local business has no distinctive method - the tactic (ranking) IS the result. Lead with the case study + relevance, 'without ads' wrapper. W8/W9/W10 all ship with no mechanism. Inventing one would score zero (slop), not high.","variants":[]},
+"trace":[{"seq":1,"kind":"skill","name":"mechanism-wordsmith","input":"SEO local, no distinctive method - mechanism slot?","result_summary":"OMIT; carry on case study + relevance (matches W8/W9/W10)"}],
+"notes":"MCQ answer=omit."}

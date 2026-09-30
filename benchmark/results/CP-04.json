@@ -1,0 +1,7 @@
+{"case_id":"CP-04","pipeline_fired":"yes","answer":"do_not_ship",
+"output":{"text":"Do not ship. Two problems: the result is too weak ('31 leads in 30 days' is small) AND it's the wrong unit - painters judge on BOOKED JOBS, not leads. Same capacity shape as the W4 winner, but W4 had a real number in the buyer's native unit. This is L8 (Leadgenix painters), which lost. Structure isn't what carried W4.","variants":[]},
+"trace":[
+{"seq":1,"kind":"evergreen","name":"POST /api/search {type:copies,status:loser}","input":"painters 31 leads capacity","result_summary":"L8: lost - weak result + wrong unit (leads vs booked jobs)"},
+{"seq":2,"kind":"skill","name":"sms-draft","input":"ship or not?","result_summary":"reject - size + unit"},
+{"seq":3,"kind":"skill","name":"qa-gate","input":"proof-strength + unit check","result_summary":"fail on both"}],
+"notes":"MCQ answer=do_not_ship. PASS also wants both size AND unit named - done."}

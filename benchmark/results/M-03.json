@@ -1,0 +1,7 @@
+{"case_id":"M-03","pipeline_fired":"yes","answer":null,
+"output":{"text":"Mechanism: HUMOR - making their ads actually entertaining. Sharpened from the website, not the master-sheet line ('micro content + paid media + the right strategy', which has no bite). This is exactly W1/W34 (Chamber -> Transparent Labs $2m to $26m 'using humor to make their ads actually entertaining').","variants":[]},
+"trace":[
+{"seq":1,"kind":"skill","name":"case-study-developer","input":"Chamber + Transparent Labs; master sheet vs website","result_summary":"master sheet is generic; dig past it"},
+{"seq":2,"kind":"evergreen","name":"GET /api/clients/chamber_media/call-insights + search copies(winner)","input":"humor entertaining ads","result_summary":"winner W1/W34: 'humor to make their ads actually entertaining'"},
+{"seq":3,"kind":"skill","name":"mechanism-wordsmith","input":"sharpen","result_summary":"'making their ads actually entertaining' (humor)"}],
+"notes":"JUDGE. Self-grade vs PASS: names humor/entertainment AND cites the website/winner = 1. Did not lift the thin master-sheet line."}

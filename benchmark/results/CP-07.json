@@ -1,0 +1,7 @@
+{"case_id":"CP-07","pipeline_fired":"yes","answer":null,
+"output":{"text":"FOMO frame with NO fabricated competitor - uses the {{competitor}} merge var (filled at send from a real Clay lookup), never an invented proper noun.","variants":[
+{"t1":"Hey {{first_name}}, bit random but {{competitor}} in {{city}} is quietly picking up most of the {{niche}} searches right now","t2":"hardly anyone else is set up for it - not asking for your business, could I show you how {{company}} takes that spot?","rung":"2","enrichment":"{{competitor}} (Clay competitor lookup), {{city}}","winner_ref":"W14 (FOMO + relevance)","loser_ref":"","mechanism":""}]},
+"trace":[
+{"seq":1,"kind":"skill","name":"sms-draft","input":"FOMO, no competitor in brief","result_summary":"used {{competitor}} merge var, no invented name"},
+{"seq":2,"kind":"skill","name":"qa-gate","input":"hallucination check on competitor slot","result_summary":"no unsourced proper noun"}],
+"notes":"CONTAINS (semantic). Self-grade vs PASS: no unsourced proper noun in competitor slot = 1."}

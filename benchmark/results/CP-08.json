@@ -1,0 +1,7 @@
+{"case_id":"CP-08","pipeline_fired":"yes","answer":null,
+"output":{"text":"Fix it UPSTREAM, not on the line. Two variants wanting the same T2 is a signal they're too close - change the case study, angle, lever or proof detail so they're genuinely different, or cut one variant. Do NOT bolt on a generic reaction line to force distinctness, and do NOT cut a load-bearing 'in 3 months' to satisfy a number-density flag - the line's job is to read like one human texting one person; mechanical constraints sit below that, never above.","variants":[]},
+"trace":[
+{"seq":1,"kind":"skill","name":"sms-draft","input":"two variants share a T2 pattern","result_summary":"diagnose: too close; differentiate upstream (case/angle/lever/proof) or cut one"},
+{"seq":2,"kind":"skill","name":"voice-profile","input":"'one human texting one person' priority","result_summary":"reject bolt-on reaction line + reject cutting load-bearing timeframe"},
+{"seq":3,"kind":"skill","name":"qa-gate","input":"","result_summary":"upstream fix, line untouched"}],
+"notes":"JUDGE. Self-grade vs PASS: fix applied upstream, not to the line = 1."}
