@@ -1,0 +1,10 @@
+{
+  "case_id": "M-02",
+  "pipeline_fired": "yes",
+  "answer": "b",
+  "output": {"text": "Ships cold: (b) 'we built them an owned audience'. It is agency-performed and portable. (a) 'get your founder on camera' is client-performed - it invites 'I can't do that' before the reader reaches 'is this real', so it is segment-locked, not cold-ready.", "variants": []},
+  "trace": [
+    {"seq": 1, "kind": "skill", "name": "mechanism-wordsmith", "input": "two candidate mechanisms; which ships cold?", "result_summary": "applied portability gate: (b) agency-performed=portable; (a) prospect-performed=objection risk"}
+  ],
+  "notes": "Pure judgment, no Evergreen data needed. Portability gate (agency-performs vs prospect-performs) decides it cleanly."
+}

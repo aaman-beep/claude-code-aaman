@@ -1,0 +1,23 @@
+{
+  "case_id": "CP-02",
+  "pipeline_fired": "yes",
+  "answer": null,
+  "output": {
+    "text": "T2 keeps the ask in-thread, no email handoff.",
+    "variants": [{
+      "t1": "noticed {{company}} isn't really running TikTok Shop lives yet",
+      "t2": "not asking for your business, but could I show you how we got a boutique like yours to 100k a month in 3 months?",
+      "rung": "2", "enrichment": "{{company}} TikTok Shop live-selling signal",
+      "winner_ref": "go_fish W18 shape ('not asking for your business but could I at least share a few ideas...')",
+      "loser_ref": "benchmark-copy: REWORK, nearest loser 0.787 (sits between winner and loser)",
+      "mechanism": null
+    }]
+  },
+  "trace": [
+    {"seq": 1, "kind": "skill", "name": "sms-draft", "input": "draft a T2 CTA for a cold SMS", "result_summary": "drafted in-thread ask modeled on the W18 winner shape"},
+    {"seq": 2, "kind": "evergreen", "name": "POST /api/search {type:copies,status:winner,client:go_fish}", "input": "TikTok shop boutique", "result_summary": "W18: 'not asking for your business but could I at least share a few ideas on how Hovi Dry Goods...'"},
+    {"seq": 3, "kind": "evergreen", "name": "POST /api/benchmark-copy", "input": "drafted t1/t2", "result_summary": "verdict REWORK, simW 0.795, simL 0.787"},
+    {"seq": 4, "kind": "skill", "name": "qa-gate", "input": "check T2 CTA", "result_summary": "no email-handoff ask present; in-thread"}
+  ],
+  "notes": "In-thread CTA per the recipe. Benchmark returned REWORK because it sits almost equally close to a winner and a loser - worth a differentiation pass, but it passes the CP-02 rule (no email handoff)."
+}

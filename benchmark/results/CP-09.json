@@ -1,0 +1,13 @@
+{
+  "case_id": "CP-09",
+  "pipeline_fired": "yes",
+  "answer": null,
+  "output": {"text": "Use Willow Boutique. It is on-niche (boutique fashion) and size-matched to a small boutique prospect - Evergreen has it as tier A, '$100k+ Monthly Sales in 3 Months'. EZ Bombs (30x ROAS / TikTok Shop record) reads aspirational and irrelevant to a tiny boutique; its number is off-scale. Keep the structure and mechanism, swap only the case to the size-matched peer with its native-unit number.", "variants": []},
+  "trace": [
+    {"seq": 1, "kind": "skill", "name": "sms-brief", "input": "Go Fish, small boutique prospect - which proof transfers?", "result_summary": "prospect is a small boutique; proof must be size-matched and on-niche"},
+    {"seq": 2, "kind": "evergreen", "name": "GET /api/clients/go_fish", "input": "case studies + niche", "result_summary": "niche DTC ecom; 87 case studies incl. boutiques"},
+    {"seq": 3, "kind": "evergreen", "name": "POST /api/search {type:case_studies,client:go_fish}", "input": "boutique fashion revenue per month", "result_summary": "WILLOW BOUTIQUE tier A '$100k+ Monthly Sales in 3 Months'; EZ BOMBS tier A '30x ROAS'"},
+    {"seq": 4, "kind": "skill", "name": "case-study-developer", "input": "pick + frame the proof", "result_summary": "selected Willow: size-matched, native unit (monthly sales), on-niche"}
+  ],
+  "notes": "Evergreen HAS both proofs. Willow is the size-match. Self-grade vs PASS rule: picks Willow AND names size-match = 1. (JUDGE - Aaman confirms.)"
+}

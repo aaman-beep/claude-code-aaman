@@ -151,7 +151,7 @@
     },
     {
       "id": "CP-09", "category": "copy", "grade_type": "JUDGE", "auto": false,
-      "required_skills": ["sms-draft", "voice-profile", "qa-gate"],
+      "required_skills": ["sms-brief", "case-study-developer"],
       "input": "Go Fish. Prospect is a small boutique. Proofs: Willow Boutique $126k last month, EZ Bombs $5M last quarter.",
       "right": "Willow. On-niche and size-matched.",
       "wrong": "(plausible) EZ Bombs, because the number is bigger.",
