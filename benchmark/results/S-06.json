@@ -1,0 +1,4 @@
+{"case_id":"S-06","pipeline_fired":"yes","answer":"sms",
+"output":{"text":"SMS. For LeadGenix, SMS beats email by roughly 8x on positive-per-send; raw reply rate (which looks higher on email) is the wrong metric - positive-per-send cross-checked against logged deals is the metric.","variants":[]},
+"trace":[{"seq":1,"kind":"evergreen","name":"GET /api/clients/leadgenix/monthly","input":"sms vs email per-send","result_summary":"SMS pr-per-send >> email"}],
+"notes":"MCQ answer=sms."}

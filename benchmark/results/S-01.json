@@ -1,0 +1,4 @@
+{"case_id":"S-01","pipeline_fired":"yes","answer":"broad",
+"output":{"text":"Broad ecom. Both proof brands (BRUNT, ARMRA) are broad DTC ecom, not niche-locked, so the frame follows the proof - don't split into two niche segments (that was round 3 of the 2026-09-21 run).","variants":[]},
+"trace":[{"seq":1,"kind":"evergreen","name":"POST /api/search {type:case_studies,client:dtco}","input":"BRUNT ARMRA niche","result_summary":"both broad DTC ecom"}],
+"notes":"MCQ answer=broad."}

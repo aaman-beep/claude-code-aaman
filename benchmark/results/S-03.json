@@ -1,0 +1,4 @@
+{"case_id":"S-03","pipeline_fired":"yes","answer":null,
+"output":{"text":"A written strategy artifact exists before copy: frame (broad) + reason, persona, proof spine, ranked angles. campaign-director Stage 2 is populated before Stage 4.","variants":[]},
+"trace":[{"seq":1,"kind":"skill","name":"sms-brief","input":"evidence","result_summary":"context loaded"},{"seq":2,"kind":"skill","name":"campaign-director","input":"Stage 2 strategy before Stage 4 copy","result_summary":"strategy artifact written first"}],
+"notes":"TRACE. Self-grade: stage 2 before stage 4 = 1. (campaign-director enforces it; without the director a run jumps to copy - that's the failure this guards.)"}

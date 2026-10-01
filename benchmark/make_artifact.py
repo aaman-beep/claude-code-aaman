@@ -65,9 +65,13 @@ def variants_html(variants):
     return "".join(out)
 
 
+CAT_ORDER = {"mechanism": 0, "copy": 1, "benchmark": 2, "routing": 3, "strategy": 4}
+
+
 def build():
-    cases = {c["id"]: c for c in json.load(open(os.path.join(HERE, "cases.json")))["cases"]}
-    files = sorted(glob.glob(os.path.join(HERE, "results", "*.json")))
+    cases = graders.load_cases()
+    files = sorted(glob.glob(os.path.join(HERE, "results", "*.json"))
+                   + glob.glob(os.path.join(HERE, "results-native", "*.json")))
     runs = {}
     for f in files:
         r = json.load(open(f))
@@ -76,8 +80,8 @@ def build():
     graded = {r["case_id"]: r for r in report["results"]}
     sc = report["scorecard"]
 
-    # order: mechanism then copy, by id
-    order = sorted(cases.values(), key=lambda c: (0 if c["category"] == "mechanism" else 1, c["id"]))
+    # order by category (mechanism, copy, benchmark, routing, strategy) then id
+    order = sorted(cases.values(), key=lambda c: (CAT_ORDER.get(c["category"], 9), c["id"]))
 
     cards = []
     for c in order:
@@ -118,12 +122,12 @@ def build():
         body.append("</div>")
         cards.append(f'<details class="case"{open_attr}>{head}{"".join(body)}</details>')
 
-    tiles = (
-        f'<div class="tile"><div class="tv">{esc(sc.get("mechanism","-"))}</div><div class="tl">Mechanism</div></div>'
-        f'<div class="tile"><div class="tv">{esc(sc.get("copy","-"))}</div><div class="tl">Copy</div></div>'
-        f'<div class="tile"><div class="tv">{esc(sc.get("pipeline_void","-"))}</div><div class="tl">Pipeline void</div></div>'
-        f'<div class="tile"><div class="tv">{len(runs)} / {len(cases)}</div><div class="tl">Cases run</div></div>'
-    )
+    tile_list = []
+    for cat in ("mechanism", "copy", "benchmark", "routing", "strategy"):
+        if cat in sc:
+            tile_list.append(f'<div class="tile"><div class="tv">{esc(sc[cat])}</div><div class="tl">{cat}</div></div>')
+    tile_list.append(f'<div class="tile"><div class="tv">{len(runs)} / {len(cases)}</div><div class="tl">cases run</div></div>')
+    tiles = "".join(tile_list)
 
     html_doc = TEMPLATE.replace("{{TILES}}", tiles).replace("{{CARDS}}", "".join(cards))
     out = os.path.join(HERE, "trace-artifact.html")
@@ -157,8 +161,7 @@ TEMPLATE = """<title>Benchmark Trace</title>
     padding-block:18px 12px;border-bottom:1px solid var(--edge);margin-bottom:16px}
   h1{margin:0 0 3px;font-size:19px;letter-spacing:-.01em;text-wrap:balance}
   .sub{margin:0 0 14px;color:var(--muted);font-size:12.5px}
-  .tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-  @media(max-width:560px){.tiles{grid-template-columns:repeat(2,1fr)}}
+  .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(132px,1fr));gap:10px}
   .tile{background:var(--panel);border:1px solid var(--edge);border-radius:12px;padding:12px 14px}
   .tv{font-size:20px;font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
   .tl{font-size:10.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-top:2px}
@@ -170,6 +173,10 @@ TEMPLATE = """<title>Benchmark Trace</title>
   .cat{font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;padding:2px 7px;border-radius:999px;border:1px solid var(--edge);color:var(--muted)}
   .cat.mechanism{color:var(--accent);border-color:color-mix(in srgb,var(--accent) 40%,var(--edge))}
   .cat.copy{color:var(--ever);border-color:color-mix(in srgb,var(--ever) 40%,var(--edge))}
+  .cat.benchmark{color:var(--void);border-color:color-mix(in srgb,var(--void) 40%,var(--edge))}
+  .cat.routing{color:var(--human);border-color:color-mix(in srgb,var(--human) 40%,var(--edge))}
+  .cat.strategy{color:var(--fail);border-color:color-mix(in srgb,var(--fail) 40%,var(--edge))}
+  .tl{text-transform:capitalize}
   .gt{font-size:10.5px;color:var(--muted);letter-spacing:.04em}
   .pill{margin-left:auto;font-size:10.5px;font-weight:700;padding:3px 9px;border-radius:999px;text-transform:uppercase;letter-spacing:.04em}
   .pill+.pill{margin-left:6px}

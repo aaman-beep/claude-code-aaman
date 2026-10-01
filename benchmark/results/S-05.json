@@ -1,0 +1,4 @@
+{"case_id":"S-05","pipeline_fired":"yes","answer":null,
+"output":{"text":"Flag the contradiction and ask which floor is current - do not silently pick. Onboarding form says $150K-$1M/mo; the August planning doc says $50K/mo. Evergreen even has this logged as a guideline ('DTCo ICP FLOOR CHANGED between the intro call and the onboarding form'). The ICP floor decides the list, proof size and language, so a silent pick is an unlogged bet.","variants":[]},
+"trace":[{"seq":1,"kind":"evergreen","name":"GET /api/guidelines?client=dtco","input":"ICP floor","result_summary":"guideline: 'DTCo ICP FLOOR CHANGED... $150K-$1M vs $50K'"},{"seq":2,"kind":"skill","name":"sms-brief","input":"reconcile","result_summary":"names both figures, asks which is current"}],
+"notes":"CONTAINS. Self-grade: names both figures AND asks = 1. The contradiction is already in Evergreen as a guideline, so a brief that loads guidelines catches it."}

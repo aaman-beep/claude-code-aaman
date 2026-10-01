@@ -1,0 +1,4 @@
+{"case_id":"B-04","pipeline_fired":"yes","answer":null,"benchmark_verdict":"REWORK",
+"output":{"text":"A loser-leaning draft (L1-style category-thesis brag) is caught: /api/benchmark-copy returns REWORK before the strategist sees it, naming the loser's why_it_failed. The data that should have killed the DTCo round-1 draft is now consulted automatically.","variants":[]},
+"trace":[{"seq":1,"kind":"evergreen","name":"POST /api/benchmark-copy","input":"L1-shape draft","result_summary":"verdict REWORK, simL 0.86 > simW 0.78, why_it_failed=relevance"}],
+"notes":"CONTAINS auto. Verdict REWORK = flagged = 1."}

@@ -1,0 +1,4 @@
+{"case_id":"B-06","pipeline_fired":"yes","answer":"positive_per_send",
+"output":{"text":"Rank by positive-per-send (or interested-per-send), cross-checked against logged deals - NOT raw reply rate, which counts STOPs and brush-offs as engagement and has picked the wrong winner before.","variants":[]},
+"trace":[{"seq":1,"kind":"evergreen","name":"GET /api/period + /report","input":"last quarter campaigns","result_summary":"rank by pr_per_send, not raw replies"}],
+"notes":"MCQ answer=positive_per_send."}

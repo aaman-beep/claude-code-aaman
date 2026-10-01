@@ -1,0 +1,4 @@
+{"case_id":"B-02","pipeline_fired":"yes","answer":null,
+"output":{"text":"Allow the mechanism. L1 (Go Fish CPG) died on RELEVANCE (whole text is about US, no observation hook), not on its mechanism (organic viral + affiliate live selling), which Aaman rates good and which the W18 winner reuses. Blanket-avoiding L1 would throw away live ammo.","variants":[]},
+"trace":[{"seq":1,"kind":"evergreen","name":"POST /api/search {type:copies,status:loser,client:go_fish}","input":"L1","result_summary":"L1 why_it_failed = relevance, not mechanism"}],
+"notes":"JUDGE. Self-grade: allows mechanism AND names relevance as L1's failure = 1. (Benchmark now supports this via the relative verdict.)"}

@@ -1,0 +1,4 @@
+{"case_id":"B-01","pipeline_fired":"yes","answer":null,"benchmark_verdict":"KEEP",
+"output":{"text":"The W18 CTA ('not asking for your business but could I at least share a few ideas...') is ALLOWED. /api/benchmark-copy returns KEEP (leans winner), not a rejection - even though the phrase also appears in losing texts. Fixed: the benchmark no longer treats a winner-shaped draft as a loser just because a component shows up in a loser.","variants":[]},
+"trace":[{"seq":1,"kind":"evergreen","name":"POST /api/benchmark-copy","input":"W18 T1/T2","result_summary":"verdict KEEP, simW 0.82 > simL 0.80"}],
+"notes":"CONTAINS auto. Verdict KEEP = not rejected = 1. This is the exact bug the native run caught, now fixed."}

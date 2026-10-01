@@ -1,0 +1,27 @@
+{
+  "case_id": "CP-03",
+  "pipeline_fired": "yes",
+  "answer": "b",
+  "output": {
+    "text": "PICK: (b) 'noticed {{company}} isn't really running TikTok Shop lives'. REASON = RELEVANCE, not proof strength. Both openers carry the identical proof (Willow Boutique $126k last month from interactive livestreams), so proof strength is a wash — the only variable is relevance. (b) is a first-person, manual-looking observation ABOUT THIS PROSPECT (their own uncaptured gap) — it reads hand-written, aimed, rung 2-3, and passes QA Q10 (speaks TO them). (a) 'most fashion brands pay Meta...' is a third-person category THESIS with the market as subject — QA Q10 auto-fail (statement-lead / podium voice), the rung-0 'blast' read. (a) is the L1 Go Fish shape on the same client + same offer that lost and drew STOPs; (b) is logged winner W18 (Evergreen id 21): human replies + a converted call from 360 sends.",
+    "variants": [
+      {
+        "t1": "Hey {{first_name}}, it's Bri at Go Fish - a bit random but noticed {{company}} isn't really running TikTok Shop lives, we actually tried it for Willow Boutique, who sold $126k last month just from interactive livestreams with relevant creators.",
+        "t2": "not asking for your business but could I at least share a few ideas on how {{company}} could take advantage of this?",
+        "rung": "2-3 (account/individualised — an observed per-prospect gap)",
+        "enrichment": "the observed gap 'isn't running TikTok Shop lives' ({{company}}-level observation) — manual-looking, barely any Clay; native to their world (fashion & apparel)",
+        "winner_ref": "W18 Go Fish / Evergreen copy id 21 (human replies + converted call from 360 sends)",
+        "loser_ref": "L1 Go Fish = opener (a) shape, category brag; why_it_failed = 'whole text is about US / a market thesis, zero relevance hook tying it to THIS recipient' -> STOPs",
+        "mechanism": "interactive TikTok Shop livestreams with relevant creators (simple support; relevance is what carries)"
+      }
+    ]
+  },
+  "trace": [
+    {"seq": 1, "kind": "evergreen", "name": "GET /api/clients/go_fish + /call-insights", "input": "offer, niche, terminology/objections", "result_summary": "TikTok Shop live-selling; angle 'social proof builds credibility'; objection 'weak TikTok case studies' -> relevance/observation must carry, not the brag"},
+    {"seq": 2, "kind": "evergreen", "name": "POST /api/search {type:copies, status:winner, client:go_fish}", "input": "confirm the logged winner", "result_summary": "W18 id 21 = opener (b); why_it_worked: 'Relevance carried it... reads hand-written, not blasted... same offer as L1 loser but led with relevance instead of a case-study brag'"},
+    {"seq": 3, "kind": "skill", "name": "sms-draft (levers + relevance-engine)", "input": "judge (a) vs (b) on lever/relevance", "result_summary": "(b) = observed-gap Trigger + Helpful, rung 2-3 aimed; (a) = FOMO-thesis that fails the speaks-TO-them test; relevance is the deciding axis, proof is held constant"},
+    {"seq": 4, "kind": "skill", "name": "voice-profile + qa-gate (Q10 speaks-TO-them)", "input": "run the auto-fail gate on both", "result_summary": "(a) auto-fails Q10 (third-person market thesis = statement-lead, LinkedIn-post read); (b) passes (first-person observation about them); T2 keeps ask in-thread (no email handoff)"},
+    {"seq": 5, "kind": "evergreen", "name": "POST /api/benchmark-copy x2 ((a) and (b))", "input": "score both drafts vs real winners/losers", "result_summary": "Both map to nearest winner W18/id21 (b sim 0.89 > a sim 0.86). Mechanical verdict flagged (b) 'DROP' / (a) 'REWORK' — a FALSE POSITIVE: nearest 'loser' id 1319 is an auto-labeled dead-campaign near-DUPLICATE of the W18 winner text, so the surface-similarity verdict contradicts the human-logged winner. Per qa-checklist the loser gate is judged by why_it_failed (id 1319 = 'auto dead campaign', no diagnostic reason), not resemblance -> (b) stands."}
+  ],
+  "notes": "PASS (my honest read): picks (b) AND names relevance (not proof strength) as the reason — exactly the pass rule. The load-bearing skill rule a generic approach misses is qa-checklist Q10 (the 'speaks-TO-them / two-finger' auto-fail): an observation about the person reads human and earns a reply; a third-person thesis about the category reads like a blast and gets STOP — same proof, opposite outcome, which is the whole lesson (relevance is the heaviest-scored dimension, not proof). IMPORTANT truthful finding on the tooling: POST /api/benchmark-copy returned 'DROP' for the correct answer (b) because the auto-generated loser corpus contains near-verbatim duplicates of the W18 winner (e.g. id 1319, 'auto dead campaign: 0 positives on 2172 sent'). That is exactly the failure mode the skills warn against — judging by surface similarity instead of by why_it_failed — so the deterministic verdict was overridden in favor of the human-logged winner W18. Flagging it because the benchmark endpoint's loser labels need de-duping against logged winners."
+}

@@ -1,0 +1,4 @@
+{"case_id":"S-02","pipeline_fired":"yes","answer":"differentiate",
+"output":{"text":"Differentiate. A solution-aware buyer already pitched by three competitors needs a reason THIS one is different - educating them on the problem is the solution-unaware move and would make every line after it wrong.","variants":[]},
+"trace":[{"seq":1,"kind":"skill","name":"sms-brief","input":"awareness read","result_summary":"solution-aware -> differentiate"}],
+"notes":"MCQ answer=differentiate."}

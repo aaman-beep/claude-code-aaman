@@ -1,0 +1,4 @@
+{"case_id":"S-04","pipeline_fired":"yes","answer":"relevance",
+"output":{"text":"Relevance. SEO for local businesses is a commodity offer - everyone sells it - so the words go to relevance, not an invented mechanism. Inventing a distinctive mechanism for a commodity offer produces slop.","variants":[]},
+"trace":[{"seq":1,"kind":"skill","name":"sms-brief","input":"offer type","result_summary":"commodity -> relevance (not mechanism)"}],
+"notes":"MCQ answer=relevance."}

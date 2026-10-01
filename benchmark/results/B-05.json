@@ -1,0 +1,4 @@
+{"case_id":"B-05","pipeline_fired":"yes","answer":null,
+"output":{"text":"FAIL (honest). /api/benchmark-copy returns W4 with its n (sent) and positive_rate, but NOT date-last-observed, NOT replication-across-clients, NOT sophistication-level. 2 of the 5 fields Aaman wants are present; 3 are missing because those columns don't exist on copies/copy_performance. So the system can't say W4 may be a year old and dead.","variants":[]},
+"trace":[{"seq":1,"kind":"evergreen","name":"POST /api/benchmark-copy (fields check)","input":"W4 nearest winner","result_summary":"has: sent, positive_rate, why_it_worked. MISSING: date, replication count, sophistication"}],
+"notes":"JUDGE [REDLINE]. Self-grade: FAIL - only 2/5 fields. Fix is schema: add observed_at, replication_count, sophistication to the winner record + surface in benchmark-copy."}

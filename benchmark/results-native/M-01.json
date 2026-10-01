@@ -1,0 +1,27 @@
+{
+  "case_id": "M-01",
+  "pipeline_fired": "yes",
+  "answer": null,
+  "output": {
+    "text": "MECHANISM: Story/founder-led creative that builds an OWNED community, so the brand keeps selling after the paid spend stops. The agency runs it end to end (agency-performed = portable). Grounded across the two S-tier DTCo cases: BRUNT was scaled by 'leveraging the founder's personal profile for ads to build trust and community' (0 to unicorn in <2 yrs, profitable on the first order, 4 inflection points on the revenue curve); ARMRA by 'building benefit-specific education funnels' that compound an audience (25x ARR YoY, CAC cut 50%, $0 to 9 figures in 2 yrs). The transferable through-line is NOT 'we replaced their marketing team' or a 'post-Ozempic opportunity' (those are positioning/outcomes) and NOT the surface tactic ('Facebook ads' / 'education funnels'). It is: creative that earns a retained audience/community, which is what lets CAC fall while spend rises (matches DTCo's own positioning: growth as one system, Speed to Payback, CAC down while spend goes up). SMS-ready line: 'mostly by building them an audience that keeps buying long after the ads stop.'",
+    "variants": [
+      {
+        "t1": "",
+        "t2": "",
+        "rung": "n/a (mechanism case)",
+        "enrichment": "n/a",
+        "winner_ref": "W19 Kynship ('creator content that doesn't even feel like an ad') + W1/W34 Chamber (owned-attention creative) as the closest logged community/creative-flywheel winners",
+        "loser_ref": "The two logged wrong-extractions on the DTCo run: 'replaced their entire marketing team' and 'post-Ozempic opportunity' — outcome/positioning, not the mechanism (per campaign-director: the useful 'community flywheel' was buried and missed)",
+        "mechanism": "Story-based/founder-led creative builds an owned community, so customers keep buying after the ad spend stops — agency-performed (portable)."
+      }
+    ]
+  },
+  "trace": [
+    {"seq": 1, "kind": "evergreen", "name": "GET /api/clients/dtco", "input": "pull case studies + offer/positioning", "result_summary": "10 case studies + DTCo offer ('growth as one system, Speed to Payback, CAC down while spend up'); BRUNT-style founder-community case + ARMRA education-funnel case both present, all S-tier"},
+    {"seq": 2, "kind": "evergreen", "name": "POST /api/search {type:case_studies, query:'BRUNT workwear founder community', client:dtco}", "input": "identify BRUNT mechanism", "result_summary": "top hit S-tier: 'leveraging founder's personal Facebook profile for ads to build trust and community' -> 0-to-unicorn <2yr, profitable on first order"},
+    {"seq": 3, "kind": "evergreen", "name": "POST /api/search {type:case_studies, query:'ARMRA colostrum education funnels', client:dtco}", "input": "identify ARMRA mechanism", "result_summary": "S-tier: 'benefit-specific education funnels' / 'dedicated funnel per colostrum use case' -> 25x ARR YoY, CAC -50%, $0 to 9 figures in 2yrs"},
+    {"seq": 4, "kind": "skill", "name": "case-study-developer", "input": "BRUNT + ARMRA proof + literal mechanisms + DTCo positioning as the 'website' proxy", "result_summary": "Mined widely (case mechanism fields + offer positioning); extracted the TRANSFERABLE bite = an owned/retained community that compounds beyond paid, not the surface tactic; flagged the two known wrong-extractions to avoid"},
+    {"seq": 5, "kind": "skill", "name": "mechanism-wordsmith", "input": "literal mechanism = founder/story creative builds a community that keeps buying after spend", "result_summary": "Reframed to SMS-ready line (Pattern 5 Position / Pattern 1 Contrarian); portability gate = AGENCY-PERFORMED -> portable, safe to lead with"}
+  ],
+  "notes": "PASS (my honest read): output names community / retained-audience-after-spend as the mechanism, satisfying the pass rule. Boundary note: the input says 'client website fetched' but I did NOT independently fetch the live DTCo site in this run — I used Evergreen's case-study mechanism fields + the DTCo offer/positioning text as the website proxy, and say so here rather than pretend. Where the real skills differ from a generic approach: (1) case-study-developer's 'mine widely, the sheet is the thinnest source' rule is what stops the generic 'they run Facebook ads' extraction and surfaces the buried community flywheel (the exact DTCo miss the campaign-director runbook calls out); (2) mechanism-wordsmith's PORTABILITY GATE is decisive here — the mechanism must be agency-performed to lead with, and 'we build you a community' is portable, whereas 'get your founder on camera' (M-02) would be prospect-performed and gated out. Names are null in the Evergreen case_studies payload, so BRUNT/ARMRA were matched by semantic query + mechanism/result signature (workwear founder-community; colostrum education funnels)."
+}

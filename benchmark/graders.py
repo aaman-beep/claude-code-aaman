@@ -11,6 +11,7 @@ is ground truth on mechanism/copy JUDGE cases).
 
 run shape: see trace_schema.json.
 """
+import glob
 import json
 import os
 import re
@@ -19,8 +20,11 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 
 
 def load_cases():
-    with open(os.path.join(HERE, "cases.json")) as f:
-        return {c["id"]: c for c in json.load(f)["cases"]}
+    cases = {}
+    for f in sorted(glob.glob(os.path.join(HERE, "cases*.json"))):
+        for c in json.load(open(f)).get("cases", []):
+            cases[c["id"]] = c
+    return cases
 
 
 def pipeline_fired(case, run):
@@ -41,9 +45,37 @@ def _t2s(run):
     return [(v.get("t2", "") or "") for v in run.get("output", {}).get("variants", []) or []]
 
 
+def _seq_of(run, name):
+    for s in run.get("trace", []):
+        if s.get("kind") == "skill" and s.get("name", "").lower() == name.lower():
+            return s.get("seq", 0)
+    return None
+
+
 def grade(case, run):
-    # 1) precondition — if the playbook skills did not fire, the case is VOID, not failed.
     fired = pipeline_fired(case, run)
+
+    # ROUTING: the whole point is whether skills fire on their own. pipeline_fired IS the
+    # score (fired=1, not=0) — never void. These are only meaningful from a NATIVE run.
+    if case.get("category") == "routing":
+        chk = case.get("check", {})
+        if not case.get("auto"):
+            return {"score": "needs_human", "pipeline_fired": fired,
+                    "reason": "routing TRACE case — read the native trace against the PASS rule"}
+        if chk.get("type") == "order_before":
+            a, b = _seq_of(run, chk["first"]), _seq_of(run, chk["then"])
+            ok = a is not None and b is not None and a < b
+            return {"score": 1 if ok else 0, "pipeline_fired": fired,
+                    "reason": f"{chk['first']}@{a} before {chk['then']}@{b}" if ok else f"ordering not shown ({chk['first']}={a}, {chk['then']}={b})"}
+        if chk.get("type") == "calls_fired":
+            hit = any(("call" in s.get("name", "").lower()) for s in run.get("trace", []))
+            return {"score": 1 if hit else 0, "pipeline_fired": fired,
+                    "reason": "a call search fired" if hit else "no call search in trace (not auto-invoked)"}
+        # default routing: did the required skills fire?
+        return {"score": 1 if fired else 0, "pipeline_fired": fired,
+                "reason": "required skills fired" if fired else f"skills {case.get('required_skills')} did NOT fire — routing failure"}
+
+    # everything else: precondition — if the playbook skills didn't fire, VOID (routing, not copy).
     if not fired:
         return {"score": "void", "pipeline_fired": False,
                 "reason": f"required skills {case.get('required_skills')} not all in trace — routing, not copy"}
@@ -54,6 +86,16 @@ def grade(case, run):
 
     chk = case.get("check", {})
     t = chk.get("type")
+
+    if t in ("benchmark_not_rejected", "benchmark_flagged"):
+        v = (run.get("benchmark_verdict") or "").upper()
+        if not v:
+            return {"score": "needs_human", "pipeline_fired": True, "reason": "no benchmark_verdict in run"}
+        rejected = v in ("REWORK", "DROP")
+        want_rejected = (t == "benchmark_flagged")
+        ok = rejected == want_rejected
+        return {"score": 1 if ok else 0, "pipeline_fired": True,
+                "reason": f"verdict={v} ({'flagged' if rejected else 'allowed'})"}
 
     if t == "mcq":
         ans = (run.get("answer") or "").strip().lower()
@@ -87,31 +129,34 @@ def grade(case, run):
 
 
 def grade_all(runs):
-    """runs: list of run dicts. Returns per-case results + the phase-1 scorecard."""
+    """runs: list of run dicts. Returns per-case results + a per-category scorecard."""
     cases = load_cases()
-    results, void, mech, copy = [], 0, {"pass": 0, "of": 0}, {"pass": 0, "of": 0}
+    results, void = [], 0
+    cats = {}  # category -> {pass, of, human}
     for run in runs:
         case = cases.get(run["case_id"])
         if not case:
             continue
         r = grade(case, run)
         r["case_id"] = run["case_id"]
+        r["category"] = case["category"]
         results.append(r)
-        bucket = mech if case["category"] == "mechanism" else copy
+        c = cats.setdefault(case["category"], {"pass": 0, "of": 0, "human": 0})
         if r["score"] == "void":
             void += 1
+        elif r["score"] == "needs_human":
+            c["human"] += 1
         else:
-            bucket["of"] += 1
+            c["of"] += 1
             if r["score"] == 1:
-                bucket["pass"] += 1
-    return {
-        "results": results,
-        "scorecard": {
-            "pipeline_void": f"{void} / {len(runs)}",
-            "mechanism": f"{mech['pass']} / {mech['of']}",
-            "copy": f"{copy['pass']} / {copy['of']}",
-        },
-    }
+                c["pass"] += 1
+    scorecard = {"pipeline_void": f"{void} / {len(runs)}"}
+    for cat in ("mechanism", "copy", "benchmark", "routing", "strategy"):
+        if cat in cats:
+            c = cats[cat]
+            extra = f" (+{c['human']} for Aaman)" if c["human"] else ""
+            scorecard[cat] = f"{c['pass']} / {c['of']}{extra}"
+    return {"results": results, "scorecard": scorecard}
 
 
 if __name__ == "__main__":
