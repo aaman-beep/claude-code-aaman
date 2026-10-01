@@ -62,6 +62,11 @@ def grade(case, run):
         if not case.get("auto"):
             return {"score": "needs_human", "pipeline_fired": fired,
                     "reason": "routing TRACE case — read the native trace against the PASS rule"}
+        # the routing question is whether the SKILLS fire. If none fired, it's a routing FAIL,
+        # regardless of any incidental Evergreen call (an ad-hoc API hit is not the skill firing).
+        if not fired:
+            return {"score": 0, "pipeline_fired": False,
+                    "reason": f"skills {case.get('required_skills')} did NOT auto-fire — plain behavior (routing gap)"}
         if chk.get("type") == "order_before":
             a, b = _seq_of(run, chk["first"]), _seq_of(run, chk["then"])
             ok = a is not None and b is not None and a < b

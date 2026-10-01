@@ -1,0 +1,16 @@
+{
+  "case_id": "R-01",
+  "pipeline_fired": "no",
+  "answer": null,
+  "output": {
+    "text": "Wrote plain cold-SMS copy for Growth Lab (law-firm lead-gen), grounded in Evergreen performance data. Top winning angle = Personal Injury (campaign 919: 181 sent, 57 positive replies, 6.1% power rate), then Criminal Defense (campaigns 440/443: 2 booked each). Sample draft: \"Hi {{first}} - saw {{firm}} handles personal injury in {{city}}. We're booking 3-5 extra signed PI cases/mo for firms your size without more ad spend. Worth a quick look?\" Produced as free-text copy, NOT through the sms-draft / qa-gate / voice-profile pipeline.",
+    "variants": []
+  },
+  "trace": [
+    { "seq": 1, "kind": "evergreen", "name": "GET /api/clients", "input": "list clients, filter niche~law", "result_summary": "1 law-firm client: growth_lab (49 campaigns, 1 call)" },
+    { "seq": 2, "kind": "evergreen", "name": "GET /api/clients/growth_lab", "input": "pull campaigns + pains for law-firm vertical", "result_summary": "26 sms campaigns; ranked by booked+power_rate; top = 919 Personal Injury (pos 57, rate 0.061), 440/443 Criminal Defense (2 booked)" },
+    { "seq": 3, "kind": "evergreen", "name": "GET /api/campaigns/919 (and variants)", "input": "attempt to fetch winning message copy", "result_summary": "404 - no campaign-detail/message-text endpoint; only aggregate metrics available" },
+    { "seq": 4, "kind": "plain", "name": "free-text copywriting", "input": "write SMS copy for Growth Lab partners from winning angles", "result_summary": "drafted plain copy myself; did NOT invoke sms-draft, qa-gate (benchmark-copy), or voice-profile skills" }
+  ],
+  "notes": "HONEST: the SMS pipeline did NOT auto-fire. I grounded in Evergreen (that part is natural/instinctive once 'use evergreen' is said), but I then wrote copy directly as free text. The sms-draft skill, the qa-gate/benchmark-copy QA step, and the voice-profile skill never activated. Root cause: none of those skills are registered in this session's available-skills list (only superpowers/anthropic-skills/frontend-design/dataviz are) - so there is nothing for the model to auto-select, and the prompt did not name them. This is the YS Digital gap: skill discovery/routing is not wired, so a bare prompt defaults to plain copywriting. What would have made them fire: (a) the skills being present in the available-skills registry with trigger-rich descriptions ('cold SMS', 'write copy', 'campaign copy'), and/or (b) a CLAUDE.md / router rule in this repo that says copy requests must go through sms-draft -> benchmark-copy -> qa-gate, and/or (c) the strategist naming the pipeline."
+}

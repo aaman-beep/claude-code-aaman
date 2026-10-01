@@ -15,12 +15,17 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 
 
 def main():
-    files = sorted(glob.glob(os.path.join(HERE, "results", "*.json")))
+    files = sorted(glob.glob(os.path.join(HERE, "results", "*.json"))
+                   + glob.glob(os.path.join(HERE, "results-native", "*.json")))
     if not files:
-        print("no results in benchmark/results/. Run cases first (see HOW-TO-RUN.md).")
+        print("no results in benchmark/results[-native]/. Run cases first (see HOW-TO-RUN.md).")
         return
-    runs = [json.load(open(f)) for f in files]
-    # normalize the model's "yes"/"no" pipeline flag into the trace-derived one (graders re-derive)
+    # native runs win over emulated for the same case id
+    byid = {}
+    for f in files:
+        r = json.load(open(f))
+        byid[r["case_id"]] = r
+    runs = list(byid.values())
     report = graders.grade_all(runs)
 
     print("=" * 60)
