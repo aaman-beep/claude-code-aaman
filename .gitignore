@@ -1,4 +1,6 @@
 .env
+.env.bak*
+.env.local
 .DS_Store
 env/
 .venv/
@@ -11,3 +13,19 @@ clients/gofish/
 clients/leadgenix/
 clients/redo/
 clients/kynship/output/
+
+# Scaletopia finance (P&L, founder pay, forecasts) - kept out of the public repo
+clients/scaletopia/finance/
+
+# Third-party course SOPs (marked confidential), keep out of the public repo
+clients/scaletopia/marketing/reference/sops/*.pdf
+clients/scaletopia/marketing/reference/sops/*.txt
+# Video screenshots with prospect names/numbers, local only
+clients/scaletopia/marketing/videos/*/assets/
+
+# client report data (kept out of the public repo)
+Monday Reports/
+Weekly Scorecards/
+
+# daily stats local log (prospect names, never commit)
+.claude/skills/scaletopia-daily-stats/local/
